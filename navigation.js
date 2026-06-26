@@ -63,7 +63,7 @@
         <li><a class="nav-link" href="methodology.html">Methodology</a></li>
       </ul>
     </nav>
-    <a class="btn btn-primary nav-cta" href="index.html#states">Calculate now</a>
+    <a class="btn btn-primary nav-cta" href="atar-calculators.html">Calculate now</a>
     <button class="menu-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu">
       <span></span><span></span><span></span>
     </button>
@@ -83,7 +83,7 @@
       <a href="vce-scaling-calculators.html">VCE Subject Scaling</a>
       <a href="university-calculators.html">University Calculators</a>
       <a href="methodology.html">Methodology</a>
-      <a class="btn btn-primary" href="index.html#states">Calculate now</a>
+      <a class="btn btn-primary" href="atar-calculators.html">Calculate now</a>
     </nav>
   </div>
 </header>

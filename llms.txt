@@ -6,69 +6,93 @@ ATARCalculators (https://atarcalculators.com/) is not affiliated with UAC, VTAC,
 
 ## ATAR calculators (by state)
 - [ATAR Calculator Australia 2026 (home)](https://atarcalculators.com/): Pick your state and estimate your ATAR from your subject marks. Covers all 8 states and territories.
-- [ATAR Calculators by State](https://atarcalculators.com/atar-calculators/): Directory of every state ATAR calculator — NSW, VIC, QLD, WA, SA, TAS, ACT, NT.
-- [NSW ATAR Calculator (HSC)](https://atarcalculators.com/nsw/): Estimate an HSC ATAR from scaled marks using UAC's latest scaling. Best 10 units (2 English + best 8), aggregate out of 500, mapped to ATAR using UAC's published aggregate-to-ATAR relationship and the NSW/ACT participation rate.
-- [VIC ATAR Calculator (VCE)](https://atarcalculators.com/vic/): Estimate a VCE ATAR from scaled study scores using VTAC scaling. Aggregate = English + best 3 + 10% of the 5th and 6th study scores.
-- [QLD ATAR Calculator (QCE)](https://atarcalculators.com/qld/): Estimate a QCE ATAR from your best 5 subject results using QTAC scaling.
-- [WA ATAR Calculator (WACE)](https://atarcalculators.com/wa/): Estimate a WACE ATAR from your best 4 scaled scores plus the 10% language/maths bonus, using TISC scaling.
-- [SA ATAR Calculator (SACE)](https://atarcalculators.com/sa/): Estimate a SACE ATAR from your scaled subject results using SATAC scaling.
-- [TAS ATAR Calculator (TCE)](https://atarcalculators.com/tas/): Estimate a Tasmanian TCE ATAR from your Tertiary Entrance score.
-- [ACT ATAR Calculator (BSSS)](https://atarcalculators.com/act/): Estimate an ACT ATAR from your best 3 majors plus 0.6 of a minor, using the BSSS scaling system.
-- [NT ATAR Calculator (NTCET)](https://atarcalculators.com/nt/): Estimate an NT NTCET ATAR from your aggregate using SATAC scaling.
+- [ATAR Calculators by State](https://atarcalculators.com/atar-calculators): Directory of every state ATAR calculator — NSW, VIC, QLD, WA, SA, TAS, ACT, NT.
+- [NSW ATAR Calculator (HSC)](https://atarcalculators.com/nsw): Estimate an HSC ATAR from scaled marks using UAC's latest scaling. Best 10 units (2 English + best 8), aggregate out of 500, mapped to ATAR using UAC's published aggregate-to-ATAR relationship and the NSW/ACT participation rate.
+- [VIC ATAR Calculator (VCE)](https://atarcalculators.com/vic): Estimate a VCE ATAR from scaled study scores using VTAC scaling. Aggregate = English + best 3 + 10% of the 5th and 6th study scores.
+- [QLD ATAR Calculator (QCE)](https://atarcalculators.com/qld): Estimate a QCE ATAR from your best 5 subject results using QTAC scaling.
+- [WA ATAR Calculator (WACE)](https://atarcalculators.com/wa): Estimate a WACE ATAR from your best 4 scaled scores plus the 10% language/maths bonus, using TISC scaling.
+- [SA ATAR Calculator (SACE)](https://atarcalculators.com/sa): Estimate a SACE ATAR from your scaled subject results using SATAC scaling.
+- [TAS ATAR Calculator (TCE)](https://atarcalculators.com/tas): Estimate a Tasmanian TCE ATAR from your Tertiary Entrance score.
+- [ACT ATAR Calculator (BSSS)](https://atarcalculators.com/act): Estimate an ACT ATAR from your best 3 majors plus 0.6 of a minor, using the BSSS scaling system.
+- [NT ATAR Calculator (NTCET)](https://atarcalculators.com/nt): Estimate an NT NTCET ATAR from your aggregate using SATAC scaling.
+
+## Exam-system ATAR calculators & prediction
+- [HSC ATAR Calculator](https://atarcalculators.com/hsc-atar-calculator): Estimate an HSC ATAR from your scaled marks (NSW), framed for HSC students.
+- [VCE ATAR Calculator](https://atarcalculators.com/vce-atar-calculator): Estimate a VCE ATAR from your scaled study scores (VIC).
+- [QCE ATAR Calculator](https://atarcalculators.com/qce-atar-calculator): Estimate a QCE ATAR from your best 5 subject results (QLD).
+- [WACE ATAR Calculator](https://atarcalculators.com/wace-atar-calculator): Estimate a WACE ATAR from your best scaled scores plus the language/maths bonus (WA).
+- [SACE ATAR Calculator](https://atarcalculators.com/sace-atar-calculator): Estimate a SACE ATAR from your scaled subject results (SA).
+- [TCE ATAR Calculator](https://atarcalculators.com/tce-atar-calculator): Estimate a Tasmanian TCE ATAR from your Tertiary Entrance score.
+- [ATAR Scaling Calculator](https://atarcalculators.com/atar-scaling-calculator): One combined tool covering all 31 HSC and VCE subjects — enter a mark or study score and see the scaled result, using official UAC and VTAC data.
+- [ATAR Predictor](https://atarcalculators.com/atar-predictor): Turn your scaled study scores into a predicted ATAR using the official VTAC aggregate-to-ATAR table.
+- [ATAR Target Calculator](https://atarcalculators.com/atar-target-calculator): Enter a target ATAR and see the aggregate, average scaled mark and raw HSC marks you need to reach it, using official UAC scaling.
 
 ## HSC subject scaling calculators (NSW)
-- [HSC Scaling Calculators — every subject](https://atarcalculators.com/hsc-scaling-calculators/): Hub for all HSC subject scaling calculators. Convert any raw HSC mark to a UAC scaled mark.
-- [HSC English Advanced Scaling](https://atarcalculators.com/hsc-english-advanced-scaling-calculator/): Convert a raw English Advanced mark to a scaled mark.
-- [HSC English Standard Scaling](https://atarcalculators.com/hsc-english-standard-scaling-calculator/): Convert a raw English Standard mark to a scaled mark.
-- [HSC Maths Advanced Scaling](https://atarcalculators.com/hsc-maths-advanced-scaling-calculator/): Convert a raw Mathematics Advanced mark to a scaled mark.
-- [HSC Maths Extension 1 Scaling](https://atarcalculators.com/hsc-maths-extension-1-scaling-calculator/): Convert a raw Mathematics Extension 1 mark to a scaled mark.
-- [HSC Maths Extension 2 Scaling](https://atarcalculators.com/hsc-maths-extension-2-scaling-calculator/): Convert a raw Mathematics Extension 2 mark to a scaled mark. One of the highest-scaling HSC courses.
-- [HSC Maths Standard Scaling](https://atarcalculators.com/hsc-maths-standard-scaling-calculator/): Convert a raw Mathematics Standard mark to a scaled mark.
-- [HSC Chemistry Scaling](https://atarcalculators.com/hsc-chemistry-scaling-calculator/): Convert a raw Chemistry mark to a scaled mark.
-- [HSC Physics Scaling](https://atarcalculators.com/hsc-physics-scaling-calculator/): Convert a raw Physics mark to a scaled mark.
-- [HSC Biology Scaling](https://atarcalculators.com/hsc-biology-scaling-calculator/): Convert a raw Biology mark to a scaled mark.
-- [HSC Economics Scaling](https://atarcalculators.com/hsc-economics-scaling-calculator/): Convert a raw Economics mark to a scaled mark.
-- [HSC Business Studies Scaling](https://atarcalculators.com/hsc-business-studies-scaling-calculator/): Convert a raw Business Studies mark to a scaled mark.
-- [HSC Legal Studies Scaling](https://atarcalculators.com/hsc-legal-studies-scaling-calculator/): Convert a raw Legal Studies mark to a scaled mark.
-- [HSC Modern History Scaling](https://atarcalculators.com/hsc-modern-history-scaling-calculator/): Convert a raw Modern History mark to a scaled mark.
-- [HSC Ancient History Scaling](https://atarcalculators.com/hsc-ancient-history-scaling-calculator/): Convert a raw Ancient History mark to a scaled mark.
-- [HSC Geography Scaling](https://atarcalculators.com/hsc-geography-scaling-calculator/): Convert a raw Geography mark to a scaled mark.
-- [HSC PDHPE Scaling](https://atarcalculators.com/hsc-pdhpe-scaling-calculator/): Convert a raw PDHPE mark to a scaled mark.
+- [HSC Scaling Calculators — every subject](https://atarcalculators.com/hsc-scaling-calculators): Hub for all HSC subject scaling calculators. Convert any raw HSC mark to a UAC scaled mark.
+- [HSC English Advanced Scaling](https://atarcalculators.com/hsc-english-advanced-scaling-calculator): Convert a raw English Advanced mark to a scaled mark.
+- [HSC English Standard Scaling](https://atarcalculators.com/hsc-english-standard-scaling-calculator): Convert a raw English Standard mark to a scaled mark.
+- [HSC Maths Advanced Scaling](https://atarcalculators.com/hsc-maths-advanced-scaling-calculator): Convert a raw Mathematics Advanced mark to a scaled mark.
+- [HSC Maths Extension 1 Scaling](https://atarcalculators.com/hsc-maths-extension-1-scaling-calculator): Convert a raw Mathematics Extension 1 mark to a scaled mark.
+- [HSC Maths Extension 2 Scaling](https://atarcalculators.com/hsc-maths-extension-2-scaling-calculator): Convert a raw Mathematics Extension 2 mark to a scaled mark. One of the highest-scaling HSC courses.
+- [HSC Maths Standard Scaling](https://atarcalculators.com/hsc-maths-standard-scaling-calculator): Convert a raw Mathematics Standard mark to a scaled mark.
+- [HSC Chemistry Scaling](https://atarcalculators.com/hsc-chemistry-scaling-calculator): Convert a raw Chemistry mark to a scaled mark.
+- [HSC Physics Scaling](https://atarcalculators.com/hsc-physics-scaling-calculator): Convert a raw Physics mark to a scaled mark.
+- [HSC Biology Scaling](https://atarcalculators.com/hsc-biology-scaling-calculator): Convert a raw Biology mark to a scaled mark.
+- [HSC Economics Scaling](https://atarcalculators.com/hsc-economics-scaling-calculator): Convert a raw Economics mark to a scaled mark.
+- [HSC Business Studies Scaling](https://atarcalculators.com/hsc-business-studies-scaling-calculator): Convert a raw Business Studies mark to a scaled mark.
+- [HSC Legal Studies Scaling](https://atarcalculators.com/hsc-legal-studies-scaling-calculator): Convert a raw Legal Studies mark to a scaled mark.
+- [HSC Modern History Scaling](https://atarcalculators.com/hsc-modern-history-scaling-calculator): Convert a raw Modern History mark to a scaled mark.
+- [HSC Ancient History Scaling](https://atarcalculators.com/hsc-ancient-history-scaling-calculator): Convert a raw Ancient History mark to a scaled mark.
+- [HSC Geography Scaling](https://atarcalculators.com/hsc-geography-scaling-calculator): Convert a raw Geography mark to a scaled mark.
+- [HSC PDHPE Scaling](https://atarcalculators.com/hsc-pdhpe-scaling-calculator): Convert a raw PDHPE mark to a scaled mark.
 
 ## VCE subject scaling calculators (VIC)
-- [VCE Scaling Calculators — every subject](https://atarcalculators.com/vce-scaling-calculators/): Hub for all VCE subject scaling calculators. Convert any study score to a VTAC scaled study score.
-- [VCE English Scaling](https://atarcalculators.com/vce-english-scaling-calculator/): Convert a VCE English study score to a scaled study score.
-- [VCE English Language Scaling](https://atarcalculators.com/vce-english-language-scaling-calculator/): Convert a VCE English Language study score to a scaled study score.
-- [VCE Literature Scaling](https://atarcalculators.com/vce-literature-scaling-calculator/): Convert a VCE Literature study score to a scaled study score.
-- [VCE Mathematical Methods Scaling](https://atarcalculators.com/vce-mathematical-methods-scaling-calculator/): Convert a VCE Mathematical Methods study score to a scaled study score.
-- [VCE Specialist Mathematics Scaling](https://atarcalculators.com/vce-specialist-mathematics-scaling-calculator/): Convert a VCE Specialist Mathematics study score to a scaled study score. The highest-scaling VCE study.
-- [VCE General Mathematics Scaling](https://atarcalculators.com/vce-general-mathematics-scaling-calculator/): Convert a VCE General Mathematics study score to a scaled study score.
-- [VCE Chemistry Scaling](https://atarcalculators.com/vce-chemistry-scaling-calculator/): Convert a VCE Chemistry study score to a scaled study score.
-- [VCE Physics Scaling](https://atarcalculators.com/vce-physics-scaling-calculator/): Convert a VCE Physics study score to a scaled study score.
-- [VCE Biology Scaling](https://atarcalculators.com/vce-biology-scaling-calculator/): Convert a VCE Biology study score to a scaled study score.
-- [VCE Psychology Scaling](https://atarcalculators.com/vce-psychology-scaling-calculator/): Convert a VCE Psychology study score to a scaled study score.
-- [VCE Economics Scaling](https://atarcalculators.com/vce-economics-scaling-calculator/): Convert a VCE Economics study score to a scaled study score.
-- [VCE Accounting Scaling](https://atarcalculators.com/vce-accounting-scaling-calculator/): Convert a VCE Accounting study score to a scaled study score.
-- [VCE Business Management Scaling](https://atarcalculators.com/vce-business-management-scaling-calculator/): Convert a VCE Business Management study score to a scaled study score.
-- [VCE Legal Studies Scaling](https://atarcalculators.com/vce-legal-studies-scaling-calculator/): Convert a VCE Legal Studies study score to a scaled study score.
+- [VCE Scaling Calculators — every subject](https://atarcalculators.com/vce-scaling-calculators): Hub for all VCE subject scaling calculators. Convert any study score to a VTAC scaled study score.
+- [VCE English Scaling](https://atarcalculators.com/vce-english-scaling-calculator): Convert a VCE English study score to a scaled study score.
+- [VCE English Language Scaling](https://atarcalculators.com/vce-english-language-scaling-calculator): Convert a VCE English Language study score to a scaled study score.
+- [VCE Literature Scaling](https://atarcalculators.com/vce-literature-scaling-calculator): Convert a VCE Literature study score to a scaled study score.
+- [VCE Mathematical Methods Scaling](https://atarcalculators.com/vce-mathematical-methods-scaling-calculator): Convert a VCE Mathematical Methods study score to a scaled study score.
+- [VCE Specialist Mathematics Scaling](https://atarcalculators.com/vce-specialist-mathematics-scaling-calculator): Convert a VCE Specialist Mathematics study score to a scaled study score. The highest-scaling VCE study.
+- [VCE General Mathematics Scaling](https://atarcalculators.com/vce-general-mathematics-scaling-calculator): Convert a VCE General Mathematics study score to a scaled study score.
+- [VCE Chemistry Scaling](https://atarcalculators.com/vce-chemistry-scaling-calculator): Convert a VCE Chemistry study score to a scaled study score.
+- [VCE Physics Scaling](https://atarcalculators.com/vce-physics-scaling-calculator): Convert a VCE Physics study score to a scaled study score.
+- [VCE Biology Scaling](https://atarcalculators.com/vce-biology-scaling-calculator): Convert a VCE Biology study score to a scaled study score.
+- [VCE Psychology Scaling](https://atarcalculators.com/vce-psychology-scaling-calculator): Convert a VCE Psychology study score to a scaled study score.
+- [VCE Economics Scaling](https://atarcalculators.com/vce-economics-scaling-calculator): Convert a VCE Economics study score to a scaled study score.
+- [VCE Accounting Scaling](https://atarcalculators.com/vce-accounting-scaling-calculator): Convert a VCE Accounting study score to a scaled study score.
+- [VCE Business Management Scaling](https://atarcalculators.com/vce-business-management-scaling-calculator): Convert a VCE Business Management study score to a scaled study score.
+- [VCE Legal Studies Scaling](https://atarcalculators.com/vce-legal-studies-scaling-calculator): Convert a VCE Legal Studies study score to a scaled study score.
+- [VCE Health and Human Development Scaling](https://atarcalculators.com/vce-hhd-scaling-calculator): Convert a VCE Health and Human Development (HHD) study score to a scaled study score.
 
 ## University calculators
-- [University Calculators hub](https://atarcalculators.com/university-calculators/): GPA, WAM, ATAR-to-GPA, bonus points and selection rank tools for Australian universities.
-- [GPA Calculator Australia](https://atarcalculators.com/gpa-calculator-australia/): Calculate your GPA on the standard Australian 7-point scale (HD=7, D=6, C=5, P=4) plus your WAM, from your marks and credit points.
-- [WAM Calculator Australia](https://atarcalculators.com/wam-calculator-australia/): Calculate your Weighted Average Mark (the credit-weighted average of your percentage marks) plus your GPA.
-- [GPA Calculator UNSW](https://atarcalculators.com/gpa-calculator-unsw/): UNSW grade bands (HD 85+) to a 7-point GPA plus WAM (UNSW's primary measure).
-- [GPA Calculator USYD](https://atarcalculators.com/gpa-calculator-usyd/): The University of Sydney uses WAM and does not issue a GPA; this gives your WAM plus an indicative GPA.
-- [GPA Calculator Monash](https://atarcalculators.com/gpa-calculator-monash/): Monash bands (High Distinction from 80%, not 85%) to a 7-point GPA plus WAM.
-- [GPA Calculator Unimelb](https://atarcalculators.com/gpa-calculator-unimelb/): University of Melbourne WAM and H1/H2A/H2B/H3 grades, with 12.5-credit-point subjects, plus an indicative GPA.
-- [ATAR to GPA Converter](https://atarcalculators.com/atar-to-gpa-converter/): Indicative 7-point GPA from an ATAR. There is no official ATAR-to-GPA conversion; this is a planning guide only.
-- [ATAR Bonus Points Calculator](https://atarcalculators.com/atar-bonus-points-calculator/): Add subject, regional, equity and other adjustment factors to an ATAR to estimate a selection rank (adjustments usually capped near 10 points).
-- [Selection Rank Calculator](https://atarcalculators.com/selection-rank-calculator/): Selection rank = ATAR + adjustment factors. This is the rank universities use to select applicants; course cut-offs are quoted as selection ranks.
-- [Regional Bonus Points Calculator](https://atarcalculators.com/regional-bonus-points-calculator/): Estimate the adjustment points rural and regional students receive (typically 3–5, based on residential postcode) and the resulting selection rank.
+- [University Calculators hub](https://atarcalculators.com/university-calculators): GPA, WAM, ATAR-to-GPA, bonus points and selection rank tools for Australian universities.
+- [GPA Calculator Australia](https://atarcalculators.com/gpa-calculator-australia): Calculate your GPA on the standard Australian 7-point scale (HD=7, D=6, C=5, P=4) plus your WAM, from your marks and credit points.
+- [WAM Calculator Australia](https://atarcalculators.com/wam-calculator-australia): Calculate your Weighted Average Mark (the credit-weighted average of your percentage marks) plus your GPA.
+- [GPA Calculator UNSW](https://atarcalculators.com/gpa-calculator-unsw): UNSW grade bands (HD 85+) to a 7-point GPA plus WAM (UNSW's primary measure).
+- [GPA Calculator USYD](https://atarcalculators.com/gpa-calculator-usyd): The University of Sydney uses WAM and does not issue a GPA; this gives your WAM plus an indicative GPA.
+- [GPA Calculator Monash](https://atarcalculators.com/gpa-calculator-monash): Monash bands (High Distinction from 80%, not 85%) to a 7-point GPA plus WAM.
+- [GPA Calculator Unimelb](https://atarcalculators.com/gpa-calculator-unimelb): University of Melbourne WAM and H1/H2A/H2B/H3 grades, with 12.5-credit-point subjects, plus an indicative GPA.
+- [ATAR to GPA Converter](https://atarcalculators.com/atar-to-gpa-converter): Indicative 7-point GPA from an ATAR. There is no official ATAR-to-GPA conversion; this is a planning guide only.
+- [ATAR Bonus Points Calculator](https://atarcalculators.com/atar-bonus-points-calculator): Add subject, regional, equity and other adjustment factors to an ATAR to estimate a selection rank (adjustments usually capped near 10 points).
+- [Selection Rank Calculator](https://atarcalculators.com/selection-rank-calculator): Selection rank = ATAR + adjustment factors. This is the rank universities use to select applicants; course cut-offs are quoted as selection ranks.
+- [Regional Bonus Points Calculator](https://atarcalculators.com/regional-bonus-points-calculator): Estimate the adjustment points rural and regional students receive (typically 3–5, based on residential postcode) and the resulting selection rank.
+
+## Course ATAR requirements
+- [ATAR Required for Medicine](https://atarcalculators.com/atar-required-for-medicine): Indicative ATAR cut-offs for undergraduate medicine at every Australian medical school that takes school leavers, plus an ATAR checker. 95+ is the working answer, alongside the UCAT and an interview.
+- [ATAR Required for Law](https://atarcalculators.com/atar-required-for-law): Indicative 2026 ATAR cut-offs for undergraduate law (LLB) across Australia, the LLB-vs-JD pathway, and an ATAR checker. Group of Eight LLBs sit at 97 to 99.5.
+
+## NAPLAN & selective school tools
+- [NAPLAN Score Calculator](https://atarcalculators.com/naplan-score-calculator): Enter a NAPLAN scale score for Year 3, 5, 7 or 9 to see the indicative proficiency level (Exceeding, Strong, Developing) for reading and numeracy.
+- [NAPLAN Band Calculator](https://atarcalculators.com/naplan-band-calculator): Convert the old 10-band NAPLAN scale to the four proficiency levels introduced in 2023.
+- [Year 9 NAPLAN Calculator](https://atarcalculators.com/naplan-year-9-calculator): Year 9 reading and numeracy proficiency and what it means for the NSW HSC minimum standard.
+- [NSW Selective Test Score Calculator](https://atarcalculators.com/selective-schools-test-score-calculator-nsw): Estimate a NSW Selective High School placement score out of 120 from the four equally weighted sections.
+- [Opportunity Class Score Calculator](https://atarcalculators.com/opportunity-class-score-calculator): Indicative profile across the three OC test sections (Reading, Mathematical Reasoning, Thinking Skills) for Year 5 entry.
+- [Victorian Selective Entry Score Calculator](https://atarcalculators.com/victorian-selective-entry-score-calculator): Indicative profile across the five ACER exam sections for the four Victorian selective entry high schools.
 
 ## About and policies
-- [How we calculate estimates (methodology)](https://atarcalculators.com/methodology/): The official scaling reports we use (UAC, VTAC, QTAC, TISC, SATAC), how aggregates are formed in each state, and why results are estimates.
-- [About ATARCalculators](https://atarcalculators.com/about/): Who we are and why the site is independent and free.
-- [Disclaimer](https://atarcalculators.com/disclaimer/): Results are estimates only, not official ATARs.
-- [Privacy Policy](https://atarcalculators.com/privacy/): Marks never leave the browser; nothing is stored or sold.
-- [Terms of Use](https://atarcalculators.com/terms/): Terms for using the free estimators.
-- [Contact](https://atarcalculators.com/contact/): Questions, corrections and feedback.
+- [How we calculate estimates (methodology)](https://atarcalculators.com/methodology): The official scaling reports we use (UAC, VTAC, QTAC, TISC, SATAC), how aggregates are formed in each state, and why results are estimates.
+- [About ATARCalculators](https://atarcalculators.com/about): Who we are and why the site is independent and free.
+- [Disclaimer](https://atarcalculators.com/disclaimer): Results are estimates only, not official ATARs.
+- [Privacy Policy](https://atarcalculators.com/privacy): Marks never leave the browser; nothing is stored or sold.
+- [Terms of Use](https://atarcalculators.com/terms): Terms for using the free estimators.
+- [Contact](https://atarcalculators.com/contact): Questions, corrections and feedback.
