@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" role="img" aria-label="ATAR Calculators">
+  <rect width="100" height="100" rx="22" fill="#1E3A8A"/>
+  <path d="M27 73 L45.5 27 L54.5 27 L73 73 L62.2 73 L57.6 61 L42.4 61 L37.8 73 Z M45.6 52 L54.4 52 L50 40.2 Z" fill="#ffffff"/>
+  <rect x="31" y="79" width="38" height="5" rx="2.5" fill="#EA580C"/>
+</svg>

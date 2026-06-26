@@ -47,19 +47,20 @@
       <ul>
         <li class="has-dropdown">
           <button class="nav-link" aria-haspopup="true" aria-expanded="false">
-            Calculators
+            ATAR Calculators
             <svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 4.5L6 7.5L9 4.5"/></svg>
           </button>
           <div class="dropdown" role="menu">
             <div class="dropdown-grid">
-                <a href="atar-calculators.html" role="menuitem"><b>All calculators</b><span>Every state in one place</span></a>
+                <a href="atar-calculators.html" role="menuitem"><b>All states</b><span>Every ATAR calculator</span></a>
                 ${dropdownItems}
             </div>
           </div>
         </li>
-        <li><a class="nav-link" href="index.html#universities">Universities</a></li>
+        <li><a class="nav-link" href="hsc-scaling-calculators.html">HSC Scaling</a></li>
+        <li><a class="nav-link" href="vce-scaling-calculators.html">VCE Scaling</a></li>
+        <li><a class="nav-link" href="university-calculators.html">University</a></li>
         <li><a class="nav-link" href="methodology.html">Methodology</a></li>
-        <li><a class="nav-link" href="index.html#faq">FAQ</a></li>
       </ul>
     </nav>
     <a class="btn btn-primary nav-cta" href="index.html#states">Calculate now</a>
@@ -69,6 +70,7 @@
   </div>
   <div class="mobile-menu" id="mobile-menu" hidden>
     <nav aria-label="Mobile">
+      <a href="atar-calculators.html">All ATAR Calculators</a>
       <a href="nsw.html">NSW HSC Calculator</a>
       <a href="vic.html">VIC VCE Calculator</a>
       <a href="qld.html">QLD QCE Calculator</a>
@@ -77,8 +79,10 @@
       <a href="tas.html">TAS TCE Calculator</a>
       <a href="act.html">ACT BSSS Calculator</a>
       <a href="nt.html">NT NTCET Calculator</a>
+      <a href="hsc-scaling-calculators.html">HSC Subject Scaling</a>
+      <a href="vce-scaling-calculators.html">VCE Subject Scaling</a>
+      <a href="university-calculators.html">University Calculators</a>
       <a href="methodology.html">Methodology</a>
-      <a href="index.html#faq">FAQ</a>
       <a class="btn btn-primary" href="index.html#states">Calculate now</a>
     </nav>
   </div>
@@ -118,10 +122,19 @@
         <ul>
           <li><a href="about.html">About us</a></li>
           <li><a href="methodology.html">Our methodology</a></li>
+          <li><a href="index.html#faq">FAQ</a></li>
           <li><a href="contact.html">Contact</a></li>
           <li><a href="privacy.html">Privacy</a></li>
           <li><a href="terms.html">Terms</a></li>
           <li><a href="disclaimer.html">Disclaimer</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>More tools</h4>
+        <ul>
+          <li><a href="hsc-scaling-calculators.html">HSC subject scaling</a></li>
+          <li><a href="vce-scaling-calculators.html">VCE subject scaling</a></li>
+          <li><a href="university-calculators.html">University calculators</a></li>
         </ul>
       </div>
     </div>
@@ -137,15 +150,18 @@
   /* ---------- INJECT NAVIGATION ---------- */
   function injectNavigation() {
     const main = document.querySelector('main');
-    if (!main) {
-      console.warn('navigation.js: no <main> element found. Header/footer not injected.');
+    if (main) {
+      // Page has a <main> — wrap it: header before, footer after
+      main.insertAdjacentHTML('beforebegin', buildHeader());
+      main.insertAdjacentHTML('afterend', buildFooter());
+    } else if (document.body) {
+      // No <main> (e.g. the homepage) — still show them:
+      // header at the top of <body>, footer at the bottom
+      document.body.insertAdjacentHTML('afterbegin', buildHeader());
+      document.body.insertAdjacentHTML('beforeend', buildFooter());
+    } else {
       return;
     }
-
-    // Inject header before <main>
-    main.insertAdjacentHTML('beforebegin', buildHeader());
-    // Inject footer after <main>
-    main.insertAdjacentHTML('afterend', buildFooter());
 
     setupHeaderInteractivity();
     highlightActivePage();

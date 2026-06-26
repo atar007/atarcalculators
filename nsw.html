@@ -109,7 +109,7 @@
         "@type": "HowToStep",
         "position": 5,
         "name": "Review your university matches",
-        "text": "See NSW universities organized by course type (Medicine, Law, Engineering, Business, Arts, Education) showing which courses your ATAR qualifies for."
+        "text": "See NSW universities organised by course type (Medicine, Law, Engineering, Business, Arts, Education) showing which courses your ATAR qualifies for."
       }
     ]
   }
@@ -195,7 +195,7 @@
       "name": "What are units in the HSC?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "HSC subjects come in units. A normal subject is 2 units. Extension subjects are 1 unit each. Your best 10 units of scaled marks count toward your ATAR."
+        "text": "HSC subjects come in units. A normal subject is 2 units. Extension subjects are 1 unit each. Your best 10 units of scaled marks count towards your ATAR."
       }
     },
     {
@@ -2664,7 +2664,7 @@ section {
   border-radius: var(--radius-2xl);
   padding: 32px;
 }
-.results-breakdown h3 {
+.results-breakdown h2, .results-breakdown h3 {
   font-family: var(--font-display);
   font-size: 1.15rem;
   font-weight: 700;
@@ -3150,6 +3150,7 @@ section {
   <meta property="og:image:alt" content="ATAR Calculator — free 2026 estimator for every Australian state"/>
   <meta name="twitter:card" content="summary_large_image"/>
   <meta name="twitter:image" content="https://atarcalculators.com/og-image.png"/>
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
 </head>
 <body>
 <!-- ↓ Header injected by navigation.js -->
@@ -3222,7 +3223,7 @@ section {
 </div>
 <!-- Breakdown table -->
 <div class="results-breakdown">
-<h3>Your top 10 units</h3>
+<h2>Your top 10 units</h2>
 <p class="breakdown-sub">These are the 10 units of scaled marks that count towards your ATAR aggregate.</p>
 <table class="breakdown-table">
 <thead>
@@ -3248,7 +3249,7 @@ section {
 <div class="uni-header">
 <span class="eyebrow"><span class="eyebrow-dot"></span>University matching</span>
 <h2>What can you study with this ATAR?</h2>
-<p>NSW universities organized by course type. We show which courses your ATAR qualifies for — and if it's short, the real pathways to get in anyway.</p>
+<p>NSW universities organised by course type. We show which courses your ATAR qualifies for — and if it's short, the real pathways to get in anyway.</p>
 </div>
 <div class="uni-tabs" id="uni-tabs" role="tablist"></div>
 <div class="uni-panels" id="uni-panels"></div>
@@ -3279,7 +3280,7 @@ section {
         <details class="faq-item"><summary>What's a good ATAR?</summary><div class="faq-body"><p>There is no single good number. It depends on the course you want. The middle ATAR is near 70. Above 80 puts you in the top fifth. Above 90 puts you in the top tenth. A good ATAR is one that gets you in.</p></div></details>
         <details class="faq-item"><summary>Can I get into uni with a low ATAR?</summary><div class="faq-body"><p>Yes. Many courses take ATARs in the 60s and 70s. Bonus points can lift you higher. There are also paths that skip the ATAR. These include TAFE, diplomas, bridging courses and portfolios. A low ATAR is one door, not the only one.</p></div></details>
         <details class="faq-item faq-extra"><summary>How many units do I need for a NSW ATAR?</summary><div class="faq-body"><p>Your ATAR uses your best 10 units. Most subjects are 2 units. So that is about five subjects. You need at least 10 units to get an ATAR.</p></div></details>
-        <details class="faq-item faq-extra"><summary>What are units in the HSC?</summary><div class="faq-body"><p>HSC subjects come in units. A normal subject is 2 units. Extension subjects are 1 unit each. Your best 10 units of scaled marks count toward your ATAR.</p></div></details>
+        <details class="faq-item faq-extra"><summary>What are units in the HSC?</summary><div class="faq-body"><p>HSC subjects come in units. A normal subject is 2 units. Extension subjects are 1 unit each. Your best 10 units of scaled marks count towards your ATAR.</p></div></details>
         <details class="faq-item faq-extra"><summary>How do bonus points and adjustment factors work?</summary><div class="faq-body"><p>Bonus points do not change your ATAR. They change your selection rank for a course. You might earn them for your area, your school, or hardship. They can lift your effective rank by 5 to 10 points. Each university sets its own scheme.</p></div></details>
         <details class="faq-item faq-extra"><summary>What is the highest ATAR? Why not 100?</summary><div class="faq-body"><p>The top ATAR is 99.95, not 100. The ATAR is a rank in steps of 0.05. To score 100 you would need to beat everyone, including yourself. So 99.95 is the top. It means you are in the top 0.05%.</p></div></details>
         <details class="faq-item faq-extra"><summary>Do Extension subjects help my ATAR?</summary><div class="faq-body"><p>Yes. Extension subjects are 1 unit each. They can scale very high. Extension 2 Maths is the top scaler in the state. They are a good way to lift a strong ATAR.</p></div></details>
@@ -3306,13 +3307,13 @@ section {
 </div>
 <div class="related-grid">
 <a href="vic.html"><b>VIC</b><span>VCE · VTAC</span></a>
-
-
-
-
-
-
-
+<a href="qld.html"><b>QLD</b><span>QCE · QTAC</span></a>
+<a href="wa.html"><b>WA</b><span>WACE · TISC</span></a>
+<a href="sa.html"><b>SA</b><span>SACE · SATAC</span></a>
+<a href="tas.html"><b>TAS</b><span>TCE</span></a>
+<a href="act.html"><b>ACT</b><span>BSSS</span></a>
+<a href="nt.html"><b>NT</b><span>NTCET · SATAC</span></a>
+<a href="hsc-scaling-calculators.html"><b>HSC scaling</b><span>By subject · UAC</span></a>
 </div>
 </div>
 </section>
@@ -3826,24 +3827,23 @@ const NSW_UNIVERSITIES = {
    Based on historical NSW HSC cohort distributions
    and the 2025 data (median ATAR 70.75, 17.3% got 90+).
 */
+/* Aggregate (best 10 units of scaled marks, /500) -> ATAR.
+   Built from UAC's published aggregate->ATAR-eligible-percentile relationship
+   (Tables A8/A9, Report on the Scaling of the NSW HSC) and the participation-rate
+   model: ATAR = 45 + 0.55 x (ATAR-eligible percentile), reflecting that ~45% of the
+   NSW/ACT age cohort is not ATAR-eligible and ranks below. Validated against known
+   anchors (17.5% of eligible >= 90, 35% >= 80, median ATAR ~70). Low end (ATAR < 53)
+   is tapered to the 30.00 reporting floor and is an approximation. */
 const ATAR_TABLE = [
-  [475, 99.95], [470, 99.50], [465, 99.00],
-  [460, 98.50], [455, 98.00], [450, 97.50],
-  [445, 97.00], [440, 96.00], [435, 95.50],
-  [430, 95.00], [425, 94.00], [420, 93.00],
-  [415, 92.00], [410, 91.00], [405, 90.00],
-  [400, 89.00], [395, 88.00], [390, 87.00],
-  [385, 86.00], [380, 85.00], [370, 83.00],
-  [360, 81.00], [350, 79.00], [340, 77.00],
-  [330, 74.50], [320, 72.00], [310, 69.50],
-  [300, 67.00], [290, 64.00], [280, 61.00],
-  [270, 58.00], [260, 55.00], [250, 52.00],
-  [240, 49.00], [230, 45.00], [220, 41.00],
-  [210, 37.00], [200, 33.00], [190, 28.50],
-  [180, 24.00], [170, 20.00], [160, 16.00],
-  [150, 12.50], [140, 9.50], [130, 7.00],
-  [120, 5.00], [110, 3.00], [100, 1.00],
-  [0, 0]
+  [500, 99.95], [490, 99.80], [480, 99.55], [470, 99.35], [460, 99.10],
+  [450, 98.90], [440, 98.00], [430, 97.15], [420, 96.25], [410, 95.40],
+  [400, 94.50], [390, 93.05], [380, 91.65], [370, 90.20], [360, 88.80],
+  [350, 87.35], [340, 85.60], [330, 83.85], [320, 82.05], [310, 80.30],
+  [300, 78.55], [290, 76.70], [280, 74.80], [270, 72.95], [260, 71.05],
+  [250, 69.20], [240, 67.55], [230, 65.90], [220, 64.25], [210, 62.60],
+  [200, 60.95], [190, 59.40], [180, 57.85], [170, 56.35], [160, 54.80],
+  [150, 53.25], [140, 51.70], [130, 50.15], [120, 48.60], [110, 47.05],
+  [100, 45.50], [80, 42.40], [60, 39.30], [40, 36.20], [0, 30.00]
 ];
 
 /* ---------- CALCULATION FUNCTIONS ---------- */
@@ -3953,8 +3953,8 @@ function calculateATAR(entries) {
 }
 
 function aggregateToATAR(aggregate) {
-  if (aggregate >= 475) return 99.95;
-  if (aggregate <= 100) return 0;
+  if (aggregate >= 500) return 99.95;
+  if (aggregate <= 0) return 30;
   for (let i = 0; i < ATAR_TABLE.length - 1; i++) {
     const [highAgg, highATAR] = ATAR_TABLE[i];
     const [lowAgg, lowATAR] = ATAR_TABLE[i + 1];

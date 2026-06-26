@@ -2632,7 +2632,7 @@ section {
   border-radius: var(--radius-2xl);
   padding: 32px;
 }
-.results-breakdown h3 {
+.results-breakdown h2, .results-breakdown h3 {
   font-family: var(--font-display);
   font-size: 1.15rem;
   font-weight: 700;
@@ -3119,6 +3119,7 @@ section {
   <meta property="og:image:alt" content="ATAR Calculator — free 2026 estimator for every Australian state"/>
   <meta name="twitter:card" content="summary_large_image"/>
   <meta name="twitter:image" content="https://atarcalculators.com/og-image.png"/>
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
 </head>
 <body>
 <!-- Header injected by navigation.js -->
@@ -3182,7 +3183,7 @@ section {
 <div class="atar-aggregate">Aggregate: <span id="atar-aggregate">—</span></div>
 </div>
 <div class="results-breakdown">
-<h3>Your aggregate breakdown</h3>
+<h2>Your aggregate breakdown</h2>
 <p class="breakdown-sub">Your best 4 scaled study scores count in full (one must be English). Your 5th and 6th best each contribute 10%.</p>
 <table class="breakdown-table">
 <thead>
@@ -3266,13 +3267,13 @@ section {
 </div>
 <div class="related-grid">
 <a href="nsw.html"><b>NSW</b><span>HSC · UAC</span></a>
-
-
-
-
-
-
-
+<a href="qld.html"><b>QLD</b><span>QCE · QTAC</span></a>
+<a href="wa.html"><b>WA</b><span>WACE · TISC</span></a>
+<a href="sa.html"><b>SA</b><span>SACE · SATAC</span></a>
+<a href="tas.html"><b>TAS</b><span>TCE</span></a>
+<a href="act.html"><b>ACT</b><span>BSSS</span></a>
+<a href="nt.html"><b>NT</b><span>NTCET · SATAC</span></a>
+<a href="vce-scaling-calculators.html"><b>VCE scaling</b><span>By subject · VTAC</span></a>
 </div>
 </div>
 </section>
@@ -3831,8 +3832,8 @@ const VCE_ATAR_TABLE = [
   [210, 99.95], [200, 99.65], [190, 99.00], [180, 97.50],
   [170, 95.00], [160, 92.00], [150, 87.50], [140, 82.50],
   [130, 75.00], [120, 65.00], [110, 52.50], [100, 37.50],
-  [90, 22.00], [80, 12.00], [70, 6.00], [60, 2.50],
-  [50, 1.00], [0, 0]
+  [90, 30.00], [80, 30.00], [70, 30.00], [60, 30.00],
+  [50, 30.00], [0, 30.00]
 ];
 
 /* ---------- CALCULATION FUNCTIONS ---------- */
@@ -3849,7 +3850,7 @@ function getVCEScaledScore(subjectId, raw) {
   const lower = t['raw_' + lowerKey];
   const upper = (t['raw_' + upperKey] !== undefined) ? t['raw_' + upperKey] : lower;
   if (raw <= 20) {
-    // below the lowest anchor, scale down proportionally toward 0
+    // below the lowest anchor, scale down proportionally towards 0
     return Math.max(0, t['raw_20'] * (raw / 20));
   }
   if (upperKey === lowerKey) return lower;
@@ -3859,7 +3860,7 @@ function getVCEScaledScore(subjectId, raw) {
 
 function vceAggregateToATAR(agg) {
   if (agg >= 210) return 99.95;
-  if (agg <= 0) return 0;
+  if (agg <= 0) return 30;
   for (let i = 0; i < VCE_ATAR_TABLE.length - 1; i++) {
     const [hi, ha] = VCE_ATAR_TABLE[i];
     const [lo, la] = VCE_ATAR_TABLE[i + 1];
@@ -4054,7 +4055,7 @@ function renderSubjectList() {
                    id="score-${subject.id}"
                    class="subject-mark"
                    value="${hasScore ? entry.score : ''}"
-                   placeholder="Type your study score (0\u201350)"
+                   placeholder="Type your study score (0–50)"
                    inputmode="numeric"
                    data-id="${subject.id}"
                    aria-label="Study score for ${subject.name}">
