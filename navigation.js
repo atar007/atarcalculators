@@ -60,7 +60,7 @@
         <li><a class="nav-link" href="hsc-scaling-calculators.html">HSC Scaling</a></li>
         <li><a class="nav-link" href="vce-scaling-calculators.html">VCE Scaling</a></li>
         <li><a class="nav-link" href="university-calculators.html">University</a></li>
-        <li><a class="nav-link" href="methodology.html">Methodology</a></li>
+        <li><a class="nav-link" href="atar-target-calculator.html">Target ATAR</a></li>
       </ul>
     </nav>
     <a class="btn btn-primary nav-cta" href="atar-calculators.html">Calculate now</a>
@@ -82,7 +82,7 @@
       <a href="hsc-scaling-calculators.html">HSC Subject Scaling</a>
       <a href="vce-scaling-calculators.html">VCE Subject Scaling</a>
       <a href="university-calculators.html">University Calculators</a>
-      <a href="methodology.html">Methodology</a>
+      <a href="atar-target-calculator.html">Target ATAR Calculator</a>
       <a class="btn btn-primary" href="atar-calculators.html">Calculate now</a>
     </nav>
   </div>
@@ -135,6 +135,7 @@
           <li><a href="hsc-scaling-calculators.html">HSC subject scaling</a></li>
           <li><a href="vce-scaling-calculators.html">VCE subject scaling</a></li>
           <li><a href="university-calculators.html">University calculators</a></li>
+          <li><a href="atar-target-calculator.html">Target ATAR calculator</a></li>
         </ul>
       </div>
     </div>
