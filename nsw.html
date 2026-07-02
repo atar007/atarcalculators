@@ -3100,7 +3100,102 @@ section {
   .subject-input-wrap { padding: 8px 12px; }
 }
 
-  </style>
+  
+/* ============= CALCULATOR CONTENT STRUCTURE (formula, steps, worked example, mistakes) ============= */
+.calc-explainer { }
+.formula-box {
+  background: var(--bg-page, #F8FAFC);
+  border: 1px solid var(--border-default, #E2E8F0);
+  border-left: 4px solid var(--navy-700, #1E3A8A);
+  border-radius: var(--radius-lg, 12px);
+  padding: 20px 24px;
+  margin: 20px 0;
+  font-size: 1.02rem;
+}
+.formula-box .formula-eq {
+  font-family: var(--font-mono, ui-monospace, monospace);
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: var(--navy-700, #1E3A8A);
+  letter-spacing: -0.01em;
+  display: block;
+  margin: 6px 0 10px;
+  line-height: 1.5;
+}
+.steps-list { counter-reset: step; list-style: none; padding: 0; margin: 18px 0; }
+.steps-list > li {
+  position: relative;
+  padding: 0 0 18px 46px;
+  margin: 0;
+  line-height: 1.7;
+}
+.steps-list > li::before {
+  counter-increment: step;
+  content: counter(step);
+  position: absolute;
+  left: 0; top: 0;
+  width: 30px; height: 30px;
+  background: var(--navy-700, #1E3A8A);
+  color: #fff;
+  border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  font-weight: 700; font-size: 0.9rem;
+  font-family: var(--font-display, system-ui);
+}
+.steps-list > li:last-child { padding-bottom: 0; }
+.worked-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 18px 0;
+  font-size: 0.95rem;
+}
+.worked-table th, .worked-table td {
+  text-align: left;
+  padding: 10px 12px;
+  border-bottom: 1px solid var(--border-default, #E2E8F0);
+}
+.worked-table th {
+  background: var(--bg-page, #F8FAFC);
+  font-weight: 700;
+  color: var(--text-primary, #0F172A);
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+}
+.worked-table td.num, .worked-table th.num { text-align: right; font-variant-numeric: tabular-nums; }
+.worked-table tr.total-row td {
+  font-weight: 700;
+  color: var(--text-primary, #0F172A);
+  border-top: 2px solid var(--navy-700, #1E3A8A);
+  border-bottom: none;
+  background: var(--bg-page, #F8FAFC);
+}
+.worked-wrap { overflow-x: auto; -webkit-overflow-scrolling: touch; }
+.mistake-list { list-style: none; padding: 0; margin: 18px 0; }
+.mistake-list > li {
+  position: relative;
+  padding: 14px 16px 14px 48px;
+  margin-bottom: 12px;
+  background: var(--bg-page, #F8FAFC);
+  border: 1px solid var(--border-default, #E2E8F0);
+  border-radius: var(--radius-lg, 12px);
+  line-height: 1.65;
+}
+.mistake-list > li::before {
+  content: '!';
+  position: absolute;
+  left: 14px; top: 14px;
+  width: 24px; height: 24px;
+  background: #FEF2F2;
+  color: #DC2626;
+  border: 1px solid #FECACA;
+  border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  font-weight: 800; font-size: 0.9rem;
+}
+.mistake-list > li b { color: var(--text-primary, #0F172A); }
+
+</style>
   <style>
     .faq-extra{display:none !important;}
     .faq-extra.is-shown{display:block !important;}
@@ -3252,6 +3347,48 @@ section {
 </div>
 </section>
 <!-- UNIVERSITY MATCHING -->
+<section class="page-content"><div class="container">
+<div class="prose calc-explainer">
+<h2>How the NSW ATAR calculation works</h2>
+<p>Your NSW ATAR is not the average of your HSC marks. It is a <strong>rank</strong> built in three stages: scale each mark, add your best units into an aggregate, then convert that aggregate to a rank out of 99.95. Here is the exact method this calculator uses, following UAC's published scaling model.</p>
+
+<h3>The formula</h3>
+<div class="formula-box">
+<span class="formula-eq">Scaled mark (per unit) = HSC mark &rarr; scaled using your subject's scaling curve</span>
+<span class="formula-eq">Aggregate = sum of your best 10 units of scaled marks (out of 500)</span>
+<span class="formula-eq">ATAR = your aggregate converted to a percentile rank (0 to 99.95)</span>
+Every HSC course is worth 2 units, except Extension courses, which are worth 1 unit. English is compulsory: at least 2 units of an English course must be in your best 10.
+</div>
+
+<h3>Step by step</h3>
+<ol class="steps-list">
+<li><b>Scale each subject.</b> Your raw HSC mark (out of 100) is converted to a scaled mark using that subject's scaling curve for the year. Scaling reflects how academically strong the cohort in that subject was, not how "hard" the subject felt. A mark of 90 in a strong-scaling subject like Chemistry is worth more scaled marks than a 90 in a weaker-scaling subject.</li>
+<li><b>Convert to units.</b> Each 2-unit course contributes its scaled mark twice (once per unit). Each 1-unit Extension course contributes once. This is why a strong Extension course can lift your aggregate efficiently.</li>
+<li><b>Pick your best 10 units.</b> The calculator ranks all your scaled units highest to lowest and keeps the top 10, with the compulsory-English rule enforced. Weaker units are dropped from the aggregate.</li>
+<li><b>Sum to an aggregate.</b> Your best 10 units of scaled marks are added together, giving an aggregate out of a maximum of 500.</li>
+<li><b>Convert to an ATAR.</b> Your aggregate is mapped to a percentile rank between 0 and 99.95. This final step reflects where your aggregate sits against the whole Year 12 cohort, including students who did not become ATAR-eligible.</li>
+</ol>
+
+<h3>Worked example</h3>
+<p>Take a student sitting five 2-unit subjects (10 units in total). Here is how their marks flow through the calculation:</p>
+<div class="worked-wrap">
+<table class="worked-table">
+<thead><tr><th>Subject</th><th class="num">HSC mark</th><th class="num">Scaled / unit</th><th class="num">&times; units</th><th class="num">Scaled total</th></tr></thead>
+<tbody>
+<tr><td>English Advanced</td><td class="num">90</td><td class="num">40.3</td><td class="num">2</td><td class="num">80.6</td></tr>
+<tr><td>Chemistry</td><td class="num">92</td><td class="num">42.2</td><td class="num">2</td><td class="num">84.4</td></tr>
+<tr><td>Mathematics Advanced</td><td class="num">91</td><td class="num">40.9</td><td class="num">2</td><td class="num">81.9</td></tr>
+<tr><td>Physics</td><td class="num">88</td><td class="num">39.5</td><td class="num">2</td><td class="num">79.0</td></tr>
+<tr><td>Biology</td><td class="num">87</td><td class="num">34.4</td><td class="num">2</td><td class="num">68.8</td></tr>
+<tr class="total-row"><td>Aggregate (out of 500)</td><td class="num"></td><td class="num"></td><td class="num">10</td><td class="num">394.7</td></tr>
+</tbody>
+</table>
+</div>
+<p>An aggregate of <strong>394.7 out of 500</strong> converts to an ATAR of about <strong>93.7</strong>. Notice that even though every raw mark was in the high 80s or low 90s, the ATAR lands near 94, not 90 — because the ATAR is a rank, and this student ranks well against the cohort. Notice too that Biology, despite a solid HSC mark of 87, scaled the lowest of the five, because Biology scales down relative to Chemistry and Physics. Swapping a low-scaling subject you score well in is rarely worth it unless you can score just as highly in the higher-scaling one.</p>
+<p>Want the full technical detail? Read our <a href="methodology.html">methodology page</a>, or the deep-dive on <a href="hsc-scaling-calculators.html">how each HSC subject scales</a>.</p>
+</div>
+</div></section>
+
 <section class="universities-section" hidden="" id="universities-section">
 <div class="container">
 <div class="uni-wrap">
@@ -3278,6 +3415,21 @@ section {
 </div>
 </section>
 <!-- FAQ -->
+<section class="page-content"><div class="container">
+<div class="prose">
+<h2>Common mistakes when estimating your NSW ATAR</h2>
+<p>These are the errors that throw students' estimates off most often. Avoid them and your estimate will be far closer to your real result.</p>
+<ul class="mistake-list">
+<li><b>Treating the ATAR as an average of your marks.</b> It is a rank, not an average. An ATAR of 90 means you rank in the top 10% of the state, not that you averaged 90. This is why your ATAR can look higher or lower than your raw marks.</li>
+<li><b>Assuming "hard" subjects always scale up.</b> Scaling reflects the strength of the cohort in a subject, not its difficulty. Some subjects that feel hard scale modestly, and choosing a high-scaling subject only helps if you can actually score well in it.</li>
+<li><b>Forgetting the compulsory English rule.</b> At least 2 units of English must be in your best 10 units. If your English mark is low, it still has to count, which can pull your aggregate down. Plan your other subjects around that.</li>
+<li><b>Entering estimated marks that are too optimistic.</b> Students often enter their best-case marks rather than realistic ones. Enter the marks you are genuinely tracking towards, then run a second, more ambitious scenario separately.</li>
+<li><b>Ignoring adjustment factors, or over-counting them.</b> Bonus points (subject bonuses, regional, EAS) do not change your ATAR. They change your <em>selection rank</em> for specific courses. Do not add them to your ATAR estimate; check each university's scheme separately.</li>
+<li><b>Expecting an exact number.</b> No calculator can produce your precise ATAR before results day, because scaling depends on this year's actual cohort, which does not exist yet. Treat the estimate as a planning tool with a margin of roughly a point or two.</li>
+</ul>
+</div>
+</div></section>
+
 <section aria-labelledby="faq-title" class="faq-section" id="faq"><div class="container container-narrow">
         <h2 id="faq-title">NSW ATAR &mdash; common questions</h2>
         <details class="faq-item"><summary>How is the ATAR calculated in NSW?</summary><div class="faq-body"><p>You get a result in each subject. UAC scales each result against the state. Your best results are added into a aggregate out of 500. That total is ranked against every student. Your place in that line becomes your ATAR. The ATAR runs from 0 to 99.95.</p></div></details>
@@ -3325,6 +3477,7 @@ section {
 <a href="act.html"><b>ACT</b><span>BSSS</span></a>
 <a href="nt.html"><b>NT</b><span>NTCET · SATAC</span></a>
 <a href="hsc-scaling-calculators.html"><b>HSC scaling</b><span>By subject · UAC</span></a>
+<a href="hsc-atar-calculator.html"><b>HSC ATAR calculator</b><span>Exam-name version</span></a>
 </div>
 </div>
 </section>

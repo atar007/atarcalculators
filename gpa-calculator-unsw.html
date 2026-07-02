@@ -12,6 +12,7 @@
   </script>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large" />
 <meta name="theme-color" content="#1E3A8A" />
 <title>GPA Calculator UNSW 2026 — 7-Point Scale + WAM</title>
 <meta name="description" content="Free UNSW GPA calculator. Uses UNSW&#x27;s grade bands (HD 85+, D 75–84, CR 65–74) to give your GPA on the 7-point scale, plus your WAM. No signup." />
@@ -2812,7 +2813,102 @@ section {
 }
 
   
-  </style>
+  
+/* ============= CALCULATOR CONTENT STRUCTURE (formula, steps, worked example, mistakes) ============= */
+.calc-explainer { }
+.formula-box {
+  background: var(--bg-page, #F8FAFC);
+  border: 1px solid var(--border-default, #E2E8F0);
+  border-left: 4px solid var(--navy-700, #1E3A8A);
+  border-radius: var(--radius-lg, 12px);
+  padding: 20px 24px;
+  margin: 20px 0;
+  font-size: 1.02rem;
+}
+.formula-box .formula-eq {
+  font-family: var(--font-mono, ui-monospace, monospace);
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: var(--navy-700, #1E3A8A);
+  letter-spacing: -0.01em;
+  display: block;
+  margin: 6px 0 10px;
+  line-height: 1.5;
+}
+.steps-list { counter-reset: step; list-style: none; padding: 0; margin: 18px 0; }
+.steps-list > li {
+  position: relative;
+  padding: 0 0 18px 46px;
+  margin: 0;
+  line-height: 1.7;
+}
+.steps-list > li::before {
+  counter-increment: step;
+  content: counter(step);
+  position: absolute;
+  left: 0; top: 0;
+  width: 30px; height: 30px;
+  background: var(--navy-700, #1E3A8A);
+  color: #fff;
+  border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  font-weight: 700; font-size: 0.9rem;
+  font-family: var(--font-display, system-ui);
+}
+.steps-list > li:last-child { padding-bottom: 0; }
+.worked-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 18px 0;
+  font-size: 0.95rem;
+}
+.worked-table th, .worked-table td {
+  text-align: left;
+  padding: 10px 12px;
+  border-bottom: 1px solid var(--border-default, #E2E8F0);
+}
+.worked-table th {
+  background: var(--bg-page, #F8FAFC);
+  font-weight: 700;
+  color: var(--text-primary, #0F172A);
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+}
+.worked-table td.num, .worked-table th.num { text-align: right; font-variant-numeric: tabular-nums; }
+.worked-table tr.total-row td {
+  font-weight: 700;
+  color: var(--text-primary, #0F172A);
+  border-top: 2px solid var(--navy-700, #1E3A8A);
+  border-bottom: none;
+  background: var(--bg-page, #F8FAFC);
+}
+.worked-wrap { overflow-x: auto; -webkit-overflow-scrolling: touch; }
+.mistake-list { list-style: none; padding: 0; margin: 18px 0; }
+.mistake-list > li {
+  position: relative;
+  padding: 14px 16px 14px 48px;
+  margin-bottom: 12px;
+  background: var(--bg-page, #F8FAFC);
+  border: 1px solid var(--border-default, #E2E8F0);
+  border-radius: var(--radius-lg, 12px);
+  line-height: 1.65;
+}
+.mistake-list > li::before {
+  content: '!';
+  position: absolute;
+  left: 14px; top: 14px;
+  width: 24px; height: 24px;
+  background: #FEF2F2;
+  color: #DC2626;
+  border: 1px solid #FECACA;
+  border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  font-weight: 800; font-size: 0.9rem;
+}
+.mistake-list > li b { color: var(--text-primary, #0F172A); }
+
+</style>
 <style>
     /* Load-more FAQ + minor enhancements */
     .faq-extra{display:none !important;}
@@ -2897,6 +2993,42 @@ section {
 </div>
 </div></div></section>
 
+<section class="page-content"><div class="container">
+<div class="prose calc-explainer">
+<h2>How the UNSW GPA is calculated</h2>
+<p>Your GPA is a weighted average, not a simple one. Here is exactly how UNSW builds it from your unit marks and credit points.</p>
+<h3>The formula</h3>
+<div class="formula-box">
+<span class="formula-eq">GPA = &Sigma;(grade points &times; credit points) &divide; &Sigma;(credit points)</span>
+<span class="formula-eq">Each mark becomes grade points using UNSW’s scale, then weighted by credit points</span>
+<span class="formula-eq">A WAM (your credit-weighted average mark) can also be shown alongside</span>
+UNSW reports a GPA on a 7-point scale. Each unit’s mark becomes grade points, weighted by credit points, then averaged. Marks are not simply averaged; the grade bands do the work.
+</div>
+<h3>Step by step</h3>
+<ol class="steps-list">
+<li><b>Enter each unit’s mark and credit points.</b> For every unit, put in your mark out of 100 and how many credit points the unit is worth. Units are usually 6 or 12 credit points.</li>
+<li><b>Convert each mark to grade points.</b> Using UNSW’s scale (for example HD = 7 at 85+), each mark becomes grade points on the 7-point scale.</li>
+<li><b>Weight by credit points and average.</b> Multiply each unit’s grade points by its credit points, sum them, then divide by the total credit points.</li>
+<li><b>Read your result.</b> You get your GPA on the 7-point scale, plus your WAM alongside.</li>
+</ol>
+<h3>Worked example</h3>
+<p>Take four units, converting each mark to grade points on UNSW’s scale:</p>
+<div class="worked-wrap">
+<table class="worked-table">
+<thead><tr><th>Unit</th><th class="num">Mark</th><th class="num">Grade (pts)</th><th class="num">Credit pts</th><th class="num">Pts &times; CP</th></tr></thead>
+<tbody>
+<tr><td>Course A</td><td class="num">82</td><td class="num">D (6)</td><td class="num">12</td><td class="num">72</td></tr>
+<tr><td>Course B</td><td class="num">74</td><td class="num">C (5)</td><td class="num">12</td><td class="num">60</td></tr>
+<tr><td>Course C</td><td class="num">68</td><td class="num">C (5)</td><td class="num">6</td><td class="num">30</td></tr>
+<tr><td>Course D</td><td class="num">59</td><td class="num">P (4)</td><td class="num">6</td><td class="num">24</td></tr>
+<tr class="total-row"><td>Totals</td><td class="num"></td><td class="num"></td><td class="num">36</td><td class="num">186</td></tr>
+</tbody>
+</table>
+</div>
+<p>GPA = 186 &divide; 36 = <strong>5.17</strong> on the 7-point scale. The credit-point weighting means a 12-credit unit counts twice as much as a 6-credit one. Your WAM (credit-weighted average mark) for the same units is about <strong>73.2</strong>.</p>
+</div>
+</div></section>
+
 <section class="page-content"><div class="container" style="max-width:760px">
 <p>UNSW reports both a WAM and a GPA on the 7.0 scale. This calculator uses UNSW's grade bands — High Distinction 85+, Distinction 75–84, Credit 65–74, Pass 50–64 — and the formula <b>GPA = &Sigma;(grade points &times; credit points) &divide; total credit points</b>.</p><p>At UNSW the WAM is the figure most often used for Honours, prizes and program progression, so this tool shows your WAM alongside your GPA. A standard UNSW course is 6 units of credit.</p>
 <h2>UNSW grade bands</h2>
@@ -2915,6 +3047,20 @@ section {
 <p>UNSW leans on your <b>WAM</b> more than your GPA. A WAM is the average of your actual marks, weighted by units. Many honours and graduate programs quote a WAM cut-off, so it is worth tracking both numbers as you go.</p>
 <p>This tool gives both your GPA and your WAM. For a general Australian GPA, use the <a href="gpa-calculator-australia.html">GPA calculator</a>. For the WAM on its own, try the <a href="wam-calculator-australia.html">WAM calculator</a>. The official grade bands are on the <a href="https://www.unsw.edu.au" target="_blank" rel="noopener">UNSW website</a>.</p>
 </div></section>
+<section class="page-content"><div class="container">
+<div class="prose">
+<h2>Common mistakes with GPA calculations</h2>
+<p>These are the errors that most often produce a wrong GPA.</p>
+<ul class="mistake-list">
+<li><b>Averaging your marks without weighting.</b> A GPA weights each unit by its credit points. A 12-credit unit counts twice as much as a 6-credit one, so a plain average of your marks will be wrong.</li>
+<li><b>Assuming every university uses the same scale.</b> Grade cut-offs differ. Some universities set HD at 80, others at 85. Always use your own institution’s scale.</li>
+<li><b>Mixing up WAM and GPA.</b> A WAM is your average mark out of 100. A GPA groups marks into points (often out of 7). They are different numbers and are not interchangeable.</li>
+<li><b>Forgetting which units count.</b> Some programs exclude first-year or pass/fail units from the WAM. Check your course rules before assuming every unit is included.</li>
+<li><b>Treating an estimate as official.</b> This tool follows the standard method, but your university’s official figure is the one that counts for honours, prizes and applications. Use this to plan.</li>
+</ul>
+</div>
+</div></section>
+
 <section class="faq-section" id="faq"><div class="container" style="max-width:760px">
 <div class="section-header"><span class="eyebrow"><span class="eyebrow-dot"></span>FAQ</span><h2 class="section-title">Common questions</h2></div>
 <details class="faq-item"><summary>How does UNSW calculate GPA?</summary><div class="faq-answer"><p>UNSW converts each course mark to grade points using its bands (HD 85+ = 7, D 75–84 = 6, CR 65–74 = 5, PS 50–64 = 4, fail = 0), multiplies by the course's units of credit, sums, and divides by total units of credit. UNSW reports this 7.0 GPA alongside your WAM.</p></div></details>

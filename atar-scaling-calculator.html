@@ -2820,7 +2820,102 @@ section {
     .faq-loadmore-wrap{text-align:center;margin-top:1.75rem;}
     .faq-count-note{text-align:center;color:#64748b;font-size:.9rem;margin:.35rem 0 1.25rem;}
     #faq-loadmore{min-width:240px;}
-  </style>
+  
+/* ============= CALCULATOR CONTENT STRUCTURE (formula, steps, worked example, mistakes) ============= */
+.calc-explainer { }
+.formula-box {
+  background: var(--bg-page, #F8FAFC);
+  border: 1px solid var(--border-default, #E2E8F0);
+  border-left: 4px solid var(--navy-700, #1E3A8A);
+  border-radius: var(--radius-lg, 12px);
+  padding: 20px 24px;
+  margin: 20px 0;
+  font-size: 1.02rem;
+}
+.formula-box .formula-eq {
+  font-family: var(--font-mono, ui-monospace, monospace);
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: var(--navy-700, #1E3A8A);
+  letter-spacing: -0.01em;
+  display: block;
+  margin: 6px 0 10px;
+  line-height: 1.5;
+}
+.steps-list { counter-reset: step; list-style: none; padding: 0; margin: 18px 0; }
+.steps-list > li {
+  position: relative;
+  padding: 0 0 18px 46px;
+  margin: 0;
+  line-height: 1.7;
+}
+.steps-list > li::before {
+  counter-increment: step;
+  content: counter(step);
+  position: absolute;
+  left: 0; top: 0;
+  width: 30px; height: 30px;
+  background: var(--navy-700, #1E3A8A);
+  color: #fff;
+  border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  font-weight: 700; font-size: 0.9rem;
+  font-family: var(--font-display, system-ui);
+}
+.steps-list > li:last-child { padding-bottom: 0; }
+.worked-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 18px 0;
+  font-size: 0.95rem;
+}
+.worked-table th, .worked-table td {
+  text-align: left;
+  padding: 10px 12px;
+  border-bottom: 1px solid var(--border-default, #E2E8F0);
+}
+.worked-table th {
+  background: var(--bg-page, #F8FAFC);
+  font-weight: 700;
+  color: var(--text-primary, #0F172A);
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+}
+.worked-table td.num, .worked-table th.num { text-align: right; font-variant-numeric: tabular-nums; }
+.worked-table tr.total-row td {
+  font-weight: 700;
+  color: var(--text-primary, #0F172A);
+  border-top: 2px solid var(--navy-700, #1E3A8A);
+  border-bottom: none;
+  background: var(--bg-page, #F8FAFC);
+}
+.worked-wrap { overflow-x: auto; -webkit-overflow-scrolling: touch; }
+.mistake-list { list-style: none; padding: 0; margin: 18px 0; }
+.mistake-list > li {
+  position: relative;
+  padding: 14px 16px 14px 48px;
+  margin-bottom: 12px;
+  background: var(--bg-page, #F8FAFC);
+  border: 1px solid var(--border-default, #E2E8F0);
+  border-radius: var(--radius-lg, 12px);
+  line-height: 1.65;
+}
+.mistake-list > li::before {
+  content: '!';
+  position: absolute;
+  left: 14px; top: 14px;
+  width: 24px; height: 24px;
+  background: #FEF2F2;
+  color: #DC2626;
+  border: 1px solid #FECACA;
+  border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  font-weight: 800; font-size: 0.9rem;
+}
+.mistake-list > li b { color: var(--text-primary, #0F172A); }
+
+</style>
 <style>
 /* ===== HSC subject scaling calculator — supplementary (uses site tokens) ===== */
 .sub-section{padding:56px 0;background:var(--bg-surface)}
@@ -2872,7 +2967,44 @@ section {
 </head>
 <body>
 <!-- Header injected by navigation.js -->
-<main id="main"><section class="page-header"><div class="container"><div class="breadcrumb"><a href="index.html">Home</a><span class="breadcrumb-sep">/</span><a href="atar-calculators.html">Calculators</a><span class="breadcrumb-sep">/</span><span>ATAR Scaling</span></div><span class="eyebrow"><span class="eyebrow-dot"></span>HSC &amp; VCE · Scaling</span><h1>ATAR Scaling Calculator — see your <em>scaled score</em> for any subject.</h1><p class="lede">Pick any HSC or VCE subject, enter your mark or study score, and see your scaled score instantly. Built on the official 2025 scaling reports (UAC and VTAC), covering 31 subjects.</p><div class="meta">Using <b>UAC &amp; VTAC 2025</b> scaling reports · 15 VCE + 16 HSC subjects</div></div></section><section class="calc-section" id="calculator"><div class="container"><div class="calc-wrap"><div class="calc-card"><label class="scalc-label" for="subj">Choose your subject</label><select id="subj" style="width:100%;padding:13px 14px;font-size:16px;border:1.5px solid var(--navy-200);border-radius:var(--radius);background:#fff;margin:0 0 16px;font-family:inherit;color:var(--navy-900);cursor:pointer"><optgroup label="VCE — enter your study score"><option value="0">Accounting</option><option value="1">Biology</option><option value="2">Business Management</option><option value="3">Chemistry</option><option value="4">Economics</option><option value="5">English</option><option value="6">English Language</option><option value="7">General Mathematics</option><option value="8">Health and Human Development</option><option value="9">Legal Studies</option><option value="10">Literature</option><option value="11">Mathematical Methods</option><option value="12">Physics</option><option value="13">Psychology</option><option value="14">Specialist Mathematics</option></optgroup><optgroup label="HSC — enter your exam mark"><option value="15">Ancient History</option><option value="16">Biology</option><option value="17">Business Studies</option><option value="18">Chemistry</option><option value="19">Economics</option><option value="20">English Advanced</option><option value="21">English Standard</option><option value="22">Geography</option><option value="23">Legal Studies</option><option value="24">Maths Advanced</option><option value="25">Maths Extension 1</option><option value="26">Maths Extension 2</option><option value="27">Maths Standard</option><option value="28">Modern History</option><option value="29">PDHPE</option><option value="30">Physics</option></optgroup></select><label class="scalc-label" for="mark" id="mlabel">Your mark</label><div class="scalc-row"><div class="scalc-inwrap"><input id="mark" type="number" min="0" max="100" step="0.1" placeholder="e.g. 85" inputmode="decimal"/><span class="scalc-suffix" id="suffix">/ 100</span></div><button class="btn btn-primary btn-lg" id="go" type="button">Calculate scaled score</button><button class="btn btn-outline" id="reset" type="button">Reset</button></div><p class="scalc-err" id="err">Enter a valid value.</p><div class="scalc-result" id="res"><div class="scalc-rlabel" id="rlabel">Estimated scaled score</div><div class="scalc-big"><span id="scaled">0.0</span> <small id="denom">/ 50</small></div><div class="scalc-chips" id="chips"></div><p class="scalc-help">Estimates use the official 2025 scaling reports (UAC for HSC, VTAC for VCE). Your official scaled score is set by the relevant authority and released with your ATAR in December.</p></div></div></div></div></section><section class="page-content"><div class="container"><div class="prose"><h2>One scaling calculator for every HSC and VCE subject</h2><p>Every Year 12 subject is scaled before it counts towards your ATAR. This tool brings all 31 major HSC and VCE subjects into one place. Pick your subject, enter your result, and see the scaled score the official report points to.</p><p>HSC and VCE scale in different ways, and this calculator handles both. For an HSC subject, you enter your exam mark out of 100 and see your scaled mark out of 50. For a VCE subject, you enter your study score out of 50 and see your scaled study score, which can sit above 50 for the strongest-scaling subjects.</p><h2>Why subjects scale up or down</h2><p>Scaling is not a measure of how hard a subject is. It reflects how the students in that subject performed across all their other subjects. Subjects taken by very strong cohorts scale up. Subjects taken by broader cohorts scale down. Your rank within the subject never changes.</p><p>That means a strong score in a subject you are good at almost always beats a weak score in a high-scaling one. Choose subjects you can do well in, not subjects you think will scale.</p><h2>Want more detail on one subject?</h2><p>Each subject also has its own calculator with a full scaling table and percentile context. Browse all of them on the <a href="hsc-scaling-calculators.html">HSC scaling calculators</a> and <a href="vce-scaling-calculators.html">VCE scaling calculators</a> pages, or read how it all works in our <a href="methodology.html">methodology</a>. To turn your scaled scores into a full ATAR, use your state calculator from the <a href="atar-calculators.html">ATAR calculators</a> hub.</p></div></div></section><section class="page-content"><div class="container" style="max-width:760px"><p>Official VCE scaling is published each year by <a href="https://www.vtac.edu.au/" target="_blank" rel="noopener">VTAC</a> in its Scaling Report, which this calculator is built on.</p></div></section>
+<main id="main"><section class="page-header"><div class="container"><div class="breadcrumb"><a href="index.html">Home</a><span class="breadcrumb-sep">/</span><a href="atar-calculators.html">Calculators</a><span class="breadcrumb-sep">/</span><span>ATAR Scaling</span></div><span class="eyebrow"><span class="eyebrow-dot"></span>HSC &amp; VCE · Scaling</span><h1>ATAR Scaling Calculator — see your <em>scaled score</em> for any subject.</h1><p class="lede">Pick any HSC or VCE subject, enter your mark or study score, and see your scaled score instantly. Built on the official 2025 scaling reports (UAC and VTAC), covering 31 subjects.</p><div class="meta">Using <b>UAC &amp; VTAC 2025</b> scaling reports · 15 VCE + 16 HSC subjects</div></div></section><section class="calc-section" id="calculator"><div class="container"><div class="calc-wrap"><div class="calc-card"><label class="scalc-label" for="subj">Choose your subject</label><select id="subj" style="width:100%;padding:13px 14px;font-size:16px;border:1.5px solid var(--navy-200);border-radius:var(--radius);background:#fff;margin:0 0 16px;font-family:inherit;color:var(--navy-900);cursor:pointer"><optgroup label="VCE — enter your study score"><option value="0">Accounting</option><option value="1">Biology</option><option value="2">Business Management</option><option value="3">Chemistry</option><option value="4">Economics</option><option value="5">English</option><option value="6">English Language</option><option value="7">General Mathematics</option><option value="8">Health and Human Development</option><option value="9">Legal Studies</option><option value="10">Literature</option><option value="11">Mathematical Methods</option><option value="12">Physics</option><option value="13">Psychology</option><option value="14">Specialist Mathematics</option></optgroup><optgroup label="HSC — enter your exam mark"><option value="15">Ancient History</option><option value="16">Biology</option><option value="17">Business Studies</option><option value="18">Chemistry</option><option value="19">Economics</option><option value="20">English Advanced</option><option value="21">English Standard</option><option value="22">Geography</option><option value="23">Legal Studies</option><option value="24">Maths Advanced</option><option value="25">Maths Extension 1</option><option value="26">Maths Extension 2</option><option value="27">Maths Standard</option><option value="28">Modern History</option><option value="29">PDHPE</option><option value="30">Physics</option></optgroup></select><label class="scalc-label" for="mark" id="mlabel">Your mark</label><div class="scalc-row"><div class="scalc-inwrap"><input id="mark" type="number" min="0" max="100" step="0.1" placeholder="e.g. 85" inputmode="decimal"/><span class="scalc-suffix" id="suffix">/ 100</span></div><button class="btn btn-primary btn-lg" id="go" type="button">Calculate scaled score</button><button class="btn btn-outline" id="reset" type="button">Reset</button></div><p class="scalc-err" id="err">Enter a valid value.</p><div class="scalc-result" id="res"><div class="scalc-rlabel" id="rlabel">Estimated scaled score</div><div class="scalc-big"><span id="scaled">0.0</span> <small id="denom">/ 50</small></div><div class="scalc-chips" id="chips"></div><p class="scalc-help">Estimates use the official 2025 scaling reports (UAC for HSC, VTAC for VCE). Your official scaled score is set by the relevant authority and released with your ATAR in December.</p></div></div></div></div></section><section class="page-content"><div class="container">
+<div class="prose calc-explainer">
+<h2>How subject scaling works</h2>
+<p>This is the hub for every HSC and VCE subject scaling calculator. Scaling puts all subjects on the same footing so marks in different subjects can be compared fairly. Here is the principle behind it.</p>
+<h3>The formula</h3>
+<div class="formula-box">
+<span class="formula-eq">Scaled mark = your raw mark or study score &rarr; the subject’s scaling curve</span>
+<span class="formula-eq">Scaling reflects the strength of the cohort in each subject, not its difficulty</span>
+<span class="formula-eq">Scaled marks, not raw marks, feed your ATAR aggregate</span>
+Each subject has its own scaling curve, recalculated every year. Pick a specific subject below to see its exact curve and to convert your own mark.
+</div>
+<h3>Step by step</h3>
+<ol class="steps-list">
+<li><b>Choose your subject.</b> Select the HSC or VCE subject you want from the lists on this page. Each opens a calculator built on that subject’s real scaling data.</li>
+<li><b>Enter your mark or study score.</b> On the subject page, put in your raw HSC mark (out of 100) or VCE study score (out of 50).</li>
+<li><b>See your scaled mark.</b> The subject curve converts your mark to a scaled mark, and shows whether that subject scales up or down.</li>
+<li><b>Compare across subjects.</b> Use several subject calculators to see how your marks compare once scaled, which is what actually matters for your ATAR.</li>
+</ol>
+<h3>How to read it</h3>
+<p>A subject that "scales up" has a cohort that tends to perform strongly across all their subjects, so a given mark is worth more scaled marks. A subject that "scales down" is the opposite. Crucially, a scaled mark that is lower than your raw mark does not mean you were penalised, it means the raw and scaled scales are different rulers. Compare your scaled mark to other subjects, not to your own raw mark.</p>
+</div>
+</div></section>
+
+<section class="page-content"><div class="container"><div class="prose"><h2>One scaling calculator for every HSC and VCE subject</h2><p>Every Year 12 subject is scaled before it counts towards your ATAR. This tool brings all 31 major HSC and VCE subjects into one place. Pick your subject, enter your result, and see the scaled score the official report points to.</p><p>HSC and VCE scale in different ways, and this calculator handles both. For an HSC subject, you enter your exam mark out of 100 and see your scaled mark out of 50. For a VCE subject, you enter your study score out of 50 and see your scaled study score, which can sit above 50 for the strongest-scaling subjects.</p><h2>Why subjects scale up or down</h2><p>Scaling is not a measure of how hard a subject is. It reflects how the students in that subject performed across all their other subjects. Subjects taken by very strong cohorts scale up. Subjects taken by broader cohorts scale down. Your rank within the subject never changes.</p><p>That means a strong score in a subject you are good at almost always beats a weak score in a high-scaling one. Choose subjects you can do well in, not subjects you think will scale.</p><h2>Want more detail on one subject?</h2><p>Each subject also has its own calculator with a full scaling table and percentile context. Browse all of them on the <a href="hsc-scaling-calculators.html">HSC scaling calculators</a> and <a href="vce-scaling-calculators.html">VCE scaling calculators</a> pages, or read how it all works in our <a href="methodology.html">methodology</a>. To turn your scaled scores into a full ATAR, use your state calculator from the <a href="atar-calculators.html">ATAR calculators</a> hub.</p></div></div></section><section class="page-content"><div class="container" style="max-width:760px"><p>Official VCE scaling is published each year by <a href="https://www.vtac.edu.au/" target="_blank" rel="noopener">VTAC</a> in its Scaling Report, which this calculator is built on.</p></div></section>
+<section class="page-content"><div class="container">
+<div class="prose">
+<h2>Common mistakes about subject scaling</h2>
+<p>These are the most common misunderstandings about how scaling works.</p>
+<ul class="mistake-list">
+<li><b>Believing scaling rewards "hard" subjects.</b> It reflects cohort strength, not difficulty. A subject only helps if you can score well in it.</li>
+<li><b>Thinking a raw 100 becomes a scaled 50 or 50 study score.</b> Scaling is rank-based, not a straight percentage. The top of the scaled scale is set by the cohort.</li>
+<li><b>Choosing subjects purely for scaling.</b> A strong mark in a slightly lower-scaling subject usually beats a weak mark in a higher-scaling one.</li>
+<li><b>Assuming scaling is fixed year to year.</b> Each subject’s curve is recalculated annually from that year’s cohort. Last year is a guide, not a guarantee.</li>
+<li><b>Confusing a scaled mark with an ATAR.</b> A scaled mark is one subject’s contribution. The ATAR combines your best results and ranks them.</li>
+</ul>
+</div>
+</div></section>
+
 <section class="faq-section"><div class="container"><div class="faq-wrap"><h2>ATAR scaling — common questions</h2><details class="faq-item"><summary>What does this ATAR scaling calculator do?</summary><div class="faq-body"><p>It converts your HSC exam mark or VCE study score into a scaled score, using the official 2025 scaling reports from UAC and VTAC. Scaled scores are what actually count towards your ATAR.</p></div></details><details class="faq-item"><summary>How is HSC scaling different from VCE scaling?</summary><div class="faq-body"><p>For HSC, you enter your exam mark out of 100 and get a scaled mark out of 50. For VCE, you enter your study score out of 50 and get a scaled study score, which can go above 50 for top-scaling subjects. This tool applies the right method for the subject you pick.</p></div></details><details class="faq-item"><summary>Which subjects can I check?</summary><div class="faq-body"><p>All major subjects across both systems: 16 HSC subjects and 15 VCE subjects, covering the sciences, maths, English, humanities and more.</p></div></details><details class="faq-item"><summary>Is the scaled score exact?</summary><div class="faq-body"><p>No, it is a close estimate based on the latest official scaling report. Your real scaled score is set by UAC or VTAC and released with your ATAR in December.</p></div></details><details class="faq-item"><summary>Why do some subjects scale up and others scale down?</summary><div class="faq-body"><p>Scaling reflects how competitive a subject's cohort is, not how hard the subject is. Subjects with strong cohorts scale up; subjects with broader cohorts scale down. Your position within the subject is never changed.</p></div></details><details class="faq-item"><summary>Does a higher-scaling subject mean a higher ATAR?</summary><div class="faq-body"><p>Not on its own. A strong score in a subject you are good at almost always beats a weak score in a high-scaling subject. Pick subjects you can perform well in.</p></div></details></div></div></section><section class="related-calc"><div class="container">
 <div class="uni-header"><span class="eyebrow"><span class="eyebrow-dot"></span>Keep going</span><h2>Related scaling tools</h2></div>
 <div class="related-grid">

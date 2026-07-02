@@ -61,6 +61,7 @@
         <li><a class="nav-link" href="vce-scaling-calculators.html">VCE Scaling</a></li>
         <li><a class="nav-link" href="university-calculators.html">University</a></li>
         <li><a class="nav-link" href="atar-target-calculator.html">Target ATAR</a></li>
+        <li><a class="nav-link" href="blog.html">Guides</a></li>
       </ul>
     </nav>
     <a class="btn btn-primary nav-cta" href="atar-calculators.html">Calculate now</a>
@@ -83,6 +84,7 @@
       <a href="vce-scaling-calculators.html">VCE Subject Scaling</a>
       <a href="university-calculators.html">University Calculators</a>
       <a href="atar-target-calculator.html">Target ATAR Calculator</a>
+      <a href="blog.html">Guides &amp; articles</a>
       <a class="btn btn-primary" href="atar-calculators.html">Calculate now</a>
     </nav>
   </div>
@@ -122,6 +124,7 @@
         <ul>
           <li><a href="about.html">About us</a></li>
           <li><a href="methodology.html">Our methodology</a></li>
+          <li><a href="blog.html">Guides &amp; articles</a></li>
           <li><a href="index.html#faq">FAQ</a></li>
           <li><a href="contact.html">Contact</a></li>
           <li><a href="privacy.html">Privacy</a></li>
@@ -141,7 +144,7 @@
     </div>
     <div class="footer-bottom">
       <p>&copy; <span id="year">${year}</span> ATARCalculators.com — Independent and free.</p>
-      <p class="footer-disclaimer">Estimates only. The official ATAR is calculated by your state's tertiary admissions body. Using scaling reports <b>published Feb 2026</b>.</p>
+      <p class="footer-disclaimer">Estimates only — your official ATAR comes from your state's tertiary admissions body. Figures sourced from official UAC, VTAC, QTAC, SCSA, SATAC, TASC &amp; BSSS reports (and ACARA for NAPLAN). Reviewed by the <a href="about.html#editorial-team">ATARCalculators Editorial Team</a> · Last updated <b>Feb 2026</b>.</p>
     </div>
   </div>
 </footer>

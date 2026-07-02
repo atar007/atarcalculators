@@ -2820,7 +2820,102 @@ section {
     .faq-loadmore-wrap{text-align:center;margin-top:1.75rem;}
     .faq-count-note{text-align:center;color:#64748b;font-size:.9rem;margin:.35rem 0 1.25rem;}
     #faq-loadmore{min-width:240px;}
-  </style>
+  
+/* ============= CALCULATOR CONTENT STRUCTURE (formula, steps, worked example, mistakes) ============= */
+.calc-explainer { }
+.formula-box {
+  background: var(--bg-page, #F8FAFC);
+  border: 1px solid var(--border-default, #E2E8F0);
+  border-left: 4px solid var(--navy-700, #1E3A8A);
+  border-radius: var(--radius-lg, 12px);
+  padding: 20px 24px;
+  margin: 20px 0;
+  font-size: 1.02rem;
+}
+.formula-box .formula-eq {
+  font-family: var(--font-mono, ui-monospace, monospace);
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: var(--navy-700, #1E3A8A);
+  letter-spacing: -0.01em;
+  display: block;
+  margin: 6px 0 10px;
+  line-height: 1.5;
+}
+.steps-list { counter-reset: step; list-style: none; padding: 0; margin: 18px 0; }
+.steps-list > li {
+  position: relative;
+  padding: 0 0 18px 46px;
+  margin: 0;
+  line-height: 1.7;
+}
+.steps-list > li::before {
+  counter-increment: step;
+  content: counter(step);
+  position: absolute;
+  left: 0; top: 0;
+  width: 30px; height: 30px;
+  background: var(--navy-700, #1E3A8A);
+  color: #fff;
+  border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  font-weight: 700; font-size: 0.9rem;
+  font-family: var(--font-display, system-ui);
+}
+.steps-list > li:last-child { padding-bottom: 0; }
+.worked-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 18px 0;
+  font-size: 0.95rem;
+}
+.worked-table th, .worked-table td {
+  text-align: left;
+  padding: 10px 12px;
+  border-bottom: 1px solid var(--border-default, #E2E8F0);
+}
+.worked-table th {
+  background: var(--bg-page, #F8FAFC);
+  font-weight: 700;
+  color: var(--text-primary, #0F172A);
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+}
+.worked-table td.num, .worked-table th.num { text-align: right; font-variant-numeric: tabular-nums; }
+.worked-table tr.total-row td {
+  font-weight: 700;
+  color: var(--text-primary, #0F172A);
+  border-top: 2px solid var(--navy-700, #1E3A8A);
+  border-bottom: none;
+  background: var(--bg-page, #F8FAFC);
+}
+.worked-wrap { overflow-x: auto; -webkit-overflow-scrolling: touch; }
+.mistake-list { list-style: none; padding: 0; margin: 18px 0; }
+.mistake-list > li {
+  position: relative;
+  padding: 14px 16px 14px 48px;
+  margin-bottom: 12px;
+  background: var(--bg-page, #F8FAFC);
+  border: 1px solid var(--border-default, #E2E8F0);
+  border-radius: var(--radius-lg, 12px);
+  line-height: 1.65;
+}
+.mistake-list > li::before {
+  content: '!';
+  position: absolute;
+  left: 14px; top: 14px;
+  width: 24px; height: 24px;
+  background: #FEF2F2;
+  color: #DC2626;
+  border: 1px solid #FECACA;
+  border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  font-weight: 800; font-size: 0.9rem;
+}
+.mistake-list > li b { color: var(--text-primary, #0F172A); }
+
+</style>
 <style>
 /* ===== HSC subject scaling calculator — supplementary (uses site tokens) ===== */
 .sub-section{padding:56px 0;background:var(--bg-surface)}
@@ -2872,12 +2967,61 @@ section {
 <style>.data-table{width:100%;border-collapse:collapse;font-size:15px;margin:14px 0}.data-table th,.data-table td{text-align:left;padding:11px 14px;border-bottom:1px solid var(--navy-100);vertical-align:top}.data-table th{background:var(--navy-50);color:var(--navy-900);font-weight:700;font-size:13px;text-transform:uppercase;letter-spacing:.03em}.data-table tr:last-child td{border-bottom:none}.scale-scroll{overflow-x:auto;border:1px solid var(--navy-100);border-radius:var(--radius)}</style></head>
 <body>
 <!-- Header injected by navigation.js -->
-<main id="main"><section class="page-header"><div class="container"><div class="breadcrumb"><a href="index.html">Home</a><span class="breadcrumb-sep">/</span><a href="atar-calculators.html">Calculators</a><span class="breadcrumb-sep">/</span><span>NAPLAN Band</span></div><span class="eyebrow"><span class="eyebrow-dot"></span>NAPLAN · Old Bands</span><h1>NAPLAN Band Calculator — convert <em>old bands</em> to the new levels.</h1><p class="lede">NAPLAN retired the 10-band scale in 2023 and replaced it with four proficiency levels. If you remember the old bands, pick one below to see roughly where it sits in the new system.</p><div class="meta">Approximate mapping based on <b>ACARA</b>'s old-to-new guidance (Year 5 reference)</div></div></section><section class="calc-section" id="calculator"><div class="container"><div class="calc-wrap"><div class="calc-card"><label class="scalc-label" for="band">Pick the old NAPLAN band (1 to 10)</label><div class="scalc-row"><div class="scalc-inwrap" style="max-width:160px"><select id="band" style="width:100%;padding:13px 14px;font-size:16px;border:1.5px solid var(--navy-200);border-radius:var(--radius);background:#fff;font-family:inherit;color:var(--navy-900);cursor:pointer"><option value="1">Band 1</option><option value="2">Band 2</option><option value="3">Band 3</option><option value="4">Band 4</option><option value="5">Band 5</option><option value="6">Band 6</option><option value="7">Band 7</option><option value="8">Band 8</option><option value="9">Band 9</option><option value="10">Band 10</option></select></div><button class="btn btn-primary btn-lg" id="go" type="button">Convert to new level</button></div><div class="scalc-result" id="res"><div class="scalc-rlabel">New proficiency level (approximate)</div><div class="scalc-big" style="font-size:1.6rem" id="level">&mdash;</div><div class="scalc-chips" id="chips"></div><p class="scalc-help">An approximate guide based on ACARA's old-to-new mapping using a Year 5 reference. The exact relationship varies a little by year level, because the proficiency cut scores rise as students get older. NAPLAN no longer issues bands.</p></div></div></div></div></section><section class="page-content"><div class="container"><div class="prose"><h2>Why the bands disappeared</h2><p>From 2008 to 2022, NAPLAN placed every result on a 10-band scale, with six bands shown at each year level. In 2023 ACARA replaced this with four proficiency levels, reset the measurement scale, and moved the test online. Results from 2022 and earlier cannot be compared with 2023 onwards.</p><p>The new system is simpler to read. Instead of decoding a band number, you see one of four plain labels: Exceeding, Strong, Developing, or Needs additional support. The table above shows the rough relationship for context.</p><h2>Reference table</h2><div class="scale-scroll"><table class="data-table"><thead><tr><th>Old NAPLAN band</th><th>New proficiency level (approx.)</th></tr></thead><tbody><tr><td style="font-weight:700;color:var(--navy-900)">Band 1</td><td>Needs additional support</td></tr><tr><td style="font-weight:700;color:var(--navy-900)">Band 2</td><td>Needs additional support</td></tr><tr><td style="font-weight:700;color:var(--navy-900)">Band 3</td><td>Needs additional support</td></tr><tr><td style="font-weight:700;color:var(--navy-900)">Band 4</td><td>Developing</td></tr><tr><td style="font-weight:700;color:var(--navy-900)">Band 5</td><td>Strong</td></tr><tr><td style="font-weight:700;color:var(--navy-900)">Band 6</td><td>Strong</td></tr><tr><td style="font-weight:700;color:var(--navy-900)">Band 7</td><td>Exceeding</td></tr><tr><td style="font-weight:700;color:var(--navy-900)">Band 8</td><td>Exceeding</td></tr><tr><td style="font-weight:700;color:var(--navy-900)">Band 9</td><td>Exceeding</td></tr><tr><td style="font-weight:700;color:var(--navy-900)">Band 10</td><td>Exceeding</td></tr></tbody></table></div><p style="font-size:14px;color:var(--navy-600);margin-top:10px">This mapping is approximate and based on a Year 5 reference. Use your child's current report for the official proficiency level.</p><h2>What to do with an old band result</h2><p>If you have a report from before 2023, the band still tells you whether your child was above or below the old national minimum standard (which sat at Band 2 in Year 3, rising each year). For anything current, use the <a href="naplan-score-calculator.html">NAPLAN score calculator</a> to read a scale score, or the <a href="naplan-year-9-calculator.html">Year 9 NAPLAN calculator</a> for the HSC link.</p></div></div></section><section class="page-content"><div class="container" style="max-width:760px">
+<main id="main"><section class="page-header"><div class="container"><div class="breadcrumb"><a href="index.html">Home</a><span class="breadcrumb-sep">/</span><a href="atar-calculators.html">Calculators</a><span class="breadcrumb-sep">/</span><span>NAPLAN Band</span></div><span class="eyebrow"><span class="eyebrow-dot"></span>NAPLAN · Old Bands</span><h1>NAPLAN Band Calculator — convert <em>old bands</em> to the new levels.</h1><p class="lede">NAPLAN retired the 10-band scale in 2023 and replaced it with four proficiency levels. If you remember the old bands, pick one below to see roughly where it sits in the new system.</p><div class="meta">Approximate mapping based on <b>ACARA</b>'s old-to-new guidance (Year 5 reference)</div></div></section><section class="calc-section" id="calculator"><div class="container"><div class="calc-wrap"><div class="calc-card"><label class="scalc-label" for="band">Pick the old NAPLAN band (1 to 10)</label><div class="scalc-row"><div class="scalc-inwrap" style="max-width:160px"><select id="band" style="width:100%;padding:13px 14px;font-size:16px;border:1.5px solid var(--navy-200);border-radius:var(--radius);background:#fff;font-family:inherit;color:var(--navy-900);cursor:pointer"><option value="1">Band 1</option><option value="2">Band 2</option><option value="3">Band 3</option><option value="4">Band 4</option><option value="5">Band 5</option><option value="6">Band 6</option><option value="7">Band 7</option><option value="8">Band 8</option><option value="9">Band 9</option><option value="10">Band 10</option></select></div><button class="btn btn-primary btn-lg" id="go" type="button">Convert to new level</button></div><div class="scalc-result" id="res"><div class="scalc-rlabel">New proficiency level (approximate)</div><div class="scalc-big" style="font-size:1.6rem" id="level">&mdash;</div><div class="scalc-chips" id="chips"></div><p class="scalc-help">An approximate guide based on ACARA's old-to-new mapping using a Year 5 reference. The exact relationship varies a little by year level, because the proficiency cut scores rise as students get older. NAPLAN no longer issues bands.</p></div></div></div></div></section><section class="page-content"><div class="container">
+<div class="prose calc-explainer">
+<h2>How NAPLAN bands map to the new levels</h2>
+<p>NAPLAN used to report results in numbered bands. Since 2023 it uses four proficiency levels instead. This tool helps you translate an old band result into the current system. Here is how it works.</p>
+<h3>The formula</h3>
+<div class="formula-box">
+<span class="formula-eq">Old system = numbered bands (the exact bands shown depended on year level)</span>
+<span class="formula-eq">New system = four proficiency levels</span>
+<span class="formula-eq">This tool maps an old band onto the closest current level</span>
+The band-to-level mapping is approximate, because the two systems were built differently. It is useful for making sense of an older report, not for official comparison.
+</div>
+<h3>Step by step</h3>
+<ol class="steps-list">
+<li><b>Find your old band.</b> Look up the numbered band from a NAPLAN report issued before 2023.</li>
+<li><b>Compare to the level boundaries.</b> The old bands are lined up against the four current proficiency levels for that year.</li>
+<li><b>Read the closest level.</b> You get the proficiency level that most closely matches the old band.</li>
+<li><b>Use it for context.</b> Treat the result as a rough translation so an older report still makes sense today.</li>
+</ol>
+<h3>Worked example</h3>
+<p>Roughly how the old bands relate to the four current levels:</p>
+<div class="worked-wrap">
+<table class="worked-table">
+<thead><tr><th>Old band (higher = stronger)</th><th>Closest current level</th></tr></thead>
+<tbody>
+<tr><td>Top bands for the year</td><td>Exceeding</td></tr>
+<tr><td>Upper-middle bands</td><td>Strong</td></tr>
+<tr><td>Lower-middle bands</td><td>Developing</td></tr>
+<tr><td>Bottom bands</td><td>Needs additional support</td></tr>
+</tbody>
+</table>
+</div>
+<p>Because band numbers meant different things at different year levels, this is an approximate guide only. A top band in Year 3 and a top band in Year 9 both map to <strong>Exceeding</strong>, but they represent very different scale scores. Use the calculator above for a specific band.</p>
+</div>
+</div></section>
+
+<section class="page-content"><div class="container"><div class="prose"><h2>Why the bands disappeared</h2><p>From 2008 to 2022, NAPLAN placed every result on a 10-band scale, with six bands shown at each year level. In 2023 ACARA replaced this with four proficiency levels, reset the measurement scale, and moved the test online. Results from 2022 and earlier cannot be compared with 2023 onwards.</p><p>The new system is simpler to read. Instead of decoding a band number, you see one of four plain labels: Exceeding, Strong, Developing, or Needs additional support. The table above shows the rough relationship for context.</p><h2>Reference table</h2><div class="scale-scroll"><table class="data-table"><thead><tr><th>Old NAPLAN band</th><th>New proficiency level (approx.)</th></tr></thead><tbody><tr><td style="font-weight:700;color:var(--navy-900)">Band 1</td><td>Needs additional support</td></tr><tr><td style="font-weight:700;color:var(--navy-900)">Band 2</td><td>Needs additional support</td></tr><tr><td style="font-weight:700;color:var(--navy-900)">Band 3</td><td>Needs additional support</td></tr><tr><td style="font-weight:700;color:var(--navy-900)">Band 4</td><td>Developing</td></tr><tr><td style="font-weight:700;color:var(--navy-900)">Band 5</td><td>Strong</td></tr><tr><td style="font-weight:700;color:var(--navy-900)">Band 6</td><td>Strong</td></tr><tr><td style="font-weight:700;color:var(--navy-900)">Band 7</td><td>Exceeding</td></tr><tr><td style="font-weight:700;color:var(--navy-900)">Band 8</td><td>Exceeding</td></tr><tr><td style="font-weight:700;color:var(--navy-900)">Band 9</td><td>Exceeding</td></tr><tr><td style="font-weight:700;color:var(--navy-900)">Band 10</td><td>Exceeding</td></tr></tbody></table></div><p style="font-size:14px;color:var(--navy-600);margin-top:10px">This mapping is approximate and based on a Year 5 reference. Use your child's current report for the official proficiency level.</p><h2>What to do with an old band result</h2><p>If you have a report from before 2023, the band still tells you whether your child was above or below the old national minimum standard (which sat at Band 2 in Year 3, rising each year). For anything current, use the <a href="naplan-score-calculator.html">NAPLAN score calculator</a> to read a scale score, or the <a href="naplan-year-9-calculator.html">Year 9 NAPLAN calculator</a> for the HSC link.</p></div></div></section><section class="page-content"><div class="container" style="max-width:760px">
 <h2>Why NAPLAN moved from bands to levels</h2>
 <p>Until 2022, NAPLAN used a <b>10-band scale</b>. From 2023, it uses <b>four proficiency levels</b> instead: Exceeding, Strong, Developing and Needs additional support. The change makes results easier to read for families.</p>
 <p>The old bands and the new levels do not line up exactly. As a rough guide, the top bands map to Exceeding, the middle bands map to Strong, and the lower bands map to Developing or below. Each year level has its own score range, so a Year 3 score and a Year 9 score are not the same thing.</p>
 <p>To read a current score, use the <a href="naplan-score-calculator.html">NAPLAN score calculator</a>. For Year 9 results and the HSC link, see the <a href="naplan-year-9-calculator.html">Year 9 NAPLAN calculator</a>. The official reports and sample tests are on the <a href="https://www.nap.edu.au" target="_blank" rel="noopener">NAP website</a>.</p>
 </div></section>
+<section class="page-content"><div class="container">
+<div class="prose">
+<h2>Common mistakes with old NAPLAN bands</h2>
+<p>These are the errors people make when interpreting old band results.</p>
+<ul class="mistake-list">
+<li><b>Treating band numbers as fixed across years.</b> The same band number meant different things in Year 3 versus Year 9. Always read a band in the context of its year level.</li>
+<li><b>Expecting an exact band-to-level match.</b> The old and new systems were built differently, so any mapping is approximate.</li>
+<li><b>Comparing old and new reports directly.</b> A pre-2023 band result and a current level result are not on the same scale. Translate before comparing.</li>
+<li><b>Assuming a higher band always means a top level.</b> It depends on the year and the boundaries. Use the mapping rather than guessing.</li>
+<li><b>Reading too much into one result.</b> A single NAPLAN result, old or new, is one snapshot and does not define a student.</li>
+</ul>
+</div>
+</div></section>
+
 <section class="faq-section"><div class="container"><div class="faq-wrap"><h2>NAPLAN bands — common questions</h2><details class="faq-item"><summary>What happened to NAPLAN bands?</summary><div class="faq-body"><p>ACARA retired the 10-band scale in 2023 and replaced it with four proficiency levels: Exceeding, Strong, Developing, and Needs additional support. The measurement scale was also reset.</p></div></details><details class="faq-item"><summary>What does my old band mean now?</summary><div class="faq-body"><p>As a rough guide using a Year 5 reference: Bands 1 to 3 map to Needs additional support, Band 4 to Developing, Bands 5 to 6 to Strong, and Bands 7 to 10 to Exceeding.</p></div></details><details class="faq-item"><summary>Can I compare old band results with new ones?</summary><div class="faq-body"><p>No. The scale was reset in 2023, so results from 2022 and earlier cannot be directly compared with 2023 onwards. Use them only as separate snapshots.</p></div></details><details class="faq-item"><summary>Is the band-to-level mapping exact?</summary><div class="faq-body"><p>No, it is approximate. The proficiency cut scores rise with each year level, so the exact relationship shifts a little between Year 3 and Year 9.</p></div></details><details class="faq-item"><summary>Which band was the old national minimum standard?</summary><div class="faq-body"><p>The old national minimum standard sat at the second band shown for each year level, for example Band 2 in Year 3 and Band 5 in Year 7. The new equivalent is the line between Developing and Strong.</p></div></details><details class="faq-item"><summary>How do I read a current NAPLAN result?</summary><div class="faq-body"><p>Use the proficiency level on your child's report, or enter the scale score into the NAPLAN score calculator to see the indicative level.</p></div></details></div></div><details class='faq-item'><summary>What replaced NAPLAN bands in 2023?</summary><div class='faq-body'><p>Four proficiency levels replaced the old 10-band scale: Exceeding, Strong, Developing and Needs additional support. The change started with the 2023 tests.</p></div></details>
 <details class='faq-item'><summary>What does 'Strong' mean in the new NAPLAN scale?</summary><div class='faq-body'><p>Strong means a student meets the expected level for their year. It roughly matches the middle of the old band range. The exact score range differs by year and subject.</p></div></details>
 <details class='faq-item'><summary>Are old NAPLAN bands and new levels the same?</summary><div class='faq-body'><p>No, they do not line up exactly. The top bands map to Exceeding and the middle bands map to Strong. Treat any conversion as a guide only.</p></div></details>
@@ -2888,6 +3032,16 @@ section {
 <a href='naplan-year-9-calculator.html'><b>Year 9 NAPLAN</b><span>HSC link</span></a>
 <a href='selective-schools-test-score-calculator-nsw.html'><b>NSW selective</b><span>Placement score</span></a>
 <a href='atar-calculators.html'><b>ATAR calculators</b><span>By state</span></a>
+</div>
+</div></section>
+<section class="related-calc"><div class="container">
+<div class="uni-header"><span class="eyebrow"><span class="eyebrow-dot"></span>Read next</span><h2>NAPLAN band guides</h2></div>
+<div class="related-grid">
+<a href='naplan-bands-by-year-level.html'><b>Bands by year level</b><span>Complete reference</span></a>
+<a href='naplan-band-8.html'><b>What was Band 8?</b><span>Meaning and range</span></a>
+<a href='naplan-minimum-vs-proficient.html'><b>Minimum vs Strong</b><span>Benchmarks explained</span></a>
+<a href='naplan-band-year-comparison.html'><b>NAPLAN across the years</b><span>Track progress</span></a>
+<a href='improve-naplan-bands.html'><b>Improve NAPLAN results</b><span>Practical steps</span></a>
 </div>
 </div></section>
 </main>

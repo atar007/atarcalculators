@@ -12,14 +12,14 @@
   </script>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<meta name="description" content="Work out the marks you need for your target ATAR. Enter an ATAR goal and see the aggregate, average scaled mark and raw HSC marks required, using official UAC scaling."/>
+<meta name="description" content="Work out the marks you need for your target ATAR. Free tool, no signup. Enter a goal ATAR and see what each subject needs to get there."/>
 <meta content="#1E3A8A" name="theme-color"/>
 <meta content="index, follow, max-snippet:-1, max-image-preview:large" name="robots"/>
 <meta content="ATARCalculators" name="author"/>
 <meta name="keywords" content="hsc chemistry scaling calculator, chemistry hsc scaling, chemistry scaled mark, hsc chemistry atar contribution, chemistry scaling 2026"/>
 <link href="https://atarcalculators.com/atar-target-calculator" rel="canonical"/>
 <meta property="og:title" content="ATAR Target Calculator 2026 — What Marks Do You Need?"/>
-<meta property="og:description" content="Work out the marks you need for your target ATAR. Enter an ATAR goal and see the aggregate, average scaled mark and raw HSC marks required, using official UAC scaling."/>
+<meta property="og:description" content="Work out the marks you need for your target ATAR. Free tool, no signup. Enter a goal ATAR and see what each subject needs to get there."/>
 <meta content="website" property="og:type"/>
 <meta content="https://atarcalculators.com/atar-target-calculator" property="og:url"/>
 <meta content="ATARCalculators" property="og:site_name"/>
@@ -27,7 +27,7 @@
 <meta property="og:image" content="https://atarcalculators.com/og-image.png"/>
 <meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:title" content="ATAR Target Calculator 2026 — What Marks Do You Need?"/>
-<meta name="twitter:description" content="Work out the marks you need for your target ATAR. Enter an ATAR goal and see the aggregate, average scaled mark and raw HSC marks required, using official UAC scaling."/>
+<meta name="twitter:description" content="Work out the marks you need for your target ATAR. Free tool, no signup. Enter a goal ATAR and see what each subject needs to get there."/>
 <meta name="twitter:image" content="https://atarcalculators.com/og-image.png"/>
 <title>ATAR Target Calculator 2026 — What Marks Do You Need?</title>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebApplication", "name": "ATAR Target Calculator", "url": "https://atarcalculators.com/atar-target-calculator", "applicationCategory": "EducationalApplication", "operatingSystem": "Any", "browserRequirements": "Requires JavaScript", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "AUD"}, "description": "Free ATAR predictor for 2026. Enter your scaled study scores and predict your ATAR using the official VTAC aggregate table. Instant, no signup.", "inLanguage": "en-AU", "isAccessibleForFree": true, "creator": {"@type": "Organization", "name": "ATARCalculators", "url": "https://atarcalculators.com/"}}</script>
@@ -2820,7 +2820,102 @@ section {
     .faq-loadmore-wrap{text-align:center;margin-top:1.75rem;}
     .faq-count-note{text-align:center;color:#64748b;font-size:.9rem;margin:.35rem 0 1.25rem;}
     #faq-loadmore{min-width:240px;}
-  </style>
+  
+/* ============= CALCULATOR CONTENT STRUCTURE (formula, steps, worked example, mistakes) ============= */
+.calc-explainer { }
+.formula-box {
+  background: var(--bg-page, #F8FAFC);
+  border: 1px solid var(--border-default, #E2E8F0);
+  border-left: 4px solid var(--navy-700, #1E3A8A);
+  border-radius: var(--radius-lg, 12px);
+  padding: 20px 24px;
+  margin: 20px 0;
+  font-size: 1.02rem;
+}
+.formula-box .formula-eq {
+  font-family: var(--font-mono, ui-monospace, monospace);
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: var(--navy-700, #1E3A8A);
+  letter-spacing: -0.01em;
+  display: block;
+  margin: 6px 0 10px;
+  line-height: 1.5;
+}
+.steps-list { counter-reset: step; list-style: none; padding: 0; margin: 18px 0; }
+.steps-list > li {
+  position: relative;
+  padding: 0 0 18px 46px;
+  margin: 0;
+  line-height: 1.7;
+}
+.steps-list > li::before {
+  counter-increment: step;
+  content: counter(step);
+  position: absolute;
+  left: 0; top: 0;
+  width: 30px; height: 30px;
+  background: var(--navy-700, #1E3A8A);
+  color: #fff;
+  border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  font-weight: 700; font-size: 0.9rem;
+  font-family: var(--font-display, system-ui);
+}
+.steps-list > li:last-child { padding-bottom: 0; }
+.worked-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 18px 0;
+  font-size: 0.95rem;
+}
+.worked-table th, .worked-table td {
+  text-align: left;
+  padding: 10px 12px;
+  border-bottom: 1px solid var(--border-default, #E2E8F0);
+}
+.worked-table th {
+  background: var(--bg-page, #F8FAFC);
+  font-weight: 700;
+  color: var(--text-primary, #0F172A);
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+}
+.worked-table td.num, .worked-table th.num { text-align: right; font-variant-numeric: tabular-nums; }
+.worked-table tr.total-row td {
+  font-weight: 700;
+  color: var(--text-primary, #0F172A);
+  border-top: 2px solid var(--navy-700, #1E3A8A);
+  border-bottom: none;
+  background: var(--bg-page, #F8FAFC);
+}
+.worked-wrap { overflow-x: auto; -webkit-overflow-scrolling: touch; }
+.mistake-list { list-style: none; padding: 0; margin: 18px 0; }
+.mistake-list > li {
+  position: relative;
+  padding: 14px 16px 14px 48px;
+  margin-bottom: 12px;
+  background: var(--bg-page, #F8FAFC);
+  border: 1px solid var(--border-default, #E2E8F0);
+  border-radius: var(--radius-lg, 12px);
+  line-height: 1.65;
+}
+.mistake-list > li::before {
+  content: '!';
+  position: absolute;
+  left: 14px; top: 14px;
+  width: 24px; height: 24px;
+  background: #FEF2F2;
+  color: #DC2626;
+  border: 1px solid #FECACA;
+  border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  font-weight: 800; font-size: 0.9rem;
+}
+.mistake-list > li b { color: var(--text-primary, #0F172A); }
+
+</style>
 <style>
 /* ===== HSC subject scaling calculator — supplementary (uses site tokens) ===== */
 .sub-section{padding:56px 0;background:var(--bg-surface)}
@@ -2886,13 +2981,62 @@ section {
 <button class="btn btn-primary btn-lg" id="calcBtn" type="button">Show the marks I need</button>
 <p class="scalc-err" id="targetErr" style="display:none"></p>
 <div class="scalc-result" id="targetRes"></div>
-</div></div></div></div></section><section class="page-content"><div class="container" style="max-width:760px">
+</div></div></div></div></section><section class="page-content"><div class="container">
+<div class="prose calc-explainer">
+<h2>How the target ATAR calculator works</h2>
+<p>This tool works backwards. You give it the ATAR you want, and it shows the aggregate, and the kind of marks, you need to get there. Here is how it does that.</p>
+<h3>The formula</h3>
+<div class="formula-box">
+<span class="formula-eq">Target aggregate = the ATAR you want &rarr; read back through the ATAR table</span>
+<span class="formula-eq">Required marks = the per-subject marks that reach that aggregate</span>
+<span class="formula-eq">Your goal ATAR sets the aggregate; the aggregate sets the marks</span>
+Because scaling differs by subject, there is no single set of marks for a given ATAR. This tool shows an indicative target so you know roughly what to aim for in each subject.
+</div>
+<h3>Step by step</h3>
+<ol class="steps-list">
+<li><b>Enter your goal ATAR.</b> Type the ATAR you are aiming for, from 30 to 99.95.</li>
+<li><b>The aggregate is found.</b> The tool reads your goal ATAR back through the ATAR table to find the aggregate you need.</li>
+<li><b>The required marks are shown.</b> It works out the kind of per-subject marks that reach that aggregate, so you have a concrete target.</li>
+<li><b>Adjust and re-plan.</b> Change your goal to see how the required marks shift. This helps you set a target that is ambitious but realistic.</li>
+</ol>
+<h3>Worked example</h3>
+<p>Here is the rough aggregate needed for some common goal ATARs (NSW-style, out of 500):</p>
+<div class="worked-wrap">
+<table class="worked-table">
+<thead><tr><th>Goal ATAR</th><th class="num">Aggregate needed (/500)</th></tr></thead>
+<tbody>
+<tr><td>95.40</td><td class="num">410</td></tr>
+<tr><td>90.20</td><td class="num">370</td></tr>
+<tr><td>85.60</td><td class="num">340</td></tr>
+<tr><td>78.55</td><td class="num">300</td></tr>
+</tbody>
+</table>
+</div>
+<p>To reach an ATAR of about <strong>90</strong>, you need an aggregate near <strong>370 out of 500</strong>, which is roughly an average scaled contribution in the high 30s per unit across your best 10 units. Use the calculator above to turn your own goal into a per-subject target.</p>
+</div>
+</div></section>
+
+<section class="page-content"><div class="container" style="max-width:760px">
 <h2>How to read your target</h2>
 <p>Your ATAR is a <b>rank</b>, not a mark. To reach a target ATAR, what matters is your <b>aggregate</b> — the sum of your best 10 units of scaled marks, out of 500. This tool turns your target ATAR back into the aggregate and the average scaled mark you need, then shows the raw HSC marks that get you there.</p>
 <p>The key idea is scaling. The same raw mark is worth different scaled marks in different subjects. A raw 85 in a high-scaling subject like Physics is worth more than a raw 85 in a lower-scaling one. That is why the table shows a <b>lower raw mark</b> for high-scaling subjects — they do more of the work for you. Even so, it is smarter to pick subjects you can do well in than to chase scaling, because marks matter more than subject choice.</p>
 <p>Use this with the rest of the site. To check a real estimate from your marks, use the state calculators like <a href="nsw.html">NSW</a> or <a href="vic.html">VIC</a>. To see how one subject scales, try the <a href="atar-scaling-calculator.html">scaling calculator</a>. Already have scaled scores? The <a href="atar-predictor.html">ATAR predictor</a> turns them into an ATAR. For the official method, see <a href="https://www.uac.edu.au/" target="_blank" rel="noopener">UAC</a>.</p>
 <p>For example, to reach a <b>95 ATAR</b> you need an average scaled mark near 41 out of 50. That works out to about a raw 84 in high-scaling subjects, but closer to a raw 90 or more in lower-scaling ones. It is worth aiming a little above your target to give yourself a buffer.</p>
-</div></section><section class="faq-section" id="faq"><div class="container" style="max-width:760px">
+</div></section><section class="page-content"><div class="container">
+<div class="prose">
+<h2>Common mistakes setting a target ATAR</h2>
+<p>These are the traps students fall into when planning a target.</p>
+<ul class="mistake-list">
+<li><b>Assuming one fixed set of marks.</b> Scaling differs by subject, so the marks needed for a given ATAR depend on your subject mix. Treat the target as indicative.</li>
+<li><b>Setting a goal with no margin.</b> Aim a little above your target so a weaker exam does not sink the plan. Build in some buffer.</li>
+<li><b>Confusing marks with rank.</b> The target is expressed in marks, but the ATAR is a rank. The same marks can land a slightly different ATAR depending on the cohort.</li>
+<li><b>Ignoring your strongest subjects.</b> It is usually easier to lift a subject you are already good at than to rescue a weak one. Target where the gains are realistic.</li>
+<li><b>Treating the estimate as a promise.</b> This is a planning tool. Your real ATAR depends on the actual cohort and your final marks.</li>
+</ul>
+</div>
+</div></section>
+
+<section class="faq-section" id="faq"><div class="container" style="max-width:760px">
 <div class="section-header"><span class="eyebrow"><span class="eyebrow-dot"></span>FAQ</span><h2 class="section-title">Common questions</h2></div>
 <details class='faq-item'><summary>What marks do I need for a 99 ATAR?</summary><div class='faq-body'><p>To reach a 99 ATAR you need an aggregate around 450 out of 500 — an average scaled mark near 45 out of 50. In raw terms that is roughly a Band 6 (90+) across high-scaling subjects, and higher again in lower-scaling ones. Enter 99 above for your exact target.</p></div></details>
 <details class='faq-item'><summary>What marks do I need for a 95 ATAR?</summary><div class='faq-body'><p>A 95 ATAR needs an aggregate near 410 out of 500, or an average scaled mark around 41. That is roughly a high Band 5 to Band 6 across strong subjects. Enter your target above to see the raw marks.</p></div></details>

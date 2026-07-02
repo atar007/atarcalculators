@@ -3069,7 +3069,102 @@ section {
 }
 
   
-  </style>
+  
+/* ============= CALCULATOR CONTENT STRUCTURE (formula, steps, worked example, mistakes) ============= */
+.calc-explainer { }
+.formula-box {
+  background: var(--bg-page, #F8FAFC);
+  border: 1px solid var(--border-default, #E2E8F0);
+  border-left: 4px solid var(--navy-700, #1E3A8A);
+  border-radius: var(--radius-lg, 12px);
+  padding: 20px 24px;
+  margin: 20px 0;
+  font-size: 1.02rem;
+}
+.formula-box .formula-eq {
+  font-family: var(--font-mono, ui-monospace, monospace);
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: var(--navy-700, #1E3A8A);
+  letter-spacing: -0.01em;
+  display: block;
+  margin: 6px 0 10px;
+  line-height: 1.5;
+}
+.steps-list { counter-reset: step; list-style: none; padding: 0; margin: 18px 0; }
+.steps-list > li {
+  position: relative;
+  padding: 0 0 18px 46px;
+  margin: 0;
+  line-height: 1.7;
+}
+.steps-list > li::before {
+  counter-increment: step;
+  content: counter(step);
+  position: absolute;
+  left: 0; top: 0;
+  width: 30px; height: 30px;
+  background: var(--navy-700, #1E3A8A);
+  color: #fff;
+  border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  font-weight: 700; font-size: 0.9rem;
+  font-family: var(--font-display, system-ui);
+}
+.steps-list > li:last-child { padding-bottom: 0; }
+.worked-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 18px 0;
+  font-size: 0.95rem;
+}
+.worked-table th, .worked-table td {
+  text-align: left;
+  padding: 10px 12px;
+  border-bottom: 1px solid var(--border-default, #E2E8F0);
+}
+.worked-table th {
+  background: var(--bg-page, #F8FAFC);
+  font-weight: 700;
+  color: var(--text-primary, #0F172A);
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+}
+.worked-table td.num, .worked-table th.num { text-align: right; font-variant-numeric: tabular-nums; }
+.worked-table tr.total-row td {
+  font-weight: 700;
+  color: var(--text-primary, #0F172A);
+  border-top: 2px solid var(--navy-700, #1E3A8A);
+  border-bottom: none;
+  background: var(--bg-page, #F8FAFC);
+}
+.worked-wrap { overflow-x: auto; -webkit-overflow-scrolling: touch; }
+.mistake-list { list-style: none; padding: 0; margin: 18px 0; }
+.mistake-list > li {
+  position: relative;
+  padding: 14px 16px 14px 48px;
+  margin-bottom: 12px;
+  background: var(--bg-page, #F8FAFC);
+  border: 1px solid var(--border-default, #E2E8F0);
+  border-radius: var(--radius-lg, 12px);
+  line-height: 1.65;
+}
+.mistake-list > li::before {
+  content: '!';
+  position: absolute;
+  left: 14px; top: 14px;
+  width: 24px; height: 24px;
+  background: #FEF2F2;
+  color: #DC2626;
+  border: 1px solid #FECACA;
+  border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  font-weight: 800; font-size: 0.9rem;
+}
+.mistake-list > li b { color: var(--text-primary, #0F172A); }
+
+</style>
   <style>
     .faq-extra{display:none !important;}
     .faq-extra.is-shown{display:block !important;}
@@ -3212,6 +3307,46 @@ section {
 </div>
 </section>
 <!-- UNIVERSITY MATCHING -->
+<section class="page-content"><div class="container">
+<div class="prose calc-explainer">
+<h2>How the VCE ATAR calculation works</h2>
+<p>Your VCE ATAR is not the average of your study scores. It is a <strong>rank</strong> built in four stages: get a study score for each subject, scale it, add your best studies into an aggregate, then convert that aggregate to a rank out of 99.95. Here is the exact method this calculator uses, following VTAC’s published model.</p>
+<h3>The formula</h3>
+<div class="formula-box">
+<span class="formula-eq">Scaled study score = your VCE study score (out of 50) &rarr; scaled by VTAC</span>
+<span class="formula-eq">Aggregate = your best 4 scaled scores, plus 10% of your 5th and 6th</span>
+<span class="formula-eq">ATAR = your aggregate (out of about 210) converted to a rank (0 to 99.95)</span>
+English is compulsory: one English study must be in your calculation. VTAC counts your top four studies in full (the "Primary Four"), then adds a 10% increment from up to two more.
+</div>
+<h3>Step by step</h3>
+<ol class="steps-list">
+<li><b>Get a study score for each subject.</b> Each VCE Unit 3&4 study gives you a study score from 0 to 50. It already ranks you against everyone else who did that study, so a 40 means you are in roughly the top 9% of that subject statewide.</li>
+<li><b>Scale each study score.</b> VTAC scales every study score up or down based on how the cohort in that study performed across all their subjects. Strong-scaling studies like Specialist Mathematics and the sciences move up; some studies scale down. Scaling is applied automatically.</li>
+<li><b>Take your best four (the Primary Four).</b> Your four highest scaled scores are added together in full. English must be one of your studies, but it does not have to be in your top four; it counts if it is one of your best.</li>
+<li><b>Add 10% of your 5th and 6th.</b> A 10% increment from your next two best scaled scores is added. This rewards taking more than four studies without letting extra subjects dominate.</li>
+<li><b>Convert the aggregate to an ATAR.</b> Your aggregate (out of a maximum near 210) is ranked against the state to give your ATAR, a number from 0 to 99.95.</li>
+</ol>
+<h3>Worked example</h3>
+<p>Take a student with six VCE studies. Study scores are out of 50; here is how they flow into the ATAR:</p>
+<div class="worked-wrap">
+<table class="worked-table">
+<thead><tr><th>Study</th><th class="num">Study score</th><th class="num">Scaled</th><th class="num">Weight</th><th class="num">Contribution</th></tr></thead>
+<tbody>
+<tr><td>Specialist Mathematics</td><td class="num">40</td><td class="num">50.0</td><td class="num">1.0</td><td class="num">50.0</td></tr>
+<tr><td>Mathematical Methods</td><td class="num">41</td><td class="num">47.4</td><td class="num">1.0</td><td class="num">47.4</td></tr>
+<tr><td>Chemistry</td><td class="num">40</td><td class="num">44.0</td><td class="num">1.0</td><td class="num">44.0</td></tr>
+<tr><td>Physics</td><td class="num">39</td><td class="num">41.0</td><td class="num">1.0</td><td class="num">41.0</td></tr>
+<tr><td>English</td><td class="num">38</td><td class="num">37.2</td><td class="num">0.10</td><td class="num">3.7</td></tr>
+<tr><td>Biology</td><td class="num">36</td><td class="num">37.2</td><td class="num">0.10</td><td class="num">3.7</td></tr>
+<tr class="total-row"><td>Aggregate (out of ~210)</td><td class="num"></td><td class="num"></td><td class="num"></td><td class="num">189.8</td></tr>
+</tbody>
+</table>
+</div>
+<p>An aggregate of <strong>189.8 out of about 210</strong> converts to an ATAR of about <strong>99.00</strong>. Notice how Specialist Mathematics, scaled to 50, lifts the total far more than its raw study score of 40 suggests, while the 5th and 6th studies each add only a tenth of their scaled score. That is why your four strongest studies matter most.</p>
+<p>For the full technical detail, see our <a href="methodology.html">methodology page</a>.</p>
+</div>
+</div></section>
+
 <section class="universities-section" hidden="" id="universities-section">
 <div class="container">
 <div class="uni-wrap">
@@ -3238,6 +3373,21 @@ section {
 </div>
 </section>
 <!-- FAQ -->
+<section class="page-content"><div class="container">
+<div class="prose">
+<h2>Common mistakes when estimating your VCE ATAR</h2>
+<p>These are the errors that throw students’ estimates off most often. Avoid them and your estimate will be far closer to your real result.</p>
+<ul class="mistake-list">
+<li><b>Confusing your study score with your ATAR.</b> A study score is out of 50 for one subject. Your ATAR is out of 99.95 across all your subjects. A study score of 40 does not mean an ATAR of 80.</li>
+<li><b>Assuming raw study scores are added directly.</b> They are scaled first. Two students with the same raw scores in different subjects can end up with different aggregates because their subjects scale differently.</li>
+<li><b>Dropping English.</b> English is compulsory for a VCE ATAR. Even if it is not one of your strongest studies, you must complete an English study or you will not receive an ATAR.</li>
+<li><b>Overrating the 5th and 6th subjects.</b> They only contribute 10% each. Loading up on extra subjects at the expense of your main four rarely helps and can hurt if it lowers your top scores.</li>
+<li><b>Chasing "easy" subjects.</b> A study that scales down can still be the right choice if you will score much higher in it. Scaling only helps when you can actually perform in the higher-scaling study.</li>
+<li><b>Expecting the exact number before December.</b> Scaling depends on this year’s cohort, so any estimate carries a margin of a point or two. Use it to plan, not as your final ATAR.</li>
+</ul>
+</div>
+</div></section>
+
 <section aria-labelledby="faq-title" class="faq-section" id="faq"><div class="container container-narrow">
         <h2 id="faq-title">VIC ATAR &mdash; common questions</h2>
         <details class="faq-item"><summary>How is the ATAR calculated in VIC?</summary><div class="faq-body"><p>You get a result in each subject. VTAC scales each result against the state. Your best results are added into a aggregate out of about 210. That total is ranked against every student. Your place in that line becomes your ATAR. The ATAR runs from 0 to 99.95.</p></div></details>
@@ -3285,6 +3435,7 @@ section {
 <a href="act.html"><b>ACT</b><span>BSSS</span></a>
 <a href="nt.html"><b>NT</b><span>NTCET · SATAC</span></a>
 <a href="vce-scaling-calculators.html"><b>VCE scaling</b><span>By subject · VTAC</span></a>
+<a href="vce-atar-calculator.html"><b>VCE ATAR calculator</b><span>Exam-name version</span></a>
 </div>
 </div>
 </section>

@@ -1,10 +1,17 @@
 # robots.txt for atarcalculators.com
-# All crawlers — including AI/LLM crawlers — are welcome to index and cite this site.
+# Policy: FULLY OPEN. Every crawler — search engines and AI / answer-engine
+# (LLM) crawlers alike — is welcome to crawl, index, and cite this site.
+# There are deliberately NO Disallow rules anywhere in this file.
 
 User-agent: *
 Allow: /
 
-# AI / answer-engine crawlers (explicitly welcomed for AEO)
+# ---------------------------------------------------------------------------
+# AI / answer-engine crawlers — explicitly welcomed for AEO & LLM visibility
+# (listing them by name in addition to the wildcard above removes any doubt)
+# ---------------------------------------------------------------------------
+
+# OpenAI (ChatGPT / SearchGPT)
 User-agent: GPTBot
 Allow: /
 
@@ -14,29 +21,98 @@ Allow: /
 User-agent: ChatGPT-User
 Allow: /
 
+# Anthropic (Claude)
 User-agent: ClaudeBot
 Allow: /
 
 User-agent: Claude-User
 Allow: /
 
+User-agent: Claude-SearchBot
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+# Perplexity
 User-agent: PerplexityBot
 Allow: /
 
 User-agent: Perplexity-User
 Allow: /
 
+# Google (AI Overviews / Gemini / Vertex)
 User-agent: Google-Extended
+Allow: /
+
+User-agent: GoogleOther
+Allow: /
+
+# Apple Intelligence
+User-agent: Applebot
 Allow: /
 
 User-agent: Applebot-Extended
 Allow: /
 
+# Microsoft / Bing / Copilot
 User-agent: Bingbot
 Allow: /
 
+User-agent: msnbot
+Allow: /
+
+# Common Crawl (feeds many LLM training sets)
 User-agent: CCBot
 Allow: /
 
+# Amazon
+User-agent: Amazonbot
+Allow: /
+
+# Meta AI
+User-agent: Meta-ExternalAgent
+Allow: /
+
+User-agent: meta-externalagent
+Allow: /
+
+User-agent: FacebookBot
+Allow: /
+
+# ByteDance (TikTok / Doubao)
+User-agent: Bytespider
+Allow: /
+
+# You.com
+User-agent: YouBot
+Allow: /
+
+# Cohere
+User-agent: cohere-ai
+Allow: /
+
+User-agent: cohere-training-data-crawler
+Allow: /
+
+# DuckDuckGo Assist
+User-agent: DuckAssistBot
+Allow: /
+
+# Mistral
+User-agent: MistralAI-User
+Allow: /
+
+# Timpi / Diffbot / other answer engines
+User-agent: Diffbot
+Allow: /
+
+User-agent: Timpibot
+Allow: /
+
+# ---------------------------------------------------------------------------
+# Discovery
+# ---------------------------------------------------------------------------
 Sitemap: https://atarcalculators.com/sitemap.xml
+
 # Structured site summary for LLMs: https://atarcalculators.com/llms.txt

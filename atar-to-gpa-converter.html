@@ -12,6 +12,7 @@
   </script>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large" />
 <meta name="theme-color" content="#1E3A8A" />
 <title>ATAR to GPA Converter 2026 — Indicative 7-Point</title>
 <meta name="description" content="Free ATAR to GPA converter. Enter your ATAR for an indicative 7-point GPA. There&#x27;s no official conversion, so use it as a rough planning guide only." />
@@ -2811,7 +2812,102 @@ section {
 }
 
   
-  </style>
+  
+/* ============= CALCULATOR CONTENT STRUCTURE (formula, steps, worked example, mistakes) ============= */
+.calc-explainer { }
+.formula-box {
+  background: var(--bg-page, #F8FAFC);
+  border: 1px solid var(--border-default, #E2E8F0);
+  border-left: 4px solid var(--navy-700, #1E3A8A);
+  border-radius: var(--radius-lg, 12px);
+  padding: 20px 24px;
+  margin: 20px 0;
+  font-size: 1.02rem;
+}
+.formula-box .formula-eq {
+  font-family: var(--font-mono, ui-monospace, monospace);
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: var(--navy-700, #1E3A8A);
+  letter-spacing: -0.01em;
+  display: block;
+  margin: 6px 0 10px;
+  line-height: 1.5;
+}
+.steps-list { counter-reset: step; list-style: none; padding: 0; margin: 18px 0; }
+.steps-list > li {
+  position: relative;
+  padding: 0 0 18px 46px;
+  margin: 0;
+  line-height: 1.7;
+}
+.steps-list > li::before {
+  counter-increment: step;
+  content: counter(step);
+  position: absolute;
+  left: 0; top: 0;
+  width: 30px; height: 30px;
+  background: var(--navy-700, #1E3A8A);
+  color: #fff;
+  border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  font-weight: 700; font-size: 0.9rem;
+  font-family: var(--font-display, system-ui);
+}
+.steps-list > li:last-child { padding-bottom: 0; }
+.worked-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 18px 0;
+  font-size: 0.95rem;
+}
+.worked-table th, .worked-table td {
+  text-align: left;
+  padding: 10px 12px;
+  border-bottom: 1px solid var(--border-default, #E2E8F0);
+}
+.worked-table th {
+  background: var(--bg-page, #F8FAFC);
+  font-weight: 700;
+  color: var(--text-primary, #0F172A);
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+}
+.worked-table td.num, .worked-table th.num { text-align: right; font-variant-numeric: tabular-nums; }
+.worked-table tr.total-row td {
+  font-weight: 700;
+  color: var(--text-primary, #0F172A);
+  border-top: 2px solid var(--navy-700, #1E3A8A);
+  border-bottom: none;
+  background: var(--bg-page, #F8FAFC);
+}
+.worked-wrap { overflow-x: auto; -webkit-overflow-scrolling: touch; }
+.mistake-list { list-style: none; padding: 0; margin: 18px 0; }
+.mistake-list > li {
+  position: relative;
+  padding: 14px 16px 14px 48px;
+  margin-bottom: 12px;
+  background: var(--bg-page, #F8FAFC);
+  border: 1px solid var(--border-default, #E2E8F0);
+  border-radius: var(--radius-lg, 12px);
+  line-height: 1.65;
+}
+.mistake-list > li::before {
+  content: '!';
+  position: absolute;
+  left: 14px; top: 14px;
+  width: 24px; height: 24px;
+  background: #FEF2F2;
+  color: #DC2626;
+  border: 1px solid #FECACA;
+  border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  font-weight: 800; font-size: 0.9rem;
+}
+.mistake-list > li b { color: var(--text-primary, #0F172A); }
+
+</style>
 <style>
     /* Load-more FAQ + minor enhancements */
     .faq-extra{display:none !important;}
@@ -2892,6 +2988,41 @@ section {
 </div>
 </div></div></section>
 
+<section class="page-content"><div class="container">
+<div class="prose calc-explainer">
+<h2>How the ATAR to GPA estimate works</h2>
+<p>There is no official conversion between an ATAR and a university GPA, because they measure completely different things. This tool gives an indicative guide only. Here is what it does and why it is only a rough estimate.</p>
+<h3>The formula</h3>
+<div class="formula-box">
+<span class="formula-eq">Indicative GPA &asymp; your ATAR mapped onto a 7-point guide</span>
+<span class="formula-eq">ATAR is a Year 12 rank (0 to 99.95); GPA is a university grade average (0 to 7)</span>
+<span class="formula-eq">No official body publishes an ATAR-to-GPA conversion</span>
+Your ATAR ranks you against other school leavers. Your GPA averages your university grade points. One does not cause the other, so any conversion is an approximation, useful for a rough sense of scale, not for applications.
+</div>
+<h3>Step by step</h3>
+<ol class="steps-list">
+<li><b>Enter your ATAR.</b> Put in your actual or estimated ATAR, from 0 to 99.95.</li>
+<li><b>Map it to the 7-point guide.</b> The tool places your ATAR on an indicative curve towards a 7-point GPA. A very high ATAR sits near the top of the guide, a mid-range ATAR nearer the middle.</li>
+<li><b>Read the indicative GPA.</b> You get a rough GPA figure. Treat it as a ballpark, since your real GPA depends entirely on your university results, not your ATAR.</li>
+<li><b>Use it for context only.</b> Never submit this figure as your GPA. If an application needs a GPA, calculate it from your actual university marks.</li>
+</ol>
+<h3>Worked example</h3>
+<p>Here is how a few ATARs map onto the indicative 7-point guide:</p>
+<div class="worked-wrap">
+<table class="worked-table">
+<thead><tr><th>ATAR</th><th class="num">Indicative GPA (7.0)</th></tr></thead>
+<tbody>
+<tr><td>95</td><td class="num">6.4</td></tr>
+<tr><td>90</td><td class="num">6.0</td></tr>
+<tr><td>80</td><td class="num">5.3</td></tr>
+<tr><td>70</td><td class="num">4.8</td></tr>
+</tbody>
+</table>
+</div>
+<p>An ATAR of 90 maps to an indicative GPA of about <strong>6.0</strong> on this guide. But remember: this is only a rough scale. A student with a 90 ATAR could finish university with a GPA well above or below 6.0, because the GPA depends on university performance, not on the ATAR.</p>
+</div>
+</div></section>
+
 <section class="page-content"><div class="container" style="max-width:760px">
 <p>There is <b>no official ATAR to GPA conversion</b>. An ATAR ranks you against other Year 12 students. A GPA shows how you do at university. The two measure different things. So many students’ GPAs differ from their ATAR.</p><p>Here is a very rough guide. A high ATAR (95+) often maps to a Distinction GPA (6.0+). An ATAR around 85 maps to a Credit-to-Distinction range. An ATAR around 70 maps to a Credit range. This tool uses that kind of mapping. The honest takeaway is simple. Your ATAR opens the door. But your GPA is earned at university.</p>
 </div></section>
@@ -2902,6 +3033,20 @@ section {
 <p>This is why your ATAR and your GPA can look so different. Your ATAR is a <b>rank</b> set on one day, against one cohort. Your GPA is built up <b>over years</b> of assignments, exams and group work. A student who struggled in Year 12 can top their degree. A student with a near-perfect ATAR can find first year hard.</p>
 <p>Want the real number instead of a rough guide? Use our <a href="gpa-calculator-australia.html">GPA calculator</a> once you have results. If your university reports a WAM instead, the <a href="wam-calculator-australia.html">WAM calculator</a> does that sum. To plan the other way, the <a href="atar-predictor.html">ATAR predictor</a> turns scaled scores into an ATAR estimate. For how the ATAR itself is built, the <a href="https://www.uac.edu.au/" target="_blank" rel="noopener">UAC website</a> sets out the official method.</p>
 </div></section>
+<section class="page-content"><div class="container">
+<div class="prose">
+<h2>Common mistakes converting ATAR to GPA</h2>
+<p>These are the errors people make when comparing the two.</p>
+<ul class="mistake-list">
+<li><b>Treating the conversion as official.</b> No university or admissions body publishes an ATAR-to-GPA table. This is an indicative guide only.</li>
+<li><b>Submitting an estimated GPA on an application.</b> Always use your real GPA from university marks. An estimate from your ATAR is not acceptable.</li>
+<li><b>Assuming a high ATAR guarantees a high GPA.</b> They measure different things at different stages. Plenty of students see their standing change at university.</li>
+<li><b>Comparing GPAs across universities directly.</b> Grade scales differ, so a 6.0 at one institution is not identical to a 6.0 at another.</li>
+<li><b>Confusing GPA with WAM.</b> A GPA groups marks into points; a WAM averages the actual marks. Know which one an application is asking for.</li>
+</ul>
+</div>
+</div></section>
+
 <section class="faq-section" id="faq"><div class="container" style="max-width:760px">
 <div class="section-header"><span class="eyebrow"><span class="eyebrow-dot"></span>FAQ</span><h2 class="section-title">Common questions</h2>
 <details class='faq-item'><summary>Is there an official ATAR to GPA conversion?</summary><div class='faq-body'><p>No. There is no official formula. An ATAR and a GPA measure different things. This tool gives a rough guide only. Always treat the result as a guess.</p></div></details>
@@ -2920,6 +3065,14 @@ section {
 <a href="selection-rank-calculator.html"><b>Selection rank</b><span>ATAR + bonus</span></a>
 <a href="wam-calculator-australia.html"><b>WAM Australia</b><span>Weighted average mark</span></a>
 <a href="university-calculators.html"><b>All uni tools</b><span>Hub</span></a></div></div></section>
+<section class="related-calc"><div class="container"><div class="uni-header"><span class="eyebrow"><span class="eyebrow-dot"></span>Read next</span><h2>ATAR and GPA, explained</h2></div><div class="related-grid">
+<a href='atar-to-gpa-table.html'><b>ATAR to GPA tables</b><span>By university</span></a>
+<a href='atar-vs-gpa.html'><b>ATAR vs GPA</b><span>The real difference</span></a>
+<a href='convert-atar-to-gpa.html'><b>Can you convert?</b><span>ATAR to GPA</span></a>
+<a href='atar-predict-gpa.html'><b>Does ATAR predict GPA?</b><span>The honest answer</span></a>
+<a href='year-12-to-university-grading.html'><b>Year 12 to university</b><span>How grading changes</span></a>
+<a href='gpa-lower-than-atar.html'><b>GPA lower than ATAR?</b><span>Why that is normal</span></a>
+</div></div></section>
 </main>
 <script src="navigation.js" defer></script>
 <script>

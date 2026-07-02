@@ -2820,7 +2820,102 @@ section {
     .faq-loadmore-wrap{text-align:center;margin-top:1.75rem;}
     .faq-count-note{text-align:center;color:#64748b;font-size:.9rem;margin:.35rem 0 1.25rem;}
     #faq-loadmore{min-width:240px;}
-  </style>
+  
+/* ============= CALCULATOR CONTENT STRUCTURE (formula, steps, worked example, mistakes) ============= */
+.calc-explainer { }
+.formula-box {
+  background: var(--bg-page, #F8FAFC);
+  border: 1px solid var(--border-default, #E2E8F0);
+  border-left: 4px solid var(--navy-700, #1E3A8A);
+  border-radius: var(--radius-lg, 12px);
+  padding: 20px 24px;
+  margin: 20px 0;
+  font-size: 1.02rem;
+}
+.formula-box .formula-eq {
+  font-family: var(--font-mono, ui-monospace, monospace);
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: var(--navy-700, #1E3A8A);
+  letter-spacing: -0.01em;
+  display: block;
+  margin: 6px 0 10px;
+  line-height: 1.5;
+}
+.steps-list { counter-reset: step; list-style: none; padding: 0; margin: 18px 0; }
+.steps-list > li {
+  position: relative;
+  padding: 0 0 18px 46px;
+  margin: 0;
+  line-height: 1.7;
+}
+.steps-list > li::before {
+  counter-increment: step;
+  content: counter(step);
+  position: absolute;
+  left: 0; top: 0;
+  width: 30px; height: 30px;
+  background: var(--navy-700, #1E3A8A);
+  color: #fff;
+  border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  font-weight: 700; font-size: 0.9rem;
+  font-family: var(--font-display, system-ui);
+}
+.steps-list > li:last-child { padding-bottom: 0; }
+.worked-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 18px 0;
+  font-size: 0.95rem;
+}
+.worked-table th, .worked-table td {
+  text-align: left;
+  padding: 10px 12px;
+  border-bottom: 1px solid var(--border-default, #E2E8F0);
+}
+.worked-table th {
+  background: var(--bg-page, #F8FAFC);
+  font-weight: 700;
+  color: var(--text-primary, #0F172A);
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+}
+.worked-table td.num, .worked-table th.num { text-align: right; font-variant-numeric: tabular-nums; }
+.worked-table tr.total-row td {
+  font-weight: 700;
+  color: var(--text-primary, #0F172A);
+  border-top: 2px solid var(--navy-700, #1E3A8A);
+  border-bottom: none;
+  background: var(--bg-page, #F8FAFC);
+}
+.worked-wrap { overflow-x: auto; -webkit-overflow-scrolling: touch; }
+.mistake-list { list-style: none; padding: 0; margin: 18px 0; }
+.mistake-list > li {
+  position: relative;
+  padding: 14px 16px 14px 48px;
+  margin-bottom: 12px;
+  background: var(--bg-page, #F8FAFC);
+  border: 1px solid var(--border-default, #E2E8F0);
+  border-radius: var(--radius-lg, 12px);
+  line-height: 1.65;
+}
+.mistake-list > li::before {
+  content: '!';
+  position: absolute;
+  left: 14px; top: 14px;
+  width: 24px; height: 24px;
+  background: #FEF2F2;
+  color: #DC2626;
+  border: 1px solid #FECACA;
+  border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  font-weight: 800; font-size: 0.9rem;
+}
+.mistake-list > li b { color: var(--text-primary, #0F172A); }
+
+</style>
 <style>
 /* ===== VCE subject scaling calculator — supplementary (uses site tokens) ===== */
 .sub-section{padding:56px 0;background:var(--bg-surface)}
@@ -2944,6 +3039,53 @@ section {
 <p>In 2025, English <b>scales down slightly</b>: a middle study score of 30 scaled to about 28 (-2), and a study score of 40 scaled to about 39. Scaling is not a measure of how &ldquo;hard&rdquo; the subject is. It reflects how the English cohort performed across <em>all</em> their other VCE subjects. A strong cohort scales a subject up. This stops its students being disadvantaged for competing against each other. A broader cohort scales down. Your rank within the subject never changes — only how that rank counts towards your ATAR.</p>
 <p>One point to be clear about. Scaling is recalculated every year. The cohort changes every year. So read this as a close estimate for planning, not a fixed value. And scaled scores can sit above 50 for the strongest-scaling subjects. To see how English combines with your other subjects, use the <a href="vic.html">VIC VCE ATAR calculator</a>. To compare subjects, browse all <a href="vce-scaling-calculators.html">VCE scaling calculators</a> or read our <a href="methodology.html">methodology</a>.</p>
 </div></div></section>
+
+<section class="page-content"><div class="container">
+<div class="prose calc-explainer">
+<h2>How English scaling works</h2>
+<p>Scaling puts every VCE study on the same footing so a study score in English compares fairly with one in any other study. Here is exactly how your English study score becomes a scaled score.</p>
+<h3>The formula</h3>
+<div class="formula-box">
+<span class="formula-eq">Scaled study score = your English study score &rarr; VTAC scaling curve</span>
+<span class="formula-eq">Study scores run 0 to 50; scaled scores can differ from your raw score</span>
+<span class="formula-eq">Your ATAR uses scaled scores, counting your best studies</span>
+A study score of 40 does not automatically stay 40. Scaling moves it up or down based on how the English cohort performed across all their studies.
+</div>
+<h3>Step by step</h3>
+<ol class="steps-list">
+<li><b>Get your study score.</b> Each VCE Unit 3&4 study gives a study score from 0 to 50. It already ranks you against everyone who did English.</li>
+<li><b>Apply the scaling curve.</b> VTAC scales your study score up or down based on the strength of the English cohort. This is applied automatically here.</li>
+<li><b>Read your scaled study score.</b> You get a scaled study score. This is what feeds into your ATAR aggregate, not your raw study score.</li>
+<li><b>See the change.</b> The calculator shows how far English moved your score, so you can see whether it scales up or down and by how much.</li>
+</ol>
+<h3>Worked example</h3>
+<p>Here is how two different study scores in English convert once scaling is applied:</p>
+<div class="worked-wrap">
+<table class="worked-table">
+<thead><tr><th>Study score (/50)</th><th class="num">Scaled score</th><th class="num">Change</th></tr></thead>
+<tbody>
+<tr><td>40</td><td class="num">39.0</td><td class="num">-1.0</td></tr>
+<tr><td>30</td><td class="num">28.0</td><td class="num">-2.0</td></tr>
+</tbody>
+</table>
+</div>
+<p>A study score of <strong>40</strong> in English scales to about <strong>39.0</strong> (scaled down slightly). Use the calculator above for your own study score.</p>
+</div>
+</div></section>
+
+<section class="page-content"><div class="container">
+<div class="prose">
+<h2>Common mistakes with English scaling</h2>
+<p>These are the misunderstandings that trip students up most often.</p>
+<ul class="mistake-list">
+<li><b>Treating your study score as your final result.</b> Your study score out of 50 is scaled before it counts. The scaled score is what matters for your ATAR.</li>
+<li><b>Assuming English scaling is fixed.</b> The curve is recalculated each year from that year’s cohort, so treat last year’s pattern as a close guide, not a promise.</li>
+<li><b>Confusing a scaled score with an ATAR.</b> A scaled study score is one study’s contribution. Your ATAR comes from your best studies combined, then ranked.</li>
+<li><b>Choosing English just for scaling.</b> Scaling only helps if you can perform in the study. A strong score in a lower-scaling study usually beats a weak score in a higher-scaling one.</li>
+<li><b>Expecting the exact scaled score early.</b> Scaling depends on this year’s cohort, which does not exist until results are finalised, so use the estimate as a guide.</li>
+</ul>
+</div>
+</div></section>
 
 <section aria-labelledby="faq-title" class="faq-section" id="faq"><div class="container container-narrow">
 <h2 id="faq-title">VCE English scaling — common questions</h2>

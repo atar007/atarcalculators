@@ -2820,7 +2820,102 @@ section {
     .faq-loadmore-wrap{text-align:center;margin-top:1.75rem;}
     .faq-count-note{text-align:center;color:#64748b;font-size:.9rem;margin:.35rem 0 1.25rem;}
     #faq-loadmore{min-width:240px;}
-  </style>
+  
+/* ============= CALCULATOR CONTENT STRUCTURE (formula, steps, worked example, mistakes) ============= */
+.calc-explainer { }
+.formula-box {
+  background: var(--bg-page, #F8FAFC);
+  border: 1px solid var(--border-default, #E2E8F0);
+  border-left: 4px solid var(--navy-700, #1E3A8A);
+  border-radius: var(--radius-lg, 12px);
+  padding: 20px 24px;
+  margin: 20px 0;
+  font-size: 1.02rem;
+}
+.formula-box .formula-eq {
+  font-family: var(--font-mono, ui-monospace, monospace);
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: var(--navy-700, #1E3A8A);
+  letter-spacing: -0.01em;
+  display: block;
+  margin: 6px 0 10px;
+  line-height: 1.5;
+}
+.steps-list { counter-reset: step; list-style: none; padding: 0; margin: 18px 0; }
+.steps-list > li {
+  position: relative;
+  padding: 0 0 18px 46px;
+  margin: 0;
+  line-height: 1.7;
+}
+.steps-list > li::before {
+  counter-increment: step;
+  content: counter(step);
+  position: absolute;
+  left: 0; top: 0;
+  width: 30px; height: 30px;
+  background: var(--navy-700, #1E3A8A);
+  color: #fff;
+  border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  font-weight: 700; font-size: 0.9rem;
+  font-family: var(--font-display, system-ui);
+}
+.steps-list > li:last-child { padding-bottom: 0; }
+.worked-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 18px 0;
+  font-size: 0.95rem;
+}
+.worked-table th, .worked-table td {
+  text-align: left;
+  padding: 10px 12px;
+  border-bottom: 1px solid var(--border-default, #E2E8F0);
+}
+.worked-table th {
+  background: var(--bg-page, #F8FAFC);
+  font-weight: 700;
+  color: var(--text-primary, #0F172A);
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+}
+.worked-table td.num, .worked-table th.num { text-align: right; font-variant-numeric: tabular-nums; }
+.worked-table tr.total-row td {
+  font-weight: 700;
+  color: var(--text-primary, #0F172A);
+  border-top: 2px solid var(--navy-700, #1E3A8A);
+  border-bottom: none;
+  background: var(--bg-page, #F8FAFC);
+}
+.worked-wrap { overflow-x: auto; -webkit-overflow-scrolling: touch; }
+.mistake-list { list-style: none; padding: 0; margin: 18px 0; }
+.mistake-list > li {
+  position: relative;
+  padding: 14px 16px 14px 48px;
+  margin-bottom: 12px;
+  background: var(--bg-page, #F8FAFC);
+  border: 1px solid var(--border-default, #E2E8F0);
+  border-radius: var(--radius-lg, 12px);
+  line-height: 1.65;
+}
+.mistake-list > li::before {
+  content: '!';
+  position: absolute;
+  left: 14px; top: 14px;
+  width: 24px; height: 24px;
+  background: #FEF2F2;
+  color: #DC2626;
+  border: 1px solid #FECACA;
+  border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  font-weight: 800; font-size: 0.9rem;
+}
+.mistake-list > li b { color: var(--text-primary, #0F172A); }
+
+</style>
 <style>
 /* ===== HSC subject scaling calculator — supplementary (uses site tokens) ===== */
 .sub-section{padding:56px 0;background:var(--bg-surface)}
@@ -2944,6 +3039,53 @@ section {
 <p>In 2025, Modern History <b>sits around the middle</b> relative to other subjects: its average scaled mark was about 25.0/50 per unit, versus roughly 25 across the whole state &mdash; close to the state average. HSC marks are reported high. Most students sit in Bands 4 to 6. So scaled marks come out lower than HSC marks in almost every subject. What matters is how a subject's scaled marks compare with others. The raw drop in the number is not the point. Scaling isn't a measure of how &ldquo;hard&rdquo; the subject is; it reflects how the Modern History cohort performs across <em>all</em> of their subjects. So two students with the same scaled mark would rank equally. That holds even across different subjects. It assumes every student had sat both.</p>
 <p>One point to be clear about. UAC says there is no single scaled mark for a given HSC mark. Each HSC mark can come from a small range of raw marks. So read this as a close estimate for planning, not an exact figure. To see how Modern History combines with your other subjects, use the <a href="nsw.html">NSW ATAR calculator</a>; to compare subjects, browse all <a href="hsc-scaling-calculators.html">HSC scaling calculators</a> or read our <a href="methodology.html">methodology</a>.</p>
 </div></div></section>
+
+<section class="page-content"><div class="container">
+<div class="prose calc-explainer">
+<h2>How Modern History scaling works</h2>
+<p>Scaling is not a penalty or a bonus. It puts every HSC subject on the same footing so a mark in Modern History can be compared fairly with a mark in any other subject. Here is exactly how your raw Modern History mark becomes a scaled mark.</p>
+<h3>The formula</h3>
+<div class="formula-box">
+<span class="formula-eq">Mark per unit = your raw Modern History mark &divide; 2 (it is a 2-unit course)</span>
+<span class="formula-eq">Scaled mark (per unit) = mark per unit &rarr; UAC scaling curve</span>
+<span class="formula-eq">Your ATAR uses the scaled mark, counted across your best 10 units</span>
+A raw mark of 100 does not become a scaled mark of 50. Scaling reflects how the Modern History cohort performed across all their subjects, so the scaled mark can sit above or below the raw mark per unit.
+</div>
+<h3>Step by step</h3>
+<ol class="steps-list">
+<li><b>Take your raw mark out of 100.</b> Enter your actual or predicted Modern History HSC mark. Predicted marks are fine before results day.</li>
+<li><b>Convert to a per-unit mark.</b> Modern History is a 2-unit course, so your mark out of 100 is treated as a mark per unit (out of 50) for scaling.</li>
+<li><b>Apply the scaling curve.</b> UAC maps your per-unit mark onto the Modern History scaling curve for the year, drawn from the official percentile distribution. This is done automatically here.</li>
+<li><b>Read your scaled mark.</b> You get a scaled mark per unit (out of 50). Multiply by 2 for the subject’s full contribution to your best-10-units ATAR aggregate.</li>
+</ol>
+<h3>Worked example</h3>
+<p>Here is how two raw marks in Modern History convert to scaled marks. What matters is not how the scaled mark compares to your raw mark, but how it compares to the roughly 25 per unit that an average subject sits at:</p>
+<div class="worked-wrap">
+<table class="worked-table">
+<thead><tr><th>Raw mark (/100)</th><th class="num">Per unit (/50)</th><th class="num">Scaled / unit</th><th class="num">vs avg subject (~25)</th></tr></thead>
+<tbody>
+<tr><td>90</td><td class="num">45</td><td class="num">39.2</td><td class="num">+14.2</td></tr>
+<tr><td>75</td><td class="num">37</td><td class="num">24.8</td><td class="num">-0.2</td></tr>
+</tbody>
+</table>
+</div>
+<p>In Modern History, the average scaled mark is about <strong>25.0 per unit</strong>, versus roughly 25 across all subjects, so Modern History <strong>scales down</strong>. A raw mark of 90 scales to about <strong>39.2 per unit</strong> here. The key point: a scaled mark below your raw mark does not mean the subject scaled you down. It means the raw HSC scale and the scaled scale are different rulers. Compare your scaled mark to other subjects, not to your own raw mark. Use the calculator above for your own mark.</p>
+</div>
+</div></section>
+
+<section class="page-content"><div class="container">
+<div class="prose">
+<h2>Common mistakes with Modern History scaling</h2>
+<p>These are the misunderstandings that trip students up most often.</p>
+<ul class="mistake-list">
+<li><b>Thinking a raw 100 becomes a scaled 50.</b> Scaling is a rank-based adjustment, not a straight percentage. Even a very high Modern History mark scales to a value set by the whole cohort, not automatically to the top.</li>
+<li><b>Assuming Modern History scaling is fixed forever.</b> The curve is recalculated each year from that year’s cohort. Last year’s numbers are a close guide, not a guarantee.</li>
+<li><b>Confusing your scaled mark with your ATAR.</b> The scaled mark is one subject’s contribution. Your ATAR comes from your best 10 units across all subjects, then a rank.</li>
+<li><b>Picking Modern History only because it "scales up".</b> A higher-scaling subject only helps if you can score well in it. A strong mark in a slightly lower-scaling subject usually beats a weak mark in a higher-scaling one.</li>
+<li><b>Forgetting the 2-unit doubling.</b> Your scaled mark per unit counts twice in the aggregate. When comparing subjects, compare the full 2-unit contribution, not just the per-unit figure.</li>
+</ul>
+</div>
+</div></section>
 
 <section aria-labelledby="faq-title" class="faq-section" id="faq"><div class="container container-narrow">
 <h2 id="faq-title">HSC Modern History scaling — common questions</h2>
