@@ -272,3 +272,20 @@
     injectNavigation();
   }
 })();
+
+/* ---------- NUMERIC INPUT CLAMPING (site-wide safeguard) ----------
+   Prevents out-of-range values (e.g. 90 in a /30 field) from reaching any
+   calculator engine. Capture phase => runs before each calculator's own
+   input/change handler, so engines always read a clamped value. */
+(function(){
+  function clampEl(t){
+    if(!t||t.tagName!=='INPUT'||(t.type!=='number'&&t.getAttribute('inputmode')!=='decimal')) return;
+    if(t.value==='') return;
+    var v=parseFloat(t.value); if(isNaN(v)) return;
+    var mx=t.getAttribute('max'), mn=t.getAttribute('min');
+    if(mx!==null&&mx!==''&&v>parseFloat(mx)) t.value=mx;
+    else if(mn!==null&&mn!==''&&v<parseFloat(mn)) t.value=mn;
+  }
+  document.addEventListener('input', function(e){ clampEl(e.target); }, true);
+  document.addEventListener('change', function(e){ clampEl(e.target); }, true);
+})();
