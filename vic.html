@@ -99,7 +99,7 @@
       "name": "How is the ATAR calculated in VIC?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "You get a result in each subject. VTAC scales each result against the state. Your best results are added into a aggregate out of about 210. That total is ranked against every student. Your place in that line becomes your ATAR. The ATAR runs from 0 to 99.95."
+        "text": "You get a result in each subject. VTAC scales each result against the state. Your best results are added into a aggregate out of about 210. That total is ranked against every student. Your place in that line becomes your ATAR. The ATAR runs from 0 to 99.95, but ATARs below 30.00 are reported as '30.00 or less'."
       }
     },
     {
@@ -3232,9 +3232,9 @@ section {
 <section class="page-header">
 <div class="container">
 <div class="breadcrumb">
-<a href="index.html">Home</a>
+<a href="/">Home</a>
 <span class="breadcrumb-sep">/</span>
-<a href="atar-calculators.html">Calculators</a>
+<a href="/atar-calculators">Calculators</a>
 <span class="breadcrumb-sep">/</span>
 <span>VIC VCE</span>
 </div>
@@ -3322,7 +3322,7 @@ English is compulsory: one English study must be in your calculation. VTAC count
 <ol class="steps-list">
 <li><b>Get a study score for each subject.</b> Each VCE Unit 3&4 study gives you a study score from 0 to 50. It already ranks you against everyone else who did that study, so a 40 means you are in roughly the top 9% of that subject statewide.</li>
 <li><b>Scale each study score.</b> VTAC scales every study score up or down based on how the cohort in that study performed across all their subjects. Strong-scaling studies like Specialist Mathematics and the sciences move up; some studies scale down. Scaling is applied automatically.</li>
-<li><b>Take your best four (the Primary Four).</b> Your four highest scaled scores are added together in full. English must be one of your studies, but it does not have to be in your top four; it counts if it is one of your best.</li>
+<li><b>Add the Primary Four at full weight.</b> Your English study plus your three best other studies are added together in full. English always counts at full weight — even if it is not one of your highest-scaling subjects.</li>
 <li><b>Add 10% of your 5th and 6th.</b> A 10% increment from your next two best scaled scores is added. This rewards taking more than four studies without letting extra subjects dominate.</li>
 <li><b>Convert the aggregate to an ATAR.</b> Your aggregate (out of a maximum near 210) is ranked against the state to give your ATAR, a number from 0 to 99.95.</li>
 </ol>
@@ -3335,15 +3335,15 @@ English is compulsory: one English study must be in your calculation. VTAC count
 <tr><td>Specialist Mathematics</td><td class="num">40</td><td class="num">50.0</td><td class="num">1.0</td><td class="num">50.0</td></tr>
 <tr><td>Mathematical Methods</td><td class="num">41</td><td class="num">47.4</td><td class="num">1.0</td><td class="num">47.4</td></tr>
 <tr><td>Chemistry</td><td class="num">40</td><td class="num">44.0</td><td class="num">1.0</td><td class="num">44.0</td></tr>
-<tr><td>Physics</td><td class="num">39</td><td class="num">41.0</td><td class="num">1.0</td><td class="num">41.0</td></tr>
-<tr><td>English</td><td class="num">38</td><td class="num">37.2</td><td class="num">0.10</td><td class="num">3.7</td></tr>
+<tr><td>English</td><td class="num">38</td><td class="num">37.2</td><td class="num">1.0</td><td class="num">37.2</td></tr>
+<tr><td>Physics</td><td class="num">39</td><td class="num">41.0</td><td class="num">0.10</td><td class="num">4.1</td></tr>
 <tr><td>Biology</td><td class="num">36</td><td class="num">37.2</td><td class="num">0.10</td><td class="num">3.7</td></tr>
-<tr class="total-row"><td>Aggregate (out of ~210)</td><td class="num"></td><td class="num"></td><td class="num"></td><td class="num">189.8</td></tr>
+<tr class="total-row"><td>Aggregate (out of ~210)</td><td class="num"></td><td class="num"></td><td class="num"></td><td class="num">186.4</td></tr>
 </tbody>
 </table>
 </div>
-<p>An aggregate of <strong>189.8 out of about 210</strong> converts to an ATAR of about <strong>99.00</strong>. Notice how Specialist Mathematics, scaled to 50, lifts the total far more than its raw study score of 40 suggests, while the 5th and 6th studies each add only a tenth of their scaled score. That is why your four strongest studies matter most.</p>
-<p>For the full technical detail, see our <a href="methodology.html">methodology page</a>.</p>
+<p>An aggregate of <strong>186.4 out of about 210</strong> converts to an ATAR of about <strong>98.5</strong>. Notice how Specialist Mathematics, scaled to 50, lifts the total far more than its raw study score of 40 suggests, while the 5th and 6th studies each add only a tenth of their scaled score. That is why your four strongest studies matter most.</p>
+<p>For the full technical detail, see our <a href="/methodology">methodology page</a>.</p>
 </div>
 </div></section>
 
@@ -3365,7 +3365,7 @@ English is compulsory: one English study must be in your calculation. VTAC count
 <div class="container">
 <div class="prose">
 <h2>About this VIC ATAR calculator</h2>
-<p>This calculator estimates your VIC VCE ATAR using the <a href="https://www.vtac.edu.au/results-offers/atar-explained.html" rel="noopener" target="_blank">VTAC 2025 Scaling Report</a> — the most recent official scaling data available. It covers all major VCE Unit 3–4 subjects, applies the compulsory English rule, and automatically builds your aggregate from your best 4 scaled study scores plus 10% of your 5th and 6th. For the technical detail on how it works, see our <a href="methodology.html">methodology page</a> or the deep-dive on how VCE ATAR is calculated.</p>
+<p>This calculator estimates your VIC VCE ATAR using the <a href="https://www.vtac.edu.au/results-offers/atar-explained.html" rel="noopener" target="_blank">VTAC 2025 Scaling Report</a> — the most recent official scaling data available. It covers all major VCE Unit 3–4 subjects, applies the compulsory English rule, and automatically builds your aggregate from your best 4 scaled study scores plus 10% of your 5th and 6th. For the technical detail on how it works, see our <a href="/methodology">methodology page</a> or the deep-dive on how VCE ATAR is calculated.</p>
 <p>Wondering which subjects scale up and which scale down? In VCE it's not about subject "difficulty" — scaling reflects how strong each subject's cohort is. Latin and Specialist Mathematics students typically perform strongly across all their subjects, so a raw study score of 35 in Latin scales to 50, while the same 35 in a subject like Health &amp; Human Development scales to about 31. Read our breakdown of the best-scaling VCE subjects in 2025 and how to choose subjects without sacrificing your study score.</p>
 <p>Once you have your ATAR estimate, the next question is always the same: <em>what can I study with this?</em> The university matching section above shows Victorian universities grouped by course type with indicative ATAR cutoffs. Your ATAR is a baseline — SEAS adjustment factors, subject increments and pathway programs can shift what's available to you. For specific course requirements, read our guides on ATAR for Medicine in Australia, ATAR for Law, and 2025 Victorian university cutoffs by course.</p>
 <p>Your real ATAR is calculated and released by VTAC in mid-December. This estimate is built to be as close as possible, but it can't be literally exact because scaling depends on the actual cohort sitting VCE this year, which doesn't exist until results day. Use it for planning, university research and motivation, not as the final word. For more on year-to-year accuracy, read our explainer on how accurate ATAR calculators really are.</p>
@@ -3390,7 +3390,7 @@ English is compulsory: one English study must be in your calculation. VTAC count
 
 <section aria-labelledby="faq-title" class="faq-section" id="faq"><div class="container container-narrow">
         <h2 id="faq-title">VIC ATAR &mdash; common questions</h2>
-        <details class="faq-item"><summary>How is the ATAR calculated in VIC?</summary><div class="faq-body"><p>You get a result in each subject. VTAC scales each result against the state. Your best results are added into a aggregate out of about 210. That total is ranked against every student. Your place in that line becomes your ATAR. The ATAR runs from 0 to 99.95.</p></div></details>
+        <details class="faq-item"><summary>How is the ATAR calculated in VIC?</summary><div class="faq-body"><p>You get a result in each subject. VTAC scales each result against the state. Your best results are added into a aggregate out of about 210. That total is ranked against every student. Your place in that line becomes your ATAR. The ATAR runs from 0 to 99.95, but ATARs below 30.00 are reported as '30.00 or less'.</p></div></details>
         <details class="faq-item"><summary>Do I need English for a VIC ATAR?</summary><div class="faq-body"><p>Yes. One English subject must sit in your best four. It can be English, English Language, Literature, or EAL. A second English can still count as another subject.</p></div></details>
         <details class="faq-item"><summary>Why is my ATAR lower than my marks?</summary><div class="faq-body"><p>Your ATAR is a rank, not a mark. It shows where you placed against everyone else. Marks show what you scored. The two are not the same. Your marks are also scaled before ranking. So a high average can still give a lower ATAR. This is normal and happens to most students.</p></div></details>
         <details class="faq-item"><summary>How accurate is this calculator before results day?</summary><div class="faq-body"><p>It uses the real method and the latest scaling data. Most estimates land within a few ATAR points. It cannot be exact yet. This year's scaling is not set until results come out. Use it as a guide, not a promise.</p></div></details>
@@ -3425,17 +3425,17 @@ English is compulsory: one English study must be in your calculation. VTAC count
 <h2>Calculators for other Australian states</h2>
 </div>
 <div class="related-grid">
-<a href='atar-target-calculator.html'><b>Target ATAR</b><span>Marks you need</span></a>
+<a href="/atar-target-calculator"><b>Target ATAR</b><span>Marks you need</span></a>
 
-<a href="nsw.html"><b>NSW</b><span>HSC · UAC</span></a>
-<a href="qld.html"><b>QLD</b><span>QCE · QTAC</span></a>
-<a href="wa.html"><b>WA</b><span>WACE · TISC</span></a>
-<a href="sa.html"><b>SA</b><span>SACE · SATAC</span></a>
-<a href="tas.html"><b>TAS</b><span>TCE</span></a>
-<a href="act.html"><b>ACT</b><span>BSSS</span></a>
-<a href="nt.html"><b>NT</b><span>NTCET · SATAC</span></a>
-<a href="vce-scaling-calculators.html"><b>VCE scaling</b><span>By subject · VTAC</span></a>
-<a href="vce-atar-calculator.html"><b>VCE ATAR calculator</b><span>Exam-name version</span></a>
+<a href="/nsw"><b>NSW</b><span>HSC · UAC</span></a>
+<a href="/qld"><b>QLD</b><span>QCE · QTAC</span></a>
+<a href="/wa"><b>WA</b><span>WACE · TISC</span></a>
+<a href="/sa"><b>SA</b><span>SACE · SATAC</span></a>
+<a href="/tas"><b>TAS</b><span>TCE</span></a>
+<a href="/act"><b>ACT</b><span>BSSS</span></a>
+<a href="/nt"><b>NT</b><span>NTCET · SATAC</span></a>
+<a href="/vce-scaling-calculators"><b>VCE scaling</b><span>By subject · VTAC</span></a>
+<a href="/vce-atar-calculator"><b>VCE ATAR calculator</b><span>Exam-name version</span></a>
 </div>
 </div>
 </section>

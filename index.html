@@ -65,94 +65,92 @@
   }
   </script>
 <!-- FAQ Page Schema (matches the homepage FAQ section — generates rich snippets) -->
-<script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": [
-      {
-        "@type": "Question",
-        "name": "How accurate is this ATAR calculator?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Our calculators use the most recent scaling reports published by UAC (NSW), VTAC (VIC), QTAC (QLD), TISC (WA), SATAC (SA), TASC (TAS) and BSSS (ACT). For NSW the methodology matches the official UAC ATAR Compass. No calculator can be 100% accurate before results day because scaling depends on the current cohort."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Do I have to sign up or pay?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "No. No email, no account, no payment. Type in your marks, see your ATAR estimate. We make money from ads on the page, not from your data."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "What's the difference between my HSC mark and my ATAR?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Your HSC mark is a score out of 100 in each subject. Your ATAR is a rank — a percentile that compares you to every other student in Australia. An ATAR of 90 means you are in the top 10%. An ATAR of 99.95 is the top 0.05%."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Why does each state have different rules?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Each state runs its own Year 12 exam system (HSC, VCE, QCE, etc.) with its own subjects and scaling. The ATAR is the universal output, but how it is calculated differs by state. That is why we built a separate calculator for each one."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Can I improve my ATAR by changing subjects?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "A little, but not as much as you think. Marks matter more than subject choice. Top scalers like Mathematics Extension, Physics, Chemistry, and English Advanced help if you can perform well in them, but a Band 6 in a normally-scaled subject beats a Band 4 in a high-scaling one."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Where does your scaling data come from?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Public reports from each state's tertiary admissions body. NSW: UAC's Report on the Scaling of the NSW HSC. VIC: VTAC's Scaling Report. QLD: QTAC's annual ATAR Report (inter-subject scaling). We update annually after each year's report is published in February or March."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Do you cover ACT and NT?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Yes. ACT students use the BSSS system (calculated by UAC). NT students use NTCET, which is the SACE system. Both have their own calculator on this site."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Can I get into uni with an ATAR below 70?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Absolutely. Many degrees accept ATARs in the 60s and 70s. Adjustment factors (EAS, rural bonuses, equity programs) can lift your effective ATAR by 5-10 points. There are also non-ATAR pathways: TAFE, diplomas, mature-age entry, portfolio entry."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Is my data saved anywhere?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "No. All calculations happen in your browser. Nothing gets sent to a server. Close the tab and your marks are gone. We cannot see them, store them, or share them."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "When does the real ATAR come out?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "NSW, ACT and VIC: mid-December. QLD: mid-December. WA, SA, NT and TAS: late December or early January. Each state's tertiary admissions body releases the exact date in October."
-        }
+<script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How accurate is this ATAR calculator?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Our calculators use the most recent scaling reports published by UAC (NSW), VTAC (VIC), QTAC (QLD), TISC (WA), SATAC (SA), TASC (TAS) and BSSS (ACT). For NSW the methodology matches the official UAC ATAR Compass. Remember though. No calculator can be 100% accurate before results day. This is because scaling depends on this year's cohort."
       }
-    ]
-  }
-  </script>
+    },
+    {
+      "@type": "Question",
+      "name": "Do I have to sign up or pay?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. No email, no account, no payment. Type in your marks, see your ATAR estimate. That's it. We make money from ads on the page, not from your data."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What's the difference between my HSC mark and my ATAR?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Your HSC mark is a score out of 100 in each subject. Your ATAR is a rank — a percentile that compares you to every other student in Australia. An ATAR of 90 means you're in the top 10%. An ATAR of 99.95 is the top 0.05%."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why does each state have different rules?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Each state runs its own Year 12 exam system (HSC, VCE, QCE, etc.) with its own subjects and scaling. The ATAR is the universal output, but how it's calculated differs by state. That's why we built a separate calculator for each one."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I improve my ATAR by changing subjects?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A little, but not as much as you think. Marks matter more than subject choice. Top scalers (Maths Extension, Physics, Chemistry, English Advanced/Extension) help if you can perform well in them. But a Band 6 in a normally-scaled subject beats a Band 4 in a \"high-scaling\" one. Pick what you can do well in."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Where does your scaling data come from?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Public reports from each state's tertiary admissions body. NSW: UAC's Report on the Scaling of the NSW HSC . VIC: VTAC's Scaling Report . QLD: QTAC's Quintile Tables . We update annually after each year's report is published (usually February/March)."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do you cover ACT and NT?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes — most calculators ignore these two. ACT students use the BSSS system (calculated by UAC). NT students use NTCET, which is the SACE system. Both have their own calculator on this site."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I get into uni with an ATAR below 70?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Absolutely. Many degrees accept ATARs in the 60s and 70s, and adjustment factors (EAS, rural bonuses, equity programs) can lift your effective ATAR by 5–10 points. There are also non-ATAR pathways: TAFE, diplomas, mature-age entry, portfolio entry. ATAR is one door, not the only one."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is my data saved anywhere?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. All calculations happen in your browser. Nothing gets sent to a server. Close the tab and your marks are gone. We can't see them, store them, or share them."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "When does the real ATAR come out?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "NSW, ACT & VIC: mid-December (a few days after HSC/VCE results). QLD: mid-December. WA & SA & NT & TAS: late December or early January. Each state's tertiary admissions body releases the date in October."
+      }
+    }
+  ]
+}</script>
 <style>
 /* =============================================================
    ATARCALCULATORS.COM — HOMEPAGE STYLES v2
@@ -2104,7 +2102,7 @@ section {
               Free calculators for every Australian state. Built on real scaling data from UAC, VTAC, QTAC and more. Pick your state and start — no email, no account, nothing.
             </p>
 <div class="hero-ctas">
-<a class="btn btn-primary btn-lg" href="atar-calculators.html">Pick your state <span aria-hidden="true">→</span></a>
+<a class="btn btn-primary btn-lg" href="/atar-calculators">Pick your state <span aria-hidden="true">→</span></a>
 <a class="btn btn-outline btn-lg" href="#how-it-works">How it works</a>
 </div>
 <ul class="trust-row" role="list">
@@ -2145,7 +2143,7 @@ section {
 <p class="section-sub">Australia has 8 states and territories, each with its own exam system. Tap yours below. Don't see your city? Check the major cities listed under each state.</p>
 </div>
 <div class="state-grid">
-<a class="state-card" href="nsw.html">
+<a class="state-card" href="/nsw">
 <div class="state-abbr" data-state="nsw">NSW</div>
 <h3>New South Wales</h3>
 <p class="state-system">HSC — scaled by UAC</p>
@@ -2153,7 +2151,7 @@ section {
 <p class="state-meta">~76,000 students each year</p>
 <span aria-hidden="true" class="state-arrow">→</span>
 </a>
-<a class="state-card" href="vic.html">
+<a class="state-card" href="/vic">
 <div class="state-abbr" data-state="vic">VIC</div>
 <h3>Victoria</h3>
 <p class="state-system">VCE — scaled by VTAC</p>
@@ -2161,7 +2159,7 @@ section {
 <p class="state-meta">~52,000 students each year</p>
 <span aria-hidden="true" class="state-arrow">→</span>
 </a>
-<a class="state-card" href="qld.html">
+<a class="state-card" href="/qld">
 <div class="state-abbr" data-state="qld">QLD</div>
 <h3>Queensland</h3>
 <p class="state-system">QCE — scaled by QTAC</p>
@@ -2169,7 +2167,7 @@ section {
 <p class="state-meta">~42,000 students each year</p>
 <span aria-hidden="true" class="state-arrow">→</span>
 </a>
-<a class="state-card" href="wa.html">
+<a class="state-card" href="/wa">
 <div class="state-abbr" data-state="wa">WA</div>
 <h3>Western Australia</h3>
 <p class="state-system">WACE — scaled by TISC</p>
@@ -2177,7 +2175,7 @@ section {
 <p class="state-meta">~14,000 students each year</p>
 <span aria-hidden="true" class="state-arrow">→</span>
 </a>
-<a class="state-card" href="sa.html">
+<a class="state-card" href="/sa">
 <div class="state-abbr" data-state="sa">SA</div>
 <h3>South Australia</h3>
 <p class="state-system">SACE — scaled by SATAC</p>
@@ -2185,7 +2183,7 @@ section {
 <p class="state-meta">~14,000 students each year</p>
 <span aria-hidden="true" class="state-arrow">→</span>
 </a>
-<a class="state-card" href="tas.html">
+<a class="state-card" href="/tas">
 <div class="state-abbr" data-state="tas">TAS</div>
 <h3>Tasmania</h3>
 <p class="state-system">TCE — UTAS / TASC</p>
@@ -2193,7 +2191,7 @@ section {
 <p class="state-meta">~3,500 students each year</p>
 <span aria-hidden="true" class="state-arrow">→</span>
 </a>
-<a class="state-card" href="act.html">
+<a class="state-card" href="/act">
 <div class="state-abbr" data-state="act">ACT</div>
 <h3>Aust. Capital Territory</h3>
 <p class="state-system">BSSS — scaled by UAC</p>
@@ -2201,7 +2199,7 @@ section {
 <p class="state-meta">~4,200 students each year</p>
 <span aria-hidden="true" class="state-arrow">→</span>
 </a>
-<a class="state-card" href="nt.html">
+<a class="state-card" href="/nt">
 <div class="state-abbr" data-state="nt">NT</div>
 <h3>Northern Territory</h3>
 <p class="state-system">NTCET — uses SACE</p>
@@ -2271,9 +2269,9 @@ section {
 <tr><td><a href="https://study.uq.edu.au/" rel="noopener" target="_blank">University of Queensland</a></td><td>Provisional Entry Medicine</td><td class="num"><b>99.00+</b></td><td class="hide-mob">+UCAT, interview</td></tr>
 <tr><td><a href="https://www.unsw.edu.au/" rel="noopener" target="_blank">UNSW Sydney</a></td><td>Medicine (BMed/MD)</td><td class="num"><b>96.00</b></td><td class="hide-mob">+UCAT, interview</td></tr>
 <tr><td><a href="https://www.monash.edu/" rel="noopener" target="_blank">Monash University</a></td><td>Medicine (MBBS direct)</td><td class="num"><b>95.00</b></td><td class="hide-mob">+UCAT, interview</td></tr>
-<tr><td><a href="https://www.adelaide.edu.au/" rel="noopener" target="_blank">University of Adelaide</a></td><td>Bachelor of Medicine</td><td class="num"><b>95.00</b></td><td class="hide-mob">+UCAT, interview</td></tr>
+<tr><td><a href="https://www.adelaide.edu.au/" rel="noopener" target="_blank">Adelaide University</a></td><td>Bachelor of Medicine</td><td class="num"><b>95.00</b></td><td class="hide-mob">+UCAT, interview</td></tr>
 <tr><td><a href="https://www.westernsydney.edu.au/" rel="noopener" target="_blank">Western Sydney University</a></td><td>Doctor of Medicine</td><td class="num"><b>95.50</b></td><td class="hide-mob">+UCAT, interview</td></tr>
-<tr><td><a href="https://www.jcu.edu.au/" rel="noopener" target="_blank">James Cook University</a></td><td>Medicine (rural)</td><td class="num"><b>85.00</b></td><td class="hide-mob">Rural priority</td></tr>
+<tr><td><a href="https://www.jcu.edu.au/" rel="noopener" target="_blank">James Cook University</a></td><td>Medicine (rural)</td><td class="num"><b>90.00</b></td><td class="hide-mob">Min threshold; median ~98</td></tr>
 <tr><td><a href="https://www.sydney.edu.au/" rel="noopener" target="_blank">University of Sydney</a></td><td>Dentistry / Dental Med</td><td class="num"><b>99.50</b></td><td class="hide-mob">+OAT, interview</td></tr>
 <tr><td><a href="https://www.unimelb.edu.au/" rel="noopener" target="_blank">University of Melbourne</a></td><td>Doctor of Dental Surgery</td><td class="num"><b>96.00</b></td><td class="hide-mob">Graduate entry</td></tr>
 <tr><td><a href="https://study.uq.edu.au/" rel="noopener" target="_blank">University of Queensland</a></td><td>Veterinary Science</td><td class="num"><b>95.00</b></td><td class="hide-mob">5 years</td></tr>
@@ -2455,7 +2453,7 @@ section {
 <details class="faq-item">
 <summary><span>How accurate is this ATAR calculator?</span><span aria-hidden="true" class="faq-icon"></span></summary>
 <div class="faq-body">
-<p>Our calculators use the most recent scaling reports published by UAC (NSW), VTAC (VIC), QTAC (QLD), TISC (WA), SATAC (SA), TASC (TAS) and BSSS (ACT). For NSW the methodology matches the official UAC ATAR Compass. Remember though — no calculator can be 100% accurate before results day, because scaling depends on this year's cohort.</p>
+<p>Our calculators use the most recent scaling reports published by UAC (NSW), VTAC (VIC), QTAC (QLD), TISC (WA), SATAC (SA), TASC (TAS) and BSSS (ACT). For NSW the methodology matches the official UAC ATAR Compass. Remember though. No calculator can be 100% accurate before results day. This is because scaling depends on this year's cohort.</p>
 </div>
 </details>
 <details class="faq-item">
@@ -2479,7 +2477,7 @@ section {
 <details class="faq-item">
 <summary><span>Can I improve my ATAR by changing subjects?</span><span aria-hidden="true" class="faq-icon"></span></summary>
 <div class="faq-body">
-<p>A little, but not as much as you think. Marks matter more than subject choice. Top scalers (Maths Extension, Physics, Chemistry, English Advanced/Extension) help if you can perform well in them — but a Band 6 in a normally-scaled subject beats a Band 4 in a "high-scaling" one. Pick what you can do well in.</p>
+<p>A little, but not as much as you think. Marks matter more than subject choice. Top scalers (Maths Extension, Physics, Chemistry, English Advanced/Extension) help if you can perform well in them. But a Band 6 in a normally-scaled subject beats a Band 4 in a "high-scaling" one. Pick what you can do well in.</p>
 </div>
 </details>
 <details class="faq-item">
@@ -2560,7 +2558,7 @@ section {
 </svg>
 </div>
 <h3>Refreshed every February</h3>
-<p>Each new annual scaling report drops in February. We update within 48 hours so you always have current data.</p>
+<p>Each new annual scaling report is released after results. We update when the new data is published.</p>
 </article>
 <article class="pillar">
 <div aria-hidden="true" class="pillar-icon">

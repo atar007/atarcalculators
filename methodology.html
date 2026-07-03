@@ -1987,7 +1987,7 @@ section {
 <section class="page-header">
 <div class="container">
 <div class="breadcrumb">
-<a href="index.html">Home</a>
+<a href="/">Home</a>
 <span class="breadcrumb-sep">/</span>
 <span>Methodology</span>
 </div>
@@ -2019,13 +2019,13 @@ section {
 <article class="prose">
 <h2 id="what-is-atar">What is the ATAR?</h2>
 <p>The <strong>Australian Tertiary Admission Rank (ATAR)</strong> is the primary tool universities use to compare Year 12 school leavers across the country. It's a <strong>rank, not a score</strong> — it tells you what percentage of the Year 12 cohort you outperformed.</p>
-<p>The scale runs from <strong>0.00 to 99.95</strong> in increments of 0.05:</p>
+<p>The scale runs from <strong>0.00 to 99.95</strong> in increments of 0.05 (ATARs below 30.00 are reported as &ldquo;30.00 or less&rdquo;):</p>
 <ul>
 <li>An ATAR of <strong>99.95</strong> means you're in the top 0.05% of the entire Year 12 cohort.</li>
 <li>An ATAR of <strong>90.00</strong> means you outperformed roughly 90% of the cohort.</li>
-<li>An ATAR of <strong>50.00</strong> is the median — half above, half below.</li>
+<li>An ATAR of <strong>50.00</strong> means you finished ahead of about half of your age group. Because roughly a third of that age group does not receive an ATAR, the median ATAR among students who do is closer to <strong>70</strong>.</li>
 </ul>
-<p>The ATAR is not calculated from your raw marks directly. Each state runs Year 12 differently (HSC, VCE, QCE, etc.), but the ATAR is the universal output that all states feed into for university admissions.</p>
+<p>The ATAR is not calculated from your raw marks directly. Each state runs Year 12 differently (HSC, VCE, QCE, etc.). But the ATAR is the universal output that all states feed into for university admissions.</p>
 <h2 id="process">The 4-step process</h2>
 <p>Whichever state's calculator you use, the underlying flow is the same:</p>
 <ol>
@@ -2121,24 +2121,22 @@ section {
 <p>Once your scaled marks are calculated, your <strong>aggregate</strong> is the sum of your counted scaled marks according to your state's rules.</p>
 <p>The aggregate is then compared to past cohorts to produce a <strong>percentile rank</strong>:</p>
 <ul>
-<li>NSW aggregate of <strong>~470/500</strong> typically ranks around ATAR 99.</li>
-<li>NSW aggregate of <strong>~430/500</strong> typically ranks around ATAR 95.</li>
-<li>NSW aggregate of <strong>~370/500</strong> typically ranks around ATAR 85.</li>
-<li>NSW aggregate of <strong>~290/500</strong> typically ranks around ATAR 70.</li>
+<li>NSW aggregate of <strong>~470/500</strong> typically ranks around ATAR 99.3.</li>
+<li>NSW aggregate of <strong>~430/500</strong> typically ranks around ATAR 97.</li>
+<li>NSW aggregate of <strong>~370/500</strong> typically ranks around ATAR 90.</li>
+<li>NSW aggregate of <strong>~290/500</strong> typically ranks around ATAR 77.</li>
 </ul>
-<p>These mappings shift slightly each year based on cohort distribution. Our calculators use the most recent five-year average to produce a stable estimate.</p>
+<p>These mappings shift slightly each year based on cohort distribution. Our calculators use recent published scaling data to produce a stable estimate.</p>
 <h2 id="updates">Update schedule</h2>
-<p>Scaling reports are released annually:</p>
+<p>Scaling reports are released after each year's Year 12 results:</p>
 <ul>
-<li><strong>UAC</strong> (NSW): published in February each year, covering the previous cohort</li>
-<li><strong>VTAC</strong> (VIC): published February</li>
-<li><strong>QTAC</strong> (QLD): published February</li>
-<li><strong>TISC</strong> (WA): published February</li>
-<li><strong>SATAC</strong> (SA &amp; NT): published February</li>
-<li><strong>TASC</strong> (TAS): published February/March</li>
-<li><strong>BSSS</strong> (ACT): published with UAC's report</li>
+<li><strong>UAC</strong> (NSW): a preliminary scaling report in December, with a fuller report around the middle of the following year</li>
+<li><strong>VTAC</strong> (VIC): scaling report published in the months after results</li>
+<li><strong>QTAC</strong> (QLD): ATAR report published after results</li>
+<li><strong>TISC</strong> (WA), <strong>SATAC</strong> (SA &amp; NT), <strong>TASC</strong> (TAS): published in the months after results</li>
+<li><strong>BSSS</strong> (ACT): released alongside UAC's report</li>
 </ul>
-<p>We aim to incorporate each new report within <strong>48 hours of its public release</strong>. The bottom of every calculator shows which report version is in use.</p>
+<p>We update our calculators when each new report is published. The bottom of every calculator shows which report version is in use.</p>
 <h2 id="accuracy">Accuracy &amp; verification</h2>
 <p>How well does our estimator match the official ATAR? We benchmark against:</p>
 <ul>
@@ -2146,17 +2144,17 @@ section {
 <li><strong>Past student feedback</strong> — students who received their official ATAR can compare it to our estimate.</li>
 <li><strong>Cohort variance</strong> — we account for the fact that each year's cohort is slightly different, which is why we show a confidence range.</li>
 </ul>
-<p>If you find a discrepancy, please <a href="contact.html">report it</a>. Real student-result comparisons are how we improve.</p>
+<p>If you find a discrepancy, please <a href="/contact">report it</a>. Real student-result comparisons are how we improve.</p>
 <h2 id="editorial-standards">Editorial standards &amp; review</h2>
-<p>This methodology — and every calculator and guide on the site — is maintained by the <strong>ATARCalculators Editorial Team</strong>, an independent group that works with Australian senior-secondary and tertiary-admissions data. We're not a tutoring brand and not academics-for-hire; our one job is turning the official reports into tools students can use. Our standards are simple and strict:</p>
+<p>This methodology — and every calculator and guide on the site — is maintained by the <strong>ATARCalculators Editorial Team</strong>, an independent group that works with Australian senior-secondary and tertiary-admissions data. We're not a tutoring brand and not academics-for-hire. Our one job is turning the official reports into tools students can use. Our standards are simple and strict:</p>
 <ul>
-<li><strong>Sourced, not guessed.</strong> No scaling factor, aggregate rule or cutoff is published unless it traces to an official public report listed above — never to memory or another calculator.</li>
+<li><strong>Sourced, not guessed.</strong> No scaling factor, aggregate rule or cutoff is published unless it traces to an official public report listed above. Never to memory or another calculator.</li>
 <li><strong>Verified against the original.</strong> We check every figure against the source report itself, not a third-party summary of it.</li>
 <li><strong>Reviewed on release.</strong> When a new annual report is published, we update the affected calculators and guides and refresh the "last reviewed" date on the page.</li>
 <li><strong>Corrected openly.</strong> Reader-reported errors are verified against the source and fixed promptly, and significant changes are recorded in the changelog below.</li>
 <li><strong>Independent.</strong> No university, tutoring company or admissions body pays for placement or influences our figures. The calculators stay neutral and free.</li>
 </ul>
-<p>Every guide carries a "last reviewed" date and the official sources behind it, so you always know how current the information is and where to verify it.</p>
+<p>Every guide carries a "last reviewed" date and the official sources behind it. So you always know how current the information is and where to verify it.</p>
 <h2 id="limitations">Limitations</h2>
 <div class="callout callout-warn">
 <strong>What our calculator cannot do:</strong>
@@ -2180,8 +2178,8 @@ section {
 <div class="container">
 <div class="bottom-cta-inner">
 <h2>Now try the calculator.</h2>
-<p>Pick your state, type your marks, get a real estimate. Backed by every source above. Try the <a href="atar-calculators.html">ATAR calculators</a>, or see subject-level scaling for <a href="hsc-scaling-calculators.html">HSC</a> and <a href="vce-scaling-calculators.html">VCE</a>.</p>
-<a class="btn btn-lg" href="atar-calculators.html">Pick your state →</a>
+<p>Pick your state, type your marks, get a real estimate. Backed by every source above. Try the <a href="/atar-calculators">ATAR calculators</a>, or see subject-level scaling for <a href="/hsc-scaling-calculators">HSC</a> and <a href="/vce-scaling-calculators">VCE</a>.</p>
+<a class="btn btn-lg" href="/atar-calculators">Pick your state →</a>
 </div>
 </div>
 </section>

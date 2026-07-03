@@ -39,7 +39,7 @@
 
 <header class="header" id="header">
   <div class="container header-inner">
-    <a class="logo" href="index.html" aria-label="ATARCalculators home">
+    <a class="logo" href="/" aria-label="ATARCalculators home">
       <span class="logo-mark" aria-hidden="true">${LOGO_SVG}</span>
       <span class="logo-text">ATAR<em>Calculators</em></span>
     </a>
@@ -52,40 +52,40 @@
           </button>
           <div class="dropdown" role="menu">
             <div class="dropdown-grid">
-                <a href="atar-calculators.html" role="menuitem"><b>All states</b><span>Every ATAR calculator</span></a>
+                <a href="/atar-calculators" role="menuitem"><b>All states</b><span>Every ATAR calculator</span></a>
                 ${dropdownItems}
             </div>
           </div>
         </li>
-        <li><a class="nav-link" href="hsc-scaling-calculators.html">HSC Scaling</a></li>
-        <li><a class="nav-link" href="vce-scaling-calculators.html">VCE Scaling</a></li>
-        <li><a class="nav-link" href="university-calculators.html">University</a></li>
-        <li><a class="nav-link" href="atar-target-calculator.html">Target ATAR</a></li>
-        <li><a class="nav-link" href="blog.html">Guides</a></li>
+        <li><a class="nav-link" href="/hsc-scaling-calculators">HSC Scaling</a></li>
+        <li><a class="nav-link" href="/vce-scaling-calculators">VCE Scaling</a></li>
+        <li><a class="nav-link" href="/university-calculators">University</a></li>
+        <li><a class="nav-link" href="/atar-target-calculator">Target ATAR</a></li>
+        <li><a class="nav-link" href="/blog">Guides</a></li>
       </ul>
     </nav>
-    <a class="btn btn-primary nav-cta" href="atar-calculators.html">Calculate now</a>
+    <a class="btn btn-primary nav-cta" href="/atar-calculators">Calculate now</a>
     <button class="menu-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu">
       <span></span><span></span><span></span>
     </button>
   </div>
   <div class="mobile-menu" id="mobile-menu" hidden>
     <nav aria-label="Mobile">
-      <a href="atar-calculators.html">All ATAR Calculators</a>
-      <a href="nsw.html">NSW HSC Calculator</a>
-      <a href="vic.html">VIC VCE Calculator</a>
-      <a href="qld.html">QLD QCE Calculator</a>
-      <a href="wa.html">WA WACE Calculator</a>
-      <a href="sa.html">SA SACE Calculator</a>
-      <a href="tas.html">TAS TCE Calculator</a>
-      <a href="act.html">ACT BSSS Calculator</a>
-      <a href="nt.html">NT NTCET Calculator</a>
-      <a href="hsc-scaling-calculators.html">HSC Subject Scaling</a>
-      <a href="vce-scaling-calculators.html">VCE Subject Scaling</a>
-      <a href="university-calculators.html">University Calculators</a>
-      <a href="atar-target-calculator.html">Target ATAR Calculator</a>
-      <a href="blog.html">Guides &amp; articles</a>
-      <a class="btn btn-primary" href="atar-calculators.html">Calculate now</a>
+      <a href="/atar-calculators">All ATAR Calculators</a>
+      <a href="/nsw">NSW HSC Calculator</a>
+      <a href="/vic">VIC VCE Calculator</a>
+      <a href="/qld">QLD QCE Calculator</a>
+      <a href="/wa">WA WACE Calculator</a>
+      <a href="/sa">SA SACE Calculator</a>
+      <a href="/tas">TAS TCE Calculator</a>
+      <a href="/act">ACT BSSS Calculator</a>
+      <a href="/nt">NT NTCET Calculator</a>
+      <a href="/hsc-scaling-calculators">HSC Subject Scaling</a>
+      <a href="/vce-scaling-calculators">VCE Subject Scaling</a>
+      <a href="/university-calculators">University Calculators</a>
+      <a href="/atar-target-calculator">Target ATAR Calculator</a>
+      <a href="/blog">Guides &amp; articles</a>
+      <a class="btn btn-primary" href="/atar-calculators">Calculate now</a>
     </nav>
   </div>
 </header>
@@ -106,7 +106,7 @@
   <div class="container">
     <div class="footer-grid">
       <div class="footer-brand">
-        <a class="logo logo-light" href="index.html" aria-label="ATARCalculators home">
+        <a class="logo logo-light" href="/" aria-label="ATARCalculators home">
           <span class="logo-mark" aria-hidden="true">${LOGO_SVG}</span>
           <span class="logo-text">ATAR<em>Calculators</em></span>
         </a>
@@ -115,36 +115,36 @@
       <div class="footer-col">
         <h4>Calculators</h4>
         <ul>
-          <li><a href="atar-calculators.html">All ATAR calculators</a></li>
+          <li><a href="/atar-calculators">All ATAR calculators</a></li>
             ${calculatorLinks}
         </ul>
       </div>
       <div class="footer-col">
         <h4>About</h4>
         <ul>
-          <li><a href="about.html">About us</a></li>
-          <li><a href="methodology.html">Our methodology</a></li>
-          <li><a href="blog.html">Guides &amp; articles</a></li>
-          <li><a href="index.html#faq">FAQ</a></li>
-          <li><a href="contact.html">Contact</a></li>
-          <li><a href="privacy.html">Privacy</a></li>
-          <li><a href="terms.html">Terms</a></li>
-          <li><a href="disclaimer.html">Disclaimer</a></li>
+          <li><a href="/about">About us</a></li>
+          <li><a href="/methodology">Our methodology</a></li>
+          <li><a href="/blog">Guides &amp; articles</a></li>
+          <li><a href="/#faq">FAQ</a></li>
+          <li><a href="/contact">Contact</a></li>
+          <li><a href="/privacy">Privacy</a></li>
+          <li><a href="/terms">Terms</a></li>
+          <li><a href="/disclaimer">Disclaimer</a></li>
         </ul>
       </div>
       <div class="footer-col">
         <h4>More tools</h4>
         <ul>
-          <li><a href="hsc-scaling-calculators.html">HSC subject scaling</a></li>
-          <li><a href="vce-scaling-calculators.html">VCE subject scaling</a></li>
-          <li><a href="university-calculators.html">University calculators</a></li>
-          <li><a href="atar-target-calculator.html">Target ATAR calculator</a></li>
+          <li><a href="/hsc-scaling-calculators">HSC subject scaling</a></li>
+          <li><a href="/vce-scaling-calculators">VCE subject scaling</a></li>
+          <li><a href="/university-calculators">University calculators</a></li>
+          <li><a href="/atar-target-calculator">Target ATAR calculator</a></li>
         </ul>
       </div>
     </div>
     <div class="footer-bottom">
       <p>&copy; <span id="year">${year}</span> ATARCalculators.com — Independent and free.</p>
-      <p class="footer-disclaimer">Estimates only — your official ATAR comes from your state's tertiary admissions body. Figures sourced from official UAC, VTAC, QTAC, SCSA, SATAC, TASC &amp; BSSS reports (and ACARA for NAPLAN). Reviewed by the <a href="about.html#editorial-team">ATARCalculators Editorial Team</a> · Last updated <b>Feb 2026</b>.</p>
+      <p class="footer-disclaimer">Estimates only — your official ATAR comes from your state's tertiary admissions body. Figures sourced from official UAC, VTAC, QTAC, SCSA, SATAC, TASC &amp; BSSS reports (and ACARA for NAPLAN). Reviewed by the <a href="/about#editorial-team">ATARCalculators Editorial Team</a> · Last updated <b>Feb 2026</b>.</p>
     </div>
   </div>
 </footer>

@@ -176,8 +176,7 @@
   ]
 }
   </script>
-  <script type="application/ld+json">
-  {
+  <script type="application/ld+json">{
   "@context": "https://schema.org",
   "@type": "FAQPage",
   "mainEntity": [
@@ -186,7 +185,7 @@
       "name": "How is the ATAR calculated in SA?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "You get a result in each subject. SATAC scales each result against the state. Your best results are added into a university aggregate. That total is ranked against every student. Your place in that line becomes your ATAR. The ATAR runs from 0 to 99.95."
+        "text": "You get a result in each subject. SATAC scales each result against the state. Your best results are added into a university aggregate. That total is ranked against every student. Your place in that line becomes your ATAR. The ATAR runs from 0 to 99.95, but ATARs below 30.00 are reported as '30.00 or less'."
       }
     },
     {
@@ -314,7 +313,7 @@
       "name": "What's the difference between my ATAR and my subject marks?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Your marks are scores in each subject. Your ATAR is one rank for all of them together. Marks can sit out of 100. The ATAR runs from 0 to 99.95. One is what you got. The other is where you placed."
+        "text": "Your marks are scores in each subject. Your ATAR is one rank for all of them together. Marks can sit out of 100. The ATAR runs from 0 to 99.95, but ATARs below 30.00 are reported as '30.00 or less'. One is what you got. The other is where you placed."
       }
     },
     {
@@ -367,7 +366,7 @@
     },
     {
       "@type": "Question",
-      "name": "Why is my friend\u2019s ATAR higher with similar marks?",
+      "name": "Why is my friend’s ATAR higher with similar marks?",
       "acceptedAnswer": {
         "@type": "Answer",
         "text": "Subject mix and scaling explain most of the gap. Your friend may take subjects that scaled higher. Or they placed higher within their groups. Near the top, a small mark gap can mean a bigger rank gap. Focus on your own results."
@@ -382,8 +381,7 @@
       }
     }
   ]
-}
-  </script>
+}</script>
   <style>
 
 /* =============================================================
@@ -3279,7 +3277,7 @@ section {
 <body>
   <main id="main">
     <section class="page-header"><div class="container">
-      <div class="breadcrumb"><a href="index.html">Home</a><span class="breadcrumb-sep">/</span><a href="atar-calculators.html">Calculators</a><span class="breadcrumb-sep">/</span><span>SA SACE</span></div>
+      <div class="breadcrumb"><a href="/">Home</a><span class="breadcrumb-sep">/</span><a href="/atar-calculators">Calculators</a><span class="breadcrumb-sep">/</span><span>SA SACE</span></div>
       <span class="eyebrow"><span class="eyebrow-dot"></span>SA &middot; SACE</span>
       <h1>SA ATAR Calculator &mdash; Estimate your <em>SACE ATAR</em> in 60 seconds.</h1>
       <p class="lede">Built on SATAC scaling and your university aggregate out of 90. Enter your Stage 2 results and see which SA universities your ATAR can reach.</p>
@@ -3313,7 +3311,7 @@ section {
     <section class="page-content"><div class="container">
 <div class="prose calc-explainer">
 <h2>How the SACE ATAR calculation works</h2>
-<p>Your SACE ATAR is not the average of your marks. It is a <strong>rank</strong> built in stages: scale each result, add your best subjects into an aggregate, then convert that aggregate to a rank out of 99.95. Here is the exact method this calculator uses, following SATAC’s published model.</p>
+<p>Your SACE ATAR is not the average of your marks. It is a <strong>rank</strong> built in stages. Scale each result, add your best subjects into an aggregate, then convert that aggregate to a rank out of 99.95. Here is the exact method this calculator uses, following SATAC’s published model.</p>
 <h3>The formula</h3>
 <div class="formula-box">
 <span class="formula-eq">Scaled result = your subject result &rarr; scaled by SATAC</span>
@@ -3344,8 +3342,8 @@ SATAC counts your best three 20-credit subjects in full, plus half of a scaled f
 </tbody>
 </table>
 </div>
-<p>An aggregate of <strong>79.2 out of 90</strong> converts to an ATAR of about <strong>95.95</strong>. Even though every raw mark sits in the high 80s or low 90s, the ATAR lands well above 90, because the ATAR is a rank and this student ranks strongly against the cohort.</p>
-<p>For the full technical detail, see our <a href="methodology.html">methodology page</a>.</p>
+<p>An aggregate of <strong>79.2 out of 90</strong> converts to an ATAR of about <strong>95.95</strong>. <em>These scaled scores are illustrative &mdash; SACE/SATAC scaling depends on how each subject&rsquo;s cohort performs. So real scaled scores differ.</em> Even though every raw mark sits in the high 80s or low 90s, the ATAR lands well above 90. This is because the ATAR is a rank and this student ranks strongly against the cohort.</p>
+<p>For the full technical detail, see our <a href="/methodology">methodology page</a>.</p>
 </div>
 </div></section>
 
@@ -3357,7 +3355,7 @@ SATAC counts your best three 20-credit subjects in full, plus half of a scaled f
 
     <section class="page-content"><div class="container"><div class="prose">
       <h2>About this SA ATAR calculator</h2>
-          <p>This tool estimates your SA ATAR. It uses SATAC's scaling model. SACE works in a clear way. Each Stage 2 subject gives you a scaled score out of 20. SATAC adds your best 90 credits of these scores. That is about four and a half subjects. The total is your university aggregate, out of 90. We turn it into an ATAR. For the full method, see our <a href="methodology.html">methodology page</a>.</p>
+          <p>This tool estimates your SA ATAR. It uses SATAC's scaling model. SACE works in a clear way. Each Stage 2 subject gives you a scaled score out of 20. SATAC adds your best 90 credits of these scores. That is about four and a half subjects. The total is your university aggregate, out of 90. We turn it into an ATAR. For the full method, see our <a href="/methodology">methodology page</a>.</p>
           <p>Only Stage 2 results count towards your ATAR. Stage 1 still matters for finishing your SACE. You also need Research Project B. It is worth 10 credits and is compulsory. It can count in the flexible part of your aggregate. So add it when you use this tool.</p>
           <p>Some subjects scale up. Others scale down. This depends on who else takes them, not how hard they feel. Strong groups pull a subject up. Got your estimate? The section above shows SA universities. Note that the University of Adelaide and UniSA merged into Adelaide University in 2026. Each course lists a guide cutoff.</p>
           <p>SATAC sets your real ATAR. It arrives in mid to late December. This estimate gets you close. It cannot be exact yet. Scaling depends on this year's students. That data does not exist until results day. Use this to plan and aim.</p>
@@ -3374,14 +3372,14 @@ SATAC counts your best three 20-credit subjects in full, plus half of a scaled f
 <li><b>Ignoring which subjects count.</b> Only your best subjects go into the aggregate, in the combination this system uses. Weaker results are dropped, so one low mark rarely sinks a strong overall profile.</li>
 <li><b>Entering optimistic marks.</b> Students often enter their best-case results rather than realistic ones. Enter the marks you are genuinely tracking towards, then run a separate, more ambitious scenario.</li>
 <li><b>Adding bonus points to your ATAR.</b> Adjustment factors do not change your ATAR. They change your <em>selection rank</em> for particular courses. Check each university’s scheme separately rather than adding points here.</li>
-<li><b>Expecting an exact number before results day.</b> Scaling depends on this year’s actual cohort, which does not exist yet, so treat the estimate as a planning tool with a margin of a point or two.</li>
+<li><b>Expecting an exact number before results day.</b> Scaling depends on this year’s actual cohort, which does not exist yet. So treat the estimate as a planning tool with a margin of a point or two.</li>
 </ul>
 </div>
 </div></section>
 
 <section class="faq-section" id="faq" aria-labelledby="faq-title"><div class="container container-narrow">
       <h2 id="faq-title">SA ATAR &mdash; common questions</h2>
-        <details class="faq-item"><summary>How is the ATAR calculated in SA?</summary><div class="faq-body"><p>You get a result in each subject. SATAC scales each result against the state. Your best results are added into a university aggregate. That total is ranked against every student. Your place in that line becomes your ATAR. The ATAR runs from 0 to 99.95.</p></div></details>
+        <details class="faq-item"><summary>How is the ATAR calculated in SA?</summary><div class="faq-body"><p>You get a result in each subject. SATAC scales each result against the state. Your best results are added into a university aggregate. That total is ranked against every student. Your place in that line becomes your ATAR. The ATAR runs from 0 to 99.95, but ATARs below 30.00 are reported as '30.00 or less'.</p></div></details>
         <details class="faq-item"><summary>What is the university aggregate in SACE?</summary><div class="faq-body"><p>It is your score out of 90. SATAC adds the scaled scores from your best 90 credits. That is about four and a half subjects. The aggregate is ranked to give your ATAR.</p></div></details>
         <details class="faq-item"><summary>Why is my ATAR lower than my marks?</summary><div class="faq-body"><p>Your ATAR is a rank, not a mark. It shows where you placed against everyone else. Marks show what you scored. The two are not the same. Your marks are also scaled before ranking. So a high average can still give a lower ATAR. This is normal and happens to most students.</p></div></details>
         <details class="faq-item"><summary>How accurate is this calculator before results day?</summary><div class="faq-body"><p>It uses the real method and the latest scaling data. Most estimates land within a few ATAR points. It cannot be exact yet. This year's scaling is not set until results come out. Use it as a guide, not a promise.</p></div></details>
@@ -3397,7 +3395,7 @@ SATAC counts your best three 20-credit subjects in full, plus half of a scaled f
         <details class="faq-item faq-extra"><summary>Is the University of Adelaide and UniSA merger real?</summary><div class="faq-body"><p>Yes. The two merged into Adelaide University. It opened in January 2026. Your SACE results and ATAR still work the same way. Cutoffs here are a guide only.</p></div></details>
         <details class="faq-item faq-extra"><summary>What is scaling and why does it happen?</summary><div class="faq-body"><p>Scaling makes subjects fair to compare. Each subject has a different group of students. SATAC looks at how that group does across all their subjects. A strong group scales the subject up. A weaker group scales it down. It is about the group, not how hard the subject feels.</p></div></details>
         <details class="faq-item faq-extra"><summary>Why do different ATAR calculators give different numbers?</summary><div class="faq-body"><p>Each calculator models scaling in its own way. The exact scaling data is not fully public. So small gaps between tools are normal. Treat every estimate as a guide. Your real ATAR comes only on results day.</p></div></details>
-        <details class="faq-item faq-extra"><summary>What's the difference between my ATAR and my subject marks?</summary><div class="faq-body"><p>Your marks are scores in each subject. Your ATAR is one rank for all of them together. Marks can sit out of 100. The ATAR runs from 0 to 99.95. One is what you got. The other is where you placed.</p></div></details>
+        <details class="faq-item faq-extra"><summary>What's the difference between my ATAR and my subject marks?</summary><div class="faq-body"><p>Your marks are scores in each subject. Your ATAR is one rank for all of them together. Marks can sit out of 100. The ATAR runs from 0 to 99.95, but ATARs below 30.00 are reported as '30.00 or less'. One is what you got. The other is where you placed.</p></div></details>
         <details class="faq-item faq-extra"><summary>Should I enter my predicted or real marks?</summary><div class="faq-body"><p>Either works in this tool. Before results day, use your best honest guess. Base it on your recent tasks and trials. Do not enter your dream score. The estimate is only as good as the marks you put in.</p></div></details>
         <details class="faq-item faq-extra"><summary>Does dropping or failing a subject hurt my ATAR?</summary><div class="faq-body"><p>Only your best subjects count, so dropping one is often fine. You just need enough subjects left. A failed subject can count as a low or zero score. It hurts most when it is one of your counted subjects.</p></div></details>
         <details class="faq-item faq-extra"><summary>Is my ATAR the same across Australia?</summary><div class="faq-body"><p>Yes. The ATAR is national. An 85 in one state equals an 85 in another. You can use it to apply anywhere in Australia. You can also use it years later if you take a break.</p></div></details>
@@ -3411,17 +3409,28 @@ SATAC counts your best three 20-credit subjects in full, plus half of a scaled f
     </div></section>
 
     <section class="related-calc"><div class="container">
+      <div class="uni-header"><span class="eyebrow"><span class="eyebrow-dot"></span>SA guides</span><h2>SA ATAR guides</h2></div>
+      <div class="related-grid">
+<a href="/how-is-atar-calculated-sa"><b>How ATAR is Calculated</b><span>SACE &amp; aggregate explained</span></a>
+<a href="/sa-atar-cutoffs"><b>SA ATAR Cutoffs</b><span>Course entry ranges</span></a>
+<a href="/best-scaling-subjects-sa"><b>Best Scaling Subjects</b><span>Which SACE subjects scale</span></a>
+<a href="/good-atar-sa"><b>What&#x27;s a Good ATAR?</b><span>Averages &amp; goals</span></a>
+<a href="/sa-atar-release-date"><b>ATAR Release Date 2026</b><span>Results day timing</span></a>
+<a href="/satac-explained"><b>SATAC Explained</b><span>How SATAC works</span></a>
+<a href="/improve-sa-atar"><b>Improve Your ATAR</b><span>Year 12 strategy</span></a>
+</div></div></section>
+<section class="related-calc"><div class="container">
       <div class="uni-header"><span class="eyebrow"><span class="eyebrow-dot"></span>Other states</span><h2>Calculators for other Australian states</h2></div>
       <div class="related-grid">
-<a href="nsw.html"><b>NSW</b><span>HSC · UAC</span></a>
-<a href="vic.html"><b>VIC</b><span>VCE · VTAC</span></a>
-<a href="qld.html"><b>QLD</b><span>QCE · QTAC</span></a>
-<a href="wa.html"><b>WA</b><span>WACE · TISC</span></a>
-<a href="tas.html"><b>TAS</b><span>TCE</span></a>
-<a href="act.html"><b>ACT</b><span>BSSS</span></a>
-<a href="nt.html"><b>NT</b><span>NTCET · SATAC</span></a>
-<a href="atar-calculators.html"><b>All states</b><span>Every ATAR calculator</span></a>
-<a href="sace-atar-calculator.html"><b>SACE ATAR calculator</b><span>Exam-name version</span></a>
+<a href="/nsw"><b>NSW</b><span>HSC · UAC</span></a>
+<a href="/vic"><b>VIC</b><span>VCE · VTAC</span></a>
+<a href="/qld"><b>QLD</b><span>QCE · QTAC</span></a>
+<a href="/wa"><b>WA</b><span>WACE · TISC</span></a>
+<a href="/tas"><b>TAS</b><span>TCE</span></a>
+<a href="/act"><b>ACT</b><span>BSSS</span></a>
+<a href="/nt"><b>NT</b><span>NTCET · SATAC</span></a>
+<a href="/atar-calculators"><b>All states</b><span>Every ATAR calculator</span></a>
+<a href="/sace-atar-calculator"><b>SACE ATAR calculator</b><span>Exam-name version</span></a>
 </div></div></section>
   </main>
   <script src="navigation.js" defer></script>
