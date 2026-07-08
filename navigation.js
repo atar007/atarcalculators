@@ -15,14 +15,14 @@
 
   /* ---------- ALL STATE CALCULATORS ---------- */
   const STATES = [
-    { code: 'NSW', sub: 'HSC · UAC scaling',   url: 'nsw.html' },
-    { code: 'VIC', sub: 'VCE · VTAC scaling',  url: 'vic.html' },
-    { code: 'QLD', sub: 'QCE · QTAC scaling',  url: 'qld.html' },
-    { code: 'WA',  sub: 'WACE · TISC scaling', url: 'wa.html' },
-    { code: 'SA',  sub: 'SACE · SATAC scaling',url: 'sa.html' },
-    { code: 'TAS', sub: 'TCE · UTAS scaling',  url: 'tas.html' },
-    { code: 'ACT', sub: 'BSSS · UAC scaling',  url: 'act.html' },
-    { code: 'NT',  sub: 'NTCET · SATAC scaling',url: 'nt.html' }
+    { code: 'NSW', sub: 'HSC · UAC scaling',   url: '/nsw' },
+    { code: 'VIC', sub: 'VCE · VTAC scaling',  url: '/vic' },
+    { code: 'QLD', sub: 'QCE · QTAC scaling',  url: '/qld' },
+    { code: 'WA',  sub: 'WACE · TISC scaling', url: '/wa' },
+    { code: 'SA',  sub: 'SACE · SATAC scaling',url: '/sa' },
+    { code: 'TAS', sub: 'TCE · UTAS scaling',  url: '/tas' },
+    { code: 'ACT', sub: 'BSSS · UAC scaling',  url: '/act' },
+    { code: 'NT',  sub: 'NTCET · SATAC scaling',url: '/nt' }
   ];
 
   /* ---------- LOGO SVG (reused) ---------- */

@@ -3118,6 +3118,17 @@ Mathematical Methods is a strong-scaling study: its scaled score can rise <stron
 <a href="/vce-legal-studies-scaling-calculator"><b>Legal Studies</b><span>Scales down slightly</span></a>
 </div>
 </div></section>
+<section class="related-calc related-blog"><div class="container">
+<div class="uni-header"><span class="eyebrow"><span class="eyebrow-dot"></span>VCE Methods guides</span><h2>VCE Methods: scaling, scores and study</h2></div>
+<div class="related-grid">
+<a href="/vce-methods-scaling"><b>Methods scaling explained</b><span>How it scales</span></a>
+<a href="/good-vce-methods-study-score"><b>Good Methods study score</b><span>The score to aim for</span></a>
+<a href="/vce-methods-resources"><b>Methods resources</b><span>Study materials</span></a>
+<a href="/vce-methods-2026"><b>Methods study design</b><span>Structure &amp; assessment</span></a>
+<a href="/vce-methods-mistakes"><b>Methods mistakes</b><span>What to avoid</span></a>
+<a href="/is-vce-methods-worth-taking"><b>Is Methods worth taking?</b><span>Pros &amp; cons</span></a>
+</div>
+</div></section>
 </main>
 <!-- Footer injected by navigation.js -->
 <script defer src="navigation.js"></script>
@@ -3137,7 +3148,7 @@ Mathematical Methods is a strong-scaling study: its scaled score can rise <stron
    var v=parseFloat(inp.value);
    if(isNaN(v)||v<0||v>50){err.style.display='block';res.classList.remove('is-shown');return;}
    err.style.display='none';
-   var sc=interp(ANC,v); document.getElementById('scaled').textContent=sc.toFixed(1);
+   var sc=Math.min(50,interp(ANC,v)); document.getElementById('scaled').textContent=sc.toFixed(1);
    var ch=sc-v, chr=(ch>=0?'+':'')+ch.toFixed(1);
    var cls=ch>0.05?'tag-up':(ch<-0.05?'tag-down':'');
    document.getElementById('chip-change').innerHTML="<b class='"+cls+"'>"+chr+"</b> from your study score";
