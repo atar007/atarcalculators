@@ -2820,12 +2820,12 @@ section {
     .faq-count-note{text-align:center;color:#64748b;font-size:.9rem;margin:.35rem 0 1.25rem;}
     #faq-loadmore{min-width:240px;}
   
-/* tighten stacked/adjacent section spacing */
-main > section + section{padding-top:0 !important}
-main > section:has(+ section){padding-bottom:36px !important}
-/* some pages have bare h2/h3 headings placed directly inside main, between sections */
-main > section:has(+ h2),main > section:has(+ h3){padding-bottom:14px !important}
-main > section + h2,main > section + h3{margin-top:26px !important}
+/* close doubled section spacing WITHOUT flushing headings to a section top edge */
+main > section + section{padding-top:32px !important}
+main > section:has(+ section){padding-bottom:32px !important}
+/* bare h2/h3 headings placed directly inside main, between sections (some ATAR calc pages) */
+main > section:has(+ h2),main > section:has(+ h3){padding-bottom:16px !important}
+main > section + h2,main > section + h3{margin-top:20px !important}
 </style>
 <style>
 /* ===== HSC subject scaling calculator — supplementary (uses site tokens) ===== */
