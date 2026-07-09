@@ -2908,6 +2908,13 @@ section {
 }
 .mistake-list > li b { color: var(--text-primary, #0F172A); }
 
+
+/* tighten stacked/adjacent section spacing */
+main > section + section{padding-top:0 !important}
+main > section:has(+ section){padding-bottom:36px !important}
+/* some pages have bare h2/h3 headings placed directly inside main, between sections */
+main > section:has(+ h2),main > section:has(+ h3){padding-bottom:14px !important}
+main > section + h2,main > section + h3{margin-top:26px !important}
 </style>
 <style>
     /* Load-more FAQ + minor enhancements */

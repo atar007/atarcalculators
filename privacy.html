@@ -1963,7 +1963,14 @@ section {
   .subject-tag { font-size: 12px; padding: 5px 10px; }
 }
 
-  </style>
+  
+/* tighten stacked/adjacent section spacing */
+main > section + section{padding-top:0 !important}
+main > section:has(+ section){padding-bottom:36px !important}
+/* some pages have bare h2/h3 headings placed directly inside main, between sections */
+main > section:has(+ h2),main > section:has(+ h3){padding-bottom:14px !important}
+main > section + h2,main > section + h3{margin-top:26px !important}
+</style>
   <meta name="twitter:title" content="Privacy Policy — ATARCalculators"/>
   <meta name="twitter:description" content="How ATARCalculators handles your data. Your marks never leave your browser, we never sell data, and all calculations happen on your own device."/>
   <meta property="og:image" content="https://atarcalculators.com/og-image.png"/>
