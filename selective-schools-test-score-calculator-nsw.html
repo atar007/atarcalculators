@@ -1545,7 +1545,7 @@ section {
 }
 .callout strong { display: inline-block; margin-bottom: 4px; }
 .callout-info {
-  background: var(--info-bg);
+  background: var(--info-bg, #EFF6FF);
   border-color: rgba(59, 130, 246, .3);
   color: #1E40AF;
 }
@@ -1738,7 +1738,7 @@ section {
   gap: 8px;
 }
 .do-card h4 { color: var(--success-text); }
-.dont-card h4 { color: var(--error-text); }
+.dont-card h4 { color: var(--error-text, #DC2626); }
 .do-dont-card ul { margin: 0; padding-left: 18px; }
 .do-dont-card li { font-size: 14px; margin-bottom: 6px; line-height: 1.5; }
 .do-card li { color: var(--success-dark, #065F46); }
@@ -2146,7 +2146,7 @@ section {
 .subject-remove:hover {
   background: var(--error-bg);
   border-color: rgba(239, 68, 68, .4);
-  color: var(--error-text);
+  color: var(--error-text, #DC2626);
 }
 
 /* Bottom section - PROMINENT mark input */
@@ -2971,7 +2971,8 @@ main > section + h2,main > section + h3{margin-top:20px !important}
 .howto-step p{font-size:14px;color:var(--text-secondary);margin:0;line-height:1.55}
 </style>
   <link rel="icon" href="/favicon.ico" sizes="any"><link rel="icon" type="image/svg+xml" href="/favicon.svg"><link rel="icon" type="image/png" sizes="48x48" href="/favicon-48x48.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="manifest" href="/site.webmanifest">
-<style>.data-table{width:100%;border-collapse:collapse;font-size:15px;margin:14px 0}.data-table th,.data-table td{text-align:left;padding:11px 14px;border-bottom:1px solid var(--navy-100);vertical-align:top}.data-table th{background:var(--navy-50);color:var(--navy-900);font-weight:700;font-size:13px;text-transform:uppercase;letter-spacing:.03em}.data-table tr:last-child td{border-bottom:none}.scale-scroll{overflow-x:auto;border:1px solid var(--navy-100);border-radius:var(--radius)}.sel-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px 18px;margin-bottom:14px}.sel-row{display:flex;flex-direction:column;gap:6px}.sel-row .scalc-inwrap{width:100%}@media(max-width:560px){.sel-grid{grid-template-columns:1fr}}</style></head>
+<style>.data-table{width:100%;border-collapse:collapse;font-size:15px;margin:14px 0}.data-table th,.data-table td{text-align:left;padding:11px 14px;border-bottom:1px solid var(--navy-100);vertical-align:top}.data-table th{background:var(--navy-50);color:var(--navy-900);font-weight:700;font-size:13px;text-transform:uppercase;letter-spacing:.03em}.data-table tr:last-child td{border-bottom:none}.scale-scroll{overflow-x:auto;border:1px solid var(--navy-100);border-radius:var(--radius-md)}.sel-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px 18px;margin-bottom:14px}.sel-row{display:flex;flex-direction:column;gap:6px}.sel-row .scalc-inwrap{width:100%}@media(max-width:560px){.sel-grid{grid-template-columns:1fr}}.faq-wrap .faq-item + .faq-item{margin-top:12px}
+</style></head>
 <body>
 <!-- Header injected by navigation.js -->
 <main id="main"><section class="page-header"><div class="container"><div class="breadcrumb"><a href="/">Home</a><span class="breadcrumb-sep">/</span><a href="/atar-calculators">Calculators</a><span class="breadcrumb-sep">/</span><span>Selective NSW</span></div><span class="eyebrow"><span class="eyebrow-dot"></span>NSW · Selective Entry</span><h1>NSW Selective Test Score Calculator — your <em>placement score</em>.</h1><p class="lede">In the current model, the NSW Selective test is widely reported to score four equally weighted sections. This is often described as a placement score out of 120. The Department does not publish the exact weightings or total, so treat this as a planning estimate. Enter your section results to estimate your placement score and see how competitive it is.</p><div class="meta">Equal-weighting model (25% each) · <b>NSW Department of Education</b> · indicative only</div></div></section><section class="calc-section" id="calculator"><div class="container"><div class="calc-wrap"><div class="calc-card"><p style="margin:0 0 14px;color:var(--navy-600);font-size:15px">Enter an estimated scaled score out of 30 for each section. Each of the four sections counts for 25% of the placement score, giving a total out of 120. The real test reports scaled scores, so treat this as an indicative planning estimate.</p><div class="sel-grid"><div class="sel-row"><label class="scalc-label" for="rd">Reading (/30)</label><div class="scalc-inwrap"><input id="rd" type="number" min="0" max="30" step="0.1" placeholder="0–30" inputmode="decimal"/><span class="scalc-suffix">/30</span></div></div><div class="sel-row"><label class="scalc-label" for="mr">Mathematical Reasoning (/30)</label><div class="scalc-inwrap"><input id="mr" type="number" min="0" max="30" step="0.1" placeholder="0–30" inputmode="decimal"/><span class="scalc-suffix">/30</span></div></div><div class="sel-row"><label class="scalc-label" for="ts">Thinking Skills (/30)</label><div class="scalc-inwrap"><input id="ts" type="number" min="0" max="30" step="0.1" placeholder="0–30" inputmode="decimal"/><span class="scalc-suffix">/30</span></div></div><div class="sel-row"><label class="scalc-label" for="wr">Writing (/30)</label><div class="scalc-inwrap"><input id="wr" type="number" min="0" max="30" step="0.1" placeholder="0–30" inputmode="decimal"/><span class="scalc-suffix">/30</span></div></div></div><div class="scalc-row" style="margin-top:4px"><button class="btn btn-primary btn-lg" id="go" type="button">Estimate my result</button><button class="btn btn-outline" id="reset" type="button">Reset</button></div><p class="scalc-err" id="err">Enter at least one section result.</p><div class="scalc-result" id="res"><div class="scalc-rlabel">Estimated placement score</div><div class="scalc-big"><span id="score">0</span> <small id="den">/ 120</small></div><div class="scalc-chips" id="chips"></div><p class="scalc-help">An indicative estimate using the equal-weighting model (each section 25% of 120). The real test reports scaled scores that rank students statewide, and there is no published cut-off. So use this for planning only, and confirm details with the NSW Department of Education.</p></div></div></div></div></section><section class="page-content"><div class="container">

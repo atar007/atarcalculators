@@ -1545,7 +1545,7 @@ section {
 }
 .callout strong { display: inline-block; margin-bottom: 4px; }
 .callout-info {
-  background: var(--info-bg);
+  background: var(--info-bg, #EFF6FF);
   border-color: rgba(59, 130, 246, .3);
   color: #1E40AF;
 }
@@ -1738,7 +1738,7 @@ section {
   gap: 8px;
 }
 .do-card h4 { color: var(--success-text); }
-.dont-card h4 { color: var(--error-text); }
+.dont-card h4 { color: var(--error-text, #DC2626); }
 .do-dont-card ul { margin: 0; padding-left: 18px; }
 .do-dont-card li { font-size: 14px; margin-bottom: 6px; line-height: 1.5; }
 .do-card li { color: var(--success-dark, #065F46); }
@@ -2146,7 +2146,7 @@ section {
 .subject-remove:hover {
   background: var(--error-bg);
   border-color: rgba(239, 68, 68, .4);
-  color: var(--error-text);
+  color: var(--error-text, #DC2626);
 }
 
 /* Bottom section - PROMINENT mark input */
@@ -2971,7 +2971,8 @@ main > section + h2,main > section + h3{margin-top:20px !important}
 .howto-step p{font-size:14px;color:var(--text-secondary);margin:0;line-height:1.55}
 </style>
   <link rel="icon" href="/favicon.ico" sizes="any"><link rel="icon" type="image/svg+xml" href="/favicon.svg"><link rel="icon" type="image/png" sizes="48x48" href="/favicon-48x48.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="manifest" href="/site.webmanifest">
-<style>.data-table{width:100%;border-collapse:collapse;font-size:15px;margin:14px 0}.data-table th,.data-table td{text-align:left;padding:11px 14px;border-bottom:1px solid var(--navy-100);vertical-align:top}.data-table th{background:var(--navy-50);color:var(--navy-900);font-weight:700;font-size:13px;text-transform:uppercase;letter-spacing:.03em}.data-table tr:last-child td{border-bottom:none}.scale-scroll{overflow-x:auto;border:1px solid var(--navy-100);border-radius:var(--radius)}.sel-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px 18px;margin-bottom:14px}.sel-row{display:flex;flex-direction:column;gap:6px}.sel-row .scalc-inwrap{width:100%}@media(max-width:560px){.sel-grid{grid-template-columns:1fr}}</style></head>
+<style>.data-table{width:100%;border-collapse:collapse;font-size:15px;margin:14px 0}.data-table th,.data-table td{text-align:left;padding:11px 14px;border-bottom:1px solid var(--navy-100);vertical-align:top}.data-table th{background:var(--navy-50);color:var(--navy-900);font-weight:700;font-size:13px;text-transform:uppercase;letter-spacing:.03em}.data-table tr:last-child td{border-bottom:none}.scale-scroll{overflow-x:auto;border:1px solid var(--navy-100);border-radius:var(--radius-md)}.sel-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px 18px;margin-bottom:14px}.sel-row{display:flex;flex-direction:column;gap:6px}.sel-row .scalc-inwrap{width:100%}@media(max-width:560px){.sel-grid{grid-template-columns:1fr}}.faq-wrap .faq-item + .faq-item{margin-top:12px}
+</style></head>
 <body>
 <!-- Header injected by navigation.js -->
 <main id="main"><section class="page-header"><div class="container"><div class="breadcrumb"><a href="/">Home</a><span class="breadcrumb-sep">/</span><a href="/atar-calculators">Calculators</a><span class="breadcrumb-sep">/</span><span>Selective VIC</span></div><span class="eyebrow"><span class="eyebrow-dot"></span>VIC · Selective Entry</span><h1>Victorian Selective Entry Score Calculator — your <em>profile</em>.</h1><p class="lede">Victoria’s four selective entry high schools use one ACER exam for Year 9 entry. It has five sections: Verbal Reasoning, Numerical Reasoning, Reading Comprehension, Mathematics, and Writing. Enter your section results for an indicative profile.</p><div class="meta">Five sections · run by <b>ACER</b> · composite ranking · indicative only</div></div></section><section class="calc-section" id="calculator"><div class="container"><div class="calc-wrap"><div class="calc-card"><p style="margin:0 0 14px;color:var(--navy-600);font-size:15px">Enter an estimated score out of 100 for each of the five sections. Victorian selection uses a composite ranking with no published scale, so treat this as an indicative read on your balance across the sections.</p><div class="sel-grid"><div class="sel-row"><label class="scalc-label" for="vr">Verbal Reasoning (0–100)</label><div class="scalc-inwrap"><input id="vr" type="number" min="0" max="100" step="0.1" placeholder="0–100" inputmode="decimal"/><span class="scalc-suffix">/100</span></div></div><div class="sel-row"><label class="scalc-label" for="nr">Numerical Reasoning (0–100)</label><div class="scalc-inwrap"><input id="nr" type="number" min="0" max="100" step="0.1" placeholder="0–100" inputmode="decimal"/><span class="scalc-suffix">/100</span></div></div><div class="sel-row"><label class="scalc-label" for="rc">Reading Comprehension (0–100)</label><div class="scalc-inwrap"><input id="rc" type="number" min="0" max="100" step="0.1" placeholder="0–100" inputmode="decimal"/><span class="scalc-suffix">/100</span></div></div><div class="sel-row"><label class="scalc-label" for="ma">Mathematics (0–100)</label><div class="scalc-inwrap"><input id="ma" type="number" min="0" max="100" step="0.1" placeholder="0–100" inputmode="decimal"/><span class="scalc-suffix">/100</span></div></div><div class="sel-row"><label class="scalc-label" for="wr">Writing (0–100)</label><div class="scalc-inwrap"><input id="wr" type="number" min="0" max="100" step="0.1" placeholder="0–100" inputmode="decimal"/><span class="scalc-suffix">/100</span></div></div></div><div class="scalc-row" style="margin-top:4px"><button class="btn btn-primary btn-lg" id="go" type="button">Estimate my result</button><button class="btn btn-outline" id="reset" type="button">Reset</button></div><p class="scalc-err" id="err">Enter at least one section result.</p><div class="scalc-result" id="res"><div class="scalc-rlabel">Indicative section average</div><div class="scalc-big"><span id="score">0</span> <small id="den">/ 100</small></div><div class="scalc-chips" id="chips"></div><p class="scalc-help">An indicative self-assessment across the five ACER sections. The real process uses a composite statewide ranking with no published pass mark. Confirm details with ACER and the Victorian Department of Education.</p></div></div></div></div></section><section class="page-content"><div class="container">

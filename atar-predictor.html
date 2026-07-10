@@ -1545,7 +1545,7 @@ section {
 }
 .callout strong { display: inline-block; margin-bottom: 4px; }
 .callout-info {
-  background: var(--info-bg);
+  background: var(--info-bg, #EFF6FF);
   border-color: rgba(59, 130, 246, .3);
   color: #1E40AF;
 }
@@ -1738,7 +1738,7 @@ section {
   gap: 8px;
 }
 .do-card h4 { color: var(--success-text); }
-.dont-card h4 { color: var(--error-text); }
+.dont-card h4 { color: var(--error-text, #DC2626); }
 .do-dont-card ul { margin: 0; padding-left: 18px; }
 .do-dont-card li { font-size: 14px; margin-bottom: 6px; line-height: 1.5; }
 .do-card li { color: var(--success-dark, #065F46); }
@@ -2146,7 +2146,7 @@ section {
 .subject-remove:hover {
   background: var(--error-bg);
   border-color: rgba(239, 68, 68, .4);
-  color: var(--error-text);
+  color: var(--error-text, #DC2626);
 }
 
 /* Bottom section - PROMINENT mark input */
@@ -2971,7 +2971,8 @@ main > section + h2,main > section + h3{margin-top:20px !important}
 .howto-step p{font-size:14px;color:var(--text-secondary);margin:0;line-height:1.55}
 </style>
   <link rel="icon" href="/favicon.ico" sizes="any"><link rel="icon" type="image/svg+xml" href="/favicon.svg"><link rel="icon" type="image/png" sizes="48x48" href="/favicon-48x48.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="manifest" href="/site.webmanifest">
-<style>.pred-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px 18px;margin-bottom:8px}.pred-row{display:flex;flex-direction:column;gap:6px}.pred-row .scalc-inwrap{width:100%}@media(max-width:560px){.pred-grid{grid-template-columns:1fr}}</style></head>
+<style>.pred-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px 18px;margin-bottom:8px}.pred-row{display:flex;flex-direction:column;gap:6px}.pred-row .scalc-inwrap{width:100%}@media(max-width:560px){.pred-grid{grid-template-columns:1fr}}.faq-wrap .faq-item + .faq-item{margin-top:12px}
+</style></head>
 <body>
 <!-- Header injected by navigation.js -->
 <main id="main"><section class="page-header"><div class="container"><div class="breadcrumb"><a href="/">Home</a><span class="breadcrumb-sep">/</span><a href="/atar-calculators">Calculators</a><span class="breadcrumb-sep">/</span><span>ATAR Predictor</span></div><span class="eyebrow"><span class="eyebrow-dot"></span>VCE · ATAR Predictor</span><h1>ATAR Predictor <span style="font-size:0.62em;color:#EA580C;vertical-align:middle">VIC / VCE</span> — turn your scaled scores into a <em>predicted ATAR</em>.</h1><p class="lede">Already know your scaled study scores? Enter your top subjects and get a predicted ATAR, using the official VTAC 2025 aggregate table. Not sure of your scaled scores? Get them first with the <a href="/atar-scaling-calculator">scaling calculator</a>.</p><p style="margin:14px 0 0;padding:12px 16px;background:#FFF7ED;border:1px solid #FED7AA;border-radius:10px;color:#9A3412;font-size:14px"><strong>Built for Victorian VCE.</strong> This predictor uses the VTAC model and VCE study scores (out of 50). If you study HSC (NSW), QCE (QLD) or another system, use your <a href="/atar-calculators">state calculator</a> for an accurate estimate.</p><div class="meta">Using the <b>VTAC 2025</b> aggregate-to-ATAR table · English counts in your top four</div></div></section><section class="calc-section" id="calculator"><div class="container"><div class="calc-wrap"><div class="calc-card">

@@ -1545,7 +1545,7 @@ section {
 }
 .callout strong { display: inline-block; margin-bottom: 4px; }
 .callout-info {
-  background: var(--info-bg);
+  background: var(--info-bg, #EFF6FF);
   border-color: rgba(59, 130, 246, .3);
   color: #1E40AF;
 }
@@ -1738,7 +1738,7 @@ section {
   gap: 8px;
 }
 .do-card h4 { color: var(--success-text); }
-.dont-card h4 { color: var(--error-text); }
+.dont-card h4 { color: var(--error-text, #DC2626); }
 .do-dont-card ul { margin: 0; padding-left: 18px; }
 .do-dont-card li { font-size: 14px; margin-bottom: 6px; line-height: 1.5; }
 .do-card li { color: var(--success-dark, #065F46); }
@@ -2146,7 +2146,7 @@ section {
 .subject-remove:hover {
   background: var(--error-bg);
   border-color: rgba(239, 68, 68, .4);
-  color: var(--error-text);
+  color: var(--error-text, #DC2626);
 }
 
 /* Bottom section - PROMINENT mark input */
@@ -2876,13 +2876,13 @@ main > section + h2,main > section + h3{margin-top:20px !important}
 .howto-step p{font-size:14px;color:var(--text-secondary);margin:0;line-height:1.55}
 </style>
   <link rel="icon" href="/favicon.ico" sizes="any"><link rel="icon" type="image/svg+xml" href="/favicon.svg"><link rel="icon" type="image/png" sizes="48x48" href="/favicon-48x48.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="manifest" href="/site.webmanifest">
-<style>.data-table{width:100%;border-collapse:collapse;font-size:15px;margin:14px 0}.data-table th,.data-table td{text-align:left;padding:11px 14px;border-bottom:1px solid var(--navy-100);vertical-align:top}.data-table th{background:var(--navy-50);color:var(--navy-900);font-weight:700;font-size:13px;text-transform:uppercase;letter-spacing:.03em}.data-table tr:last-child td{border-bottom:none}.scale-scroll{overflow-x:auto;-webkit-overflow-scrolling:touch;border:1px solid var(--navy-100);border-radius:var(--radius)}</style></head>
+<style>.data-table{width:100%;border-collapse:collapse;font-size:15px;margin:14px 0}.data-table th,.data-table td{text-align:left;padding:11px 14px;border-bottom:1px solid var(--navy-100);vertical-align:top}.data-table th{background:var(--navy-50);color:var(--navy-900);font-weight:700;font-size:13px;text-transform:uppercase;letter-spacing:.03em}.data-table tr:last-child td{border-bottom:none}.scale-scroll{overflow-x:auto;-webkit-overflow-scrolling:touch;border:1px solid var(--navy-100);border-radius:var(--radius-md)}</style></head>
 <body>
 <!-- Header injected by navigation.js -->
 <main id="main"><section class="page-header"><div class="container">
 <h1>ATAR for Nursing in Australia</h1>
 <p class="lede">A Bachelor of Nursing is one of the more accessible health degrees. Cut-offs usually sit between 65 and 80, and there are more ways in than for most courses.</p>
-</div></section><section class="calc-section" id="calculator"><div class="container"><div class="calc-wrap"><div class="calc-card"><div style="background:var(--navy-50);border:1px solid var(--navy-100);border-radius:var(--radius);padding:16px 18px;margin-bottom:18px"><b style="color:var(--navy-900)">Quick answer:</b> A Bachelor of Nursing usually needs an ATAR between about 65 and 80. Competitive metro universities can sit higher, while regional campuses and adjustment factors often bring the number down. Most programs do not use an admission test.</div><label class="scalc-label" for="atar">Your ATAR (or the one you're aiming for)</label><div class="scalc-row"><div class="scalc-inwrap"><input id="atar" type="number" min="0" max="99.95" step="0.05" placeholder="e.g. 96.50" inputmode="decimal"/><span class="scalc-suffix">/ 99.95</span></div><button class="btn btn-primary btn-lg" id="go" type="button">Check where I stand</button><button class="btn btn-outline" id="reset" type="button">Reset</button></div><p class="scalc-err" id="err">Enter an ATAR between 0 and 99.95.</p><div class="scalc-result" id="res"><div class="scalc-rlabel" id="rlabel">Where you stand</div><div class="scalc-big" style="font-size:1.4rem;line-height:1.4" id="verdict">&mdash;</div><p class="scalc-help">A guide based on indicative 2026 ATAR ranges. Cut-offs change each year and vary by university, so always check current figures with the university or your admissions centre.</p></div></div></div></div></section><section class="page-content"><div class="container">
+</div></section><section class="calc-section" id="calculator"><div class="container"><div class="calc-wrap"><div class="calc-card"><div style="background:var(--navy-50);border:1px solid var(--navy-100);border-radius:var(--radius-md);padding:16px 18px;margin-bottom:18px"><b style="color:var(--navy-900)">Quick answer:</b> A Bachelor of Nursing usually needs an ATAR between about 65 and 80. Competitive metro universities can sit higher, while regional campuses and adjustment factors often bring the number down. Most programs do not use an admission test.</div><label class="scalc-label" for="atar">Your ATAR (or the one you're aiming for)</label><div class="scalc-row"><div class="scalc-inwrap"><input id="atar" type="number" min="0" max="99.95" step="0.05" placeholder="e.g. 96.50" inputmode="decimal"/><span class="scalc-suffix">/ 99.95</span></div><button class="btn btn-primary btn-lg" id="go" type="button">Check where I stand</button><button class="btn btn-outline" id="reset" type="button">Reset</button></div><p class="scalc-err" id="err">Enter an ATAR between 0 and 99.95.</p><div class="scalc-result" id="res"><div class="scalc-rlabel" id="rlabel">Where you stand</div><div class="scalc-big" style="font-size:1.4rem;line-height:1.4" id="verdict">&mdash;</div><p class="scalc-help">A guide based on indicative 2026 ATAR ranges. Cut-offs change each year and vary by university, so always check current figures with the university or your admissions centre.</p></div></div></div></div></section><section class="page-content"><div class="container">
 <h2>What ATAR do you need for nursing?</h2>
 <p>For most Bachelor of Nursing programs, the working range is an ATAR of about 65 to 80. The exact number depends heavily on the university and the campus.</p>
 <p>Well-known metropolitan universities tend to sit at the higher end, sometimes near 80 to 90 in high demand. Regional campuses often sit lower. And some accept students well below 65 once adjustment factors are applied.</p>

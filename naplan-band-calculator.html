@@ -1545,7 +1545,7 @@ section {
 }
 .callout strong { display: inline-block; margin-bottom: 4px; }
 .callout-info {
-  background: var(--info-bg);
+  background: var(--info-bg, #EFF6FF);
   border-color: rgba(59, 130, 246, .3);
   color: #1E40AF;
 }
@@ -1738,7 +1738,7 @@ section {
   gap: 8px;
 }
 .do-card h4 { color: var(--success-text); }
-.dont-card h4 { color: var(--error-text); }
+.dont-card h4 { color: var(--error-text, #DC2626); }
 .do-dont-card ul { margin: 0; padding-left: 18px; }
 .do-dont-card li { font-size: 14px; margin-bottom: 6px; line-height: 1.5; }
 .do-card li { color: var(--success-dark, #065F46); }
@@ -2146,7 +2146,7 @@ section {
 .subject-remove:hover {
   background: var(--error-bg);
   border-color: rgba(239, 68, 68, .4);
-  color: var(--error-text);
+  color: var(--error-text, #DC2626);
 }
 
 /* Bottom section - PROMINENT mark input */
@@ -2971,10 +2971,11 @@ main > section + h2,main > section + h3{margin-top:20px !important}
 .howto-step p{font-size:14px;color:var(--text-secondary);margin:0;line-height:1.55}
 </style>
   <link rel="icon" href="/favicon.ico" sizes="any"><link rel="icon" type="image/svg+xml" href="/favicon.svg"><link rel="icon" type="image/png" sizes="48x48" href="/favicon-48x48.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="manifest" href="/site.webmanifest">
-<style>.data-table{width:100%;border-collapse:collapse;font-size:15px;margin:14px 0}.data-table th,.data-table td{text-align:left;padding:11px 14px;border-bottom:1px solid var(--navy-100);vertical-align:top}.data-table th{background:var(--navy-50);color:var(--navy-900);font-weight:700;font-size:13px;text-transform:uppercase;letter-spacing:.03em}.data-table tr:last-child td{border-bottom:none}.scale-scroll{overflow-x:auto;border:1px solid var(--navy-100);border-radius:var(--radius)}</style></head>
+<style>.data-table{width:100%;border-collapse:collapse;font-size:15px;margin:14px 0}.data-table th,.data-table td{text-align:left;padding:11px 14px;border-bottom:1px solid var(--navy-100);vertical-align:top}.data-table th{background:var(--navy-50);color:var(--navy-900);font-weight:700;font-size:13px;text-transform:uppercase;letter-spacing:.03em}.data-table tr:last-child td{border-bottom:none}.scale-scroll{overflow-x:auto;border:1px solid var(--navy-100);border-radius:var(--radius-md)}.faq-wrap .faq-item + .faq-item{margin-top:12px}
+</style></head>
 <body>
 <!-- Header injected by navigation.js -->
-<main id="main"><section class="page-header"><div class="container"><div class="breadcrumb"><a href="/">Home</a><span class="breadcrumb-sep">/</span><a href="/atar-calculators">Calculators</a><span class="breadcrumb-sep">/</span><span>NAPLAN Band</span></div><span class="eyebrow"><span class="eyebrow-dot"></span>NAPLAN · Old Bands</span><h1>NAPLAN Band Calculator — convert <em>old bands</em> to the new levels.</h1><p class="lede">NAPLAN retired the 10-band scale in 2023 and replaced it with four proficiency levels. If you remember the old bands, pick one below to see roughly where it sits in the new system.</p><div class="meta">Approximate guide only (Year 5 reference). <b>ACARA</b> reset the NAPLAN scale in 2023 and does not publish an official old-band-to-level conversion</div></div></section><section class="calc-section" id="calculator"><div class="container"><div class="calc-wrap"><div class="calc-card"><label class="scalc-label" for="band">Pick the old NAPLAN band (1 to 10)</label><div class="scalc-row"><div class="scalc-inwrap" style="max-width:160px"><select id="band" style="width:100%;padding:13px 14px;font-size:16px;border:1.5px solid var(--navy-200);border-radius:var(--radius);background:#fff;font-family:inherit;color:var(--navy-900);cursor:pointer"><option value="1">Band 1</option><option value="2">Band 2</option><option value="3">Band 3</option><option value="4">Band 4</option><option value="5">Band 5</option><option value="6">Band 6</option><option value="7">Band 7</option><option value="8">Band 8</option><option value="9">Band 9</option><option value="10">Band 10</option></select></div><button class="btn btn-primary btn-lg" id="go" type="button">Convert to new level</button></div><div class="scalc-result" id="res"><div class="scalc-rlabel">New proficiency level (approximate)</div><div class="scalc-big" style="font-size:1.6rem" id="level">&mdash;</div><div class="scalc-chips" id="chips"></div><p class="scalc-help">An approximate guide only, using a Year 5 reference. ACARA reset the NAPLAN scale in 2023 and states that results from 2023 onwards cannot be directly compared with 2008 to 2022. So there is no official band-to-level conversion. The new proficiency standards were also set higher than the old national minimum standard. So a middle band does not automatically equate to Strong today. The exact relationship varies a little by year level, because the proficiency cut scores rise as students get older. NAPLAN no longer issues bands.</p></div></div></div></div></section><section class="page-content"><div class="container">
+<main id="main"><section class="page-header"><div class="container"><div class="breadcrumb"><a href="/">Home</a><span class="breadcrumb-sep">/</span><a href="/atar-calculators">Calculators</a><span class="breadcrumb-sep">/</span><span>NAPLAN Band</span></div><span class="eyebrow"><span class="eyebrow-dot"></span>NAPLAN · Old Bands</span><h1>NAPLAN Band Calculator — convert <em>old bands</em> to the new levels.</h1><p class="lede">NAPLAN retired the 10-band scale in 2023 and replaced it with four proficiency levels. If you remember the old bands, pick one below to see roughly where it sits in the new system.</p><div class="meta">Approximate guide only (Year 5 reference). <b>ACARA</b> reset the NAPLAN scale in 2023 and does not publish an official old-band-to-level conversion</div></div></section><section class="calc-section" id="calculator"><div class="container"><div class="calc-wrap"><div class="calc-card"><label class="scalc-label" for="band">Pick the old NAPLAN band (1 to 10)</label><div class="scalc-row"><div class="scalc-inwrap" style="max-width:160px"><select id="band" style="width:100%;padding:13px 14px;font-size:16px;border:1.5px solid var(--navy-200);border-radius:var(--radius-md);background:#fff;font-family:inherit;color:var(--navy-900);cursor:pointer"><option value="1">Band 1</option><option value="2">Band 2</option><option value="3">Band 3</option><option value="4">Band 4</option><option value="5">Band 5</option><option value="6">Band 6</option><option value="7">Band 7</option><option value="8">Band 8</option><option value="9">Band 9</option><option value="10">Band 10</option></select></div><button class="btn btn-primary btn-lg" id="go" type="button">Convert to new level</button></div><div class="scalc-result" id="res"><div class="scalc-rlabel">New proficiency level (approximate)</div><div class="scalc-big" style="font-size:1.6rem" id="level">&mdash;</div><div class="scalc-chips" id="chips"></div><p class="scalc-help">An approximate guide only, using a Year 5 reference. ACARA reset the NAPLAN scale in 2023 and states that results from 2023 onwards cannot be directly compared with 2008 to 2022. So there is no official band-to-level conversion. The new proficiency standards were also set higher than the old national minimum standard. So a middle band does not automatically equate to Strong today. The exact relationship varies a little by year level, because the proficiency cut scores rise as students get older. NAPLAN no longer issues bands.</p></div></div></div></div></section><section class="page-content"><div class="container">
 <div class="prose calc-explainer">
 <h2>How NAPLAN bands map to the new levels</h2>
 <p>NAPLAN used to report results in numbered bands. Since 2023 it uses four proficiency levels instead. This tool helps you translate an old band result into the current system. Here is how it works.</p>

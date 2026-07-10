@@ -1545,7 +1545,7 @@ section {
 }
 .callout strong { display: inline-block; margin-bottom: 4px; }
 .callout-info {
-  background: var(--info-bg);
+  background: var(--info-bg, #EFF6FF);
   border-color: rgba(59, 130, 246, .3);
   color: #1E40AF;
 }
@@ -1738,7 +1738,7 @@ section {
   gap: 8px;
 }
 .do-card h4 { color: var(--success-text); }
-.dont-card h4 { color: var(--error-text); }
+.dont-card h4 { color: var(--error-text, #DC2626); }
 .do-dont-card ul { margin: 0; padding-left: 18px; }
 .do-dont-card li { font-size: 14px; margin-bottom: 6px; line-height: 1.5; }
 .do-card li { color: var(--success-dark, #065F46); }
@@ -2146,7 +2146,7 @@ section {
 .subject-remove:hover {
   background: var(--error-bg);
   border-color: rgba(239, 68, 68, .4);
-  color: var(--error-text);
+  color: var(--error-text, #DC2626);
 }
 
 /* Bottom section - PROMINENT mark input */
@@ -2876,13 +2876,13 @@ main > section + h2,main > section + h3{margin-top:20px !important}
 .howto-step p{font-size:14px;color:var(--text-secondary);margin:0;line-height:1.55}
 </style>
   <link rel="icon" href="/favicon.ico" sizes="any"><link rel="icon" type="image/svg+xml" href="/favicon.svg"><link rel="icon" type="image/png" sizes="48x48" href="/favicon-48x48.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="manifest" href="/site.webmanifest">
-<style>.data-table{width:100%;border-collapse:collapse;font-size:15px;margin:14px 0}.data-table th,.data-table td{text-align:left;padding:11px 14px;border-bottom:1px solid var(--navy-100);vertical-align:top}.data-table th{background:var(--navy-50);color:var(--navy-900);font-weight:700;font-size:13px;text-transform:uppercase;letter-spacing:.03em}.data-table tr:last-child td{border-bottom:none}.scale-scroll{overflow-x:auto;-webkit-overflow-scrolling:touch;border:1px solid var(--navy-100);border-radius:var(--radius)}</style></head>
+<style>.data-table{width:100%;border-collapse:collapse;font-size:15px;margin:14px 0}.data-table th,.data-table td{text-align:left;padding:11px 14px;border-bottom:1px solid var(--navy-100);vertical-align:top}.data-table th{background:var(--navy-50);color:var(--navy-900);font-weight:700;font-size:13px;text-transform:uppercase;letter-spacing:.03em}.data-table tr:last-child td{border-bottom:none}.scale-scroll{overflow-x:auto;-webkit-overflow-scrolling:touch;border:1px solid var(--navy-100);border-radius:var(--radius-md)}</style></head>
 <body>
 <!-- Header injected by navigation.js -->
 <main id="main"><section class="page-header"><div class="container">
 <h1>ATAR for Commerce and Business</h1>
 <p class="lede">Commerce cut-offs range widely, from about 75 at many universities to 96 at the most competitive. Your major and any maths prerequisite are worth checking early.</p>
-</div></section><section class="calc-section" id="calculator"><div class="container"><div class="calc-wrap"><div class="calc-card"><div style="background:var(--navy-50);border:1px solid var(--navy-100);border-radius:var(--radius);padding:16px 18px;margin-bottom:18px"><b style="color:var(--navy-900)">Quick answer:</b> A Bachelor of Commerce or Business usually needs an ATAR between about 75 and 96. The most competitive programs, such as UNSW and Melbourne, sit near the top, while many strong universities sit in the high 70s to mid 80s. Some majors and universities require a level of maths.</div><label class="scalc-label" for="atar">Your ATAR (or the one you're aiming for)</label><div class="scalc-row"><div class="scalc-inwrap"><input id="atar" type="number" min="0" max="99.95" step="0.05" placeholder="e.g. 96.50" inputmode="decimal"/><span class="scalc-suffix">/ 99.95</span></div><button class="btn btn-primary btn-lg" id="go" type="button">Check where I stand</button><button class="btn btn-outline" id="reset" type="button">Reset</button></div><p class="scalc-err" id="err">Enter an ATAR between 0 and 99.95.</p><div class="scalc-result" id="res"><div class="scalc-rlabel" id="rlabel">Where you stand</div><div class="scalc-big" style="font-size:1.4rem;line-height:1.4" id="verdict">&mdash;</div><p class="scalc-help">A guide based on indicative 2026 ATAR ranges. Cut-offs change each year and vary by university and major, so always check current figures with the university.</p></div></div></div></div></section><section class="page-content"><div class="container">
+</div></section><section class="calc-section" id="calculator"><div class="container"><div class="calc-wrap"><div class="calc-card"><div style="background:var(--navy-50);border:1px solid var(--navy-100);border-radius:var(--radius-md);padding:16px 18px;margin-bottom:18px"><b style="color:var(--navy-900)">Quick answer:</b> A Bachelor of Commerce or Business usually needs an ATAR between about 75 and 96. The most competitive programs, such as UNSW and Melbourne, sit near the top, while many strong universities sit in the high 70s to mid 80s. Some majors and universities require a level of maths.</div><label class="scalc-label" for="atar">Your ATAR (or the one you're aiming for)</label><div class="scalc-row"><div class="scalc-inwrap"><input id="atar" type="number" min="0" max="99.95" step="0.05" placeholder="e.g. 96.50" inputmode="decimal"/><span class="scalc-suffix">/ 99.95</span></div><button class="btn btn-primary btn-lg" id="go" type="button">Check where I stand</button><button class="btn btn-outline" id="reset" type="button">Reset</button></div><p class="scalc-err" id="err">Enter an ATAR between 0 and 99.95.</p><div class="scalc-result" id="res"><div class="scalc-rlabel" id="rlabel">Where you stand</div><div class="scalc-big" style="font-size:1.4rem;line-height:1.4" id="verdict">&mdash;</div><p class="scalc-help">A guide based on indicative 2026 ATAR ranges. Cut-offs change each year and vary by university and major, so always check current figures with the university.</p></div></div></div></div></section><section class="page-content"><div class="container">
 <h2>What ATAR do you need for commerce?</h2>
 <p>Commerce and business cut-offs range widely, from about 75 to 96. Few fields have such a spread, so where you can study depends a lot on the university.</p>
 <p>The most competitive programs, such as commerce at UNSW and Melbourne, sit near the top, often 95 or above. Many strong universities offer commerce in the high 70s to mid 80s, and business degrees at other universities can sit lower again.</p>

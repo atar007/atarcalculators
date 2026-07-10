@@ -1545,7 +1545,7 @@ section {
 }
 .callout strong { display: inline-block; margin-bottom: 4px; }
 .callout-info {
-  background: var(--info-bg);
+  background: var(--info-bg, #EFF6FF);
   border-color: rgba(59, 130, 246, .3);
   color: #1E40AF;
 }
@@ -1738,7 +1738,7 @@ section {
   gap: 8px;
 }
 .do-card h4 { color: var(--success-text); }
-.dont-card h4 { color: var(--error-text); }
+.dont-card h4 { color: var(--error-text, #DC2626); }
 .do-dont-card ul { margin: 0; padding-left: 18px; }
 .do-dont-card li { font-size: 14px; margin-bottom: 6px; line-height: 1.5; }
 .do-card li { color: var(--success-dark, #065F46); }
@@ -2146,7 +2146,7 @@ section {
 .subject-remove:hover {
   background: var(--error-bg);
   border-color: rgba(239, 68, 68, .4);
-  color: var(--error-text);
+  color: var(--error-text, #DC2626);
 }
 
 /* Bottom section - PROMINENT mark input */
@@ -2876,13 +2876,13 @@ main > section + h2,main > section + h3{margin-top:20px !important}
 .howto-step p{font-size:14px;color:var(--text-secondary);margin:0;line-height:1.55}
 </style>
   <link rel="icon" href="/favicon.ico" sizes="any"><link rel="icon" type="image/svg+xml" href="/favicon.svg"><link rel="icon" type="image/png" sizes="48x48" href="/favicon-48x48.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="manifest" href="/site.webmanifest">
-<style>.data-table{width:100%;border-collapse:collapse;font-size:15px;margin:14px 0}.data-table th,.data-table td{text-align:left;padding:11px 14px;border-bottom:1px solid var(--navy-100);vertical-align:top}.data-table th{background:var(--navy-50);color:var(--navy-900);font-weight:700;font-size:13px;text-transform:uppercase;letter-spacing:.03em}.data-table tr:last-child td{border-bottom:none}.scale-scroll{overflow-x:auto;-webkit-overflow-scrolling:touch;border:1px solid var(--navy-100);border-radius:var(--radius)}</style></head>
+<style>.data-table{width:100%;border-collapse:collapse;font-size:15px;margin:14px 0}.data-table th,.data-table td{text-align:left;padding:11px 14px;border-bottom:1px solid var(--navy-100);vertical-align:top}.data-table th{background:var(--navy-50);color:var(--navy-900);font-weight:700;font-size:13px;text-transform:uppercase;letter-spacing:.03em}.data-table tr:last-child td{border-bottom:none}.scale-scroll{overflow-x:auto;-webkit-overflow-scrolling:touch;border:1px solid var(--navy-100);border-radius:var(--radius-md)}</style></head>
 <body>
 <!-- Header injected by navigation.js -->
 <main id="main"><section class="page-header"><div class="container">
 <h1>ATAR for Veterinary Science in Australia</h1>
 <p class="lede">Veterinary science is one of the most competitive degrees in the country. Direct entry usually needs an ATAR of 95 or above, and there are few programs.</p>
-</div></section><section class="calc-section" id="calculator"><div class="container"><div class="calc-wrap"><div class="calc-card"><div style="background:var(--navy-50);border:1px solid var(--navy-100);border-radius:var(--radius);padding:16px 18px;margin-bottom:18px"><b style="color:var(--navy-900)">Quick answer:</b> Undergraduate veterinary science usually needs an ATAR of about 95 or higher. Only a few universities offer it, so places are limited. Prerequisites, often biology and chemistry, matter, and some programs use an interview or questionnaire. A postgraduate route is the main alternative.</div><label class="scalc-label" for="atar">Your ATAR (or the one you're aiming for)</label><div class="scalc-row"><div class="scalc-inwrap"><input id="atar" type="number" min="0" max="99.95" step="0.05" placeholder="e.g. 96.50" inputmode="decimal"/><span class="scalc-suffix">/ 99.95</span></div><button class="btn btn-primary btn-lg" id="go" type="button">Check where I stand</button><button class="btn btn-outline" id="reset" type="button">Reset</button></div><p class="scalc-err" id="err">Enter an ATAR between 0 and 99.95.</p><div class="scalc-result" id="res"><div class="scalc-rlabel" id="rlabel">Where you stand</div><div class="scalc-big" style="font-size:1.4rem;line-height:1.4" id="verdict">&mdash;</div><p class="scalc-help">A guide based on indicative 2026 ATAR ranges. Veterinary science has very few programs and cut-offs are high, so always check current figures with the university.</p></div></div></div></div></section><section class="page-content"><div class="container">
+</div></section><section class="calc-section" id="calculator"><div class="container"><div class="calc-wrap"><div class="calc-card"><div style="background:var(--navy-50);border:1px solid var(--navy-100);border-radius:var(--radius-md);padding:16px 18px;margin-bottom:18px"><b style="color:var(--navy-900)">Quick answer:</b> Undergraduate veterinary science usually needs an ATAR of about 95 or higher. Only a few universities offer it, so places are limited. Prerequisites, often biology and chemistry, matter, and some programs use an interview or questionnaire. A postgraduate route is the main alternative.</div><label class="scalc-label" for="atar">Your ATAR (or the one you're aiming for)</label><div class="scalc-row"><div class="scalc-inwrap"><input id="atar" type="number" min="0" max="99.95" step="0.05" placeholder="e.g. 96.50" inputmode="decimal"/><span class="scalc-suffix">/ 99.95</span></div><button class="btn btn-primary btn-lg" id="go" type="button">Check where I stand</button><button class="btn btn-outline" id="reset" type="button">Reset</button></div><p class="scalc-err" id="err">Enter an ATAR between 0 and 99.95.</p><div class="scalc-result" id="res"><div class="scalc-rlabel" id="rlabel">Where you stand</div><div class="scalc-big" style="font-size:1.4rem;line-height:1.4" id="verdict">&mdash;</div><p class="scalc-help">A guide based on indicative 2026 ATAR ranges. Veterinary science has very few programs and cut-offs are high, so always check current figures with the university.</p></div></div></div></div></section><section class="page-content"><div class="container">
 <h2>What ATAR do you need for vet science?</h2>
 <p>Direct entry to veterinary science usually needs an ATAR of about 95 or higher. And the most competitive programs sit near 99. It is one of the highest cut-offs of any degree.</p>
 <p>Only a few universities offer veterinary science, which is part of why competition is so intense. The limited number of places keeps cut-offs high year after year.</p>

@@ -1545,7 +1545,7 @@ section {
 }
 .callout strong { display: inline-block; margin-bottom: 4px; }
 .callout-info {
-  background: var(--info-bg);
+  background: var(--info-bg, #EFF6FF);
   border-color: rgba(59, 130, 246, .3);
   color: #1E40AF;
 }
@@ -1738,7 +1738,7 @@ section {
   gap: 8px;
 }
 .do-card h4 { color: var(--success-text); }
-.dont-card h4 { color: var(--error-text); }
+.dont-card h4 { color: var(--error-text, #DC2626); }
 .do-dont-card ul { margin: 0; padding-left: 18px; }
 .do-dont-card li { font-size: 14px; margin-bottom: 6px; line-height: 1.5; }
 .do-card li { color: var(--success-dark, #065F46); }
@@ -2146,7 +2146,7 @@ section {
 .subject-remove:hover {
   background: var(--error-bg);
   border-color: rgba(239, 68, 68, .4);
-  color: var(--error-text);
+  color: var(--error-text, #DC2626);
 }
 
 /* Bottom section - PROMINENT mark input */
@@ -2969,12 +2969,13 @@ main > section + h2,main > section + h3{margin-top:20px !important}
 .howto-step .n{font-family:var(--font-display);font-weight:700;color:var(--orange-600);font-size:12px;letter-spacing:.06em}
 .howto-step h3{font-family:var(--font-display);font-size:16px;margin:10px 0 5px;color:var(--text-primary);font-weight:700}
 .howto-step p{font-size:14px;color:var(--text-secondary);margin:0;line-height:1.55}
+.faq-wrap .faq-item + .faq-item{margin-top:12px}
 </style>
   <link rel="icon" href="/favicon.ico" sizes="any"><link rel="icon" type="image/svg+xml" href="/favicon.svg"><link rel="icon" type="image/png" sizes="48x48" href="/favicon-48x48.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="manifest" href="/site.webmanifest">
 </head>
 <body>
 <!-- Header injected by navigation.js -->
-<main id="main"><section class="page-header"><div class="container"><div class="breadcrumb"><a href="/">Home</a><span class="breadcrumb-sep">/</span><a href="/atar-calculators">Calculators</a><span class="breadcrumb-sep">/</span><span>NAPLAN Score</span></div><span class="eyebrow"><span class="eyebrow-dot"></span>NAPLAN · Proficiency</span><h1>NAPLAN Score Calculator — find your <em>proficiency level</em>.</h1><p class="lede">Enter a NAPLAN scale score for Year 3, 5, 7 or 9 and see the indicative proficiency level: Exceeding, Strong, or below. Since 2023, NAPLAN reports four levels instead of the old ten bands.</p><div class="meta">Indicative thresholds from <b>ACARA</b>'s 2023+ proficiency standards · Reading and Numeracy</div></div></section><section class="calc-section" id="calculator"><div class="container"><div class="calc-wrap"><div class="calc-card"><div style="display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-bottom:16px"><div><label class="scalc-label" for="yr">Year level</label><select id="yr" style="width:100%;padding:13px 14px;font-size:16px;border:1.5px solid var(--navy-200);border-radius:var(--radius);background:#fff;font-family:inherit;color:var(--navy-900);cursor:pointer"><option value="3">Year 3</option><option value="5">Year 5</option><option value="7">Year 7</option><option value="9" selected>Year 9</option></select></div><div><label class="scalc-label" for="dom">Domain</label><select id="dom" style="width:100%;padding:13px 14px;font-size:16px;border:1.5px solid var(--navy-200);border-radius:var(--radius);background:#fff;font-family:inherit;color:var(--navy-900);cursor:pointer"><option value="Reading">Reading</option><option value="Numeracy">Numeracy</option></select></div></div><label class="scalc-label" for="score">NAPLAN scale score</label><div class="scalc-row"><div class="scalc-inwrap"><input id="score" type="number" min="0" max="1000" step="1" placeholder="e.g. 560" inputmode="numeric"/><span class="scalc-suffix">/ 1000</span></div><button class="btn btn-primary btn-lg" id="go" type="button">Check proficiency level</button><button class="btn btn-outline" id="reset" type="button">Reset</button></div><p class="scalc-err" id="err">Enter a scale score between 0 and 1000.</p><div class="scalc-result" id="res"><div class="scalc-rlabel" id="rlabel">Indicative proficiency level</div><div class="scalc-big" style="font-size:1.6rem" id="level">&mdash;</div><div class="scalc-chips" id="chips"></div><p class="scalc-help">An indicative guide using ACARA's 2023+ proficiency thresholds for Reading and Numeracy. The exact cut scores are set each year and printed on your child's report. The lower two levels (Developing and Needs additional support) are shown together here, as their boundary is not published as a single national figure.</p></div></div></div></div></section><section class="page-content"><div class="container">
+<main id="main"><section class="page-header"><div class="container"><div class="breadcrumb"><a href="/">Home</a><span class="breadcrumb-sep">/</span><a href="/atar-calculators">Calculators</a><span class="breadcrumb-sep">/</span><span>NAPLAN Score</span></div><span class="eyebrow"><span class="eyebrow-dot"></span>NAPLAN · Proficiency</span><h1>NAPLAN Score Calculator — find your <em>proficiency level</em>.</h1><p class="lede">Enter a NAPLAN scale score for Year 3, 5, 7 or 9 and see the indicative proficiency level: Exceeding, Strong, or below. Since 2023, NAPLAN reports four levels instead of the old ten bands.</p><div class="meta">Indicative thresholds from <b>ACARA</b>'s 2023+ proficiency standards · Reading and Numeracy</div></div></section><section class="calc-section" id="calculator"><div class="container"><div class="calc-wrap"><div class="calc-card"><div style="display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-bottom:16px"><div><label class="scalc-label" for="yr">Year level</label><select id="yr" style="width:100%;padding:13px 14px;font-size:16px;border:1.5px solid var(--navy-200);border-radius:var(--radius-md);background:#fff;font-family:inherit;color:var(--navy-900);cursor:pointer"><option value="3">Year 3</option><option value="5">Year 5</option><option value="7">Year 7</option><option value="9" selected>Year 9</option></select></div><div><label class="scalc-label" for="dom">Domain</label><select id="dom" style="width:100%;padding:13px 14px;font-size:16px;border:1.5px solid var(--navy-200);border-radius:var(--radius-md);background:#fff;font-family:inherit;color:var(--navy-900);cursor:pointer"><option value="Reading">Reading</option><option value="Numeracy">Numeracy</option></select></div></div><label class="scalc-label" for="score">NAPLAN scale score</label><div class="scalc-row"><div class="scalc-inwrap"><input id="score" type="number" min="0" max="1000" step="1" placeholder="e.g. 560" inputmode="numeric"/><span class="scalc-suffix">/ 1000</span></div><button class="btn btn-primary btn-lg" id="go" type="button">Check proficiency level</button><button class="btn btn-outline" id="reset" type="button">Reset</button></div><p class="scalc-err" id="err">Enter a scale score between 0 and 1000.</p><div class="scalc-result" id="res"><div class="scalc-rlabel" id="rlabel">Indicative proficiency level</div><div class="scalc-big" style="font-size:1.6rem" id="level">&mdash;</div><div class="scalc-chips" id="chips"></div><p class="scalc-help">An indicative guide using ACARA's 2023+ proficiency thresholds for Reading and Numeracy. The exact cut scores are set each year and printed on your child's report. The lower two levels (Developing and Needs additional support) are shown together here, as their boundary is not published as a single national figure.</p></div></div></div></div></section><section class="page-content"><div class="container">
 <div class="prose calc-explainer">
 <h2>How NAPLAN scoring works</h2>
 <p>NAPLAN reports each domain on a national numeric scale, then places you in one of four proficiency levels. Here is how a scale score becomes a level.</p>

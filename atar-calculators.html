@@ -1532,7 +1532,7 @@ section {
 }
 .callout strong { display: inline-block; margin-bottom: 4px; }
 .callout-info {
-  background: var(--info-bg);
+  background: var(--info-bg, #EFF6FF);
   border-color: rgba(59, 130, 246, .3);
   color: #1E40AF;
 }
@@ -1725,7 +1725,7 @@ section {
   gap: 8px;
 }
 .do-card h4 { color: var(--success-text); }
-.dont-card h4 { color: var(--error-text); }
+.dont-card h4 { color: var(--error-text, #DC2626); }
 .do-dont-card ul { margin: 0; padding-left: 18px; }
 .do-dont-card li { font-size: 14px; margin-bottom: 6px; line-height: 1.5; }
 .do-card li { color: var(--success-dark, #065F46); }
@@ -2037,6 +2037,48 @@ section {
 .state-grid { grid-template-columns: 1fr; gap: 12px; }
 .state-card { min-height: auto; padding: 18px; padding-right: 38px; }
 
+/* related calculators + uni-header (restored) */
+.uni-header{text-align: center;
+  margin-bottom: 32px;}
+.uni-header h2{font-family: var(--font-display);
+  font-size: clamp(1.6rem, 1.2rem + 1.6vw, 2.4rem);
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  color: var(--text-primary);
+  margin-bottom: 12px;}
+.uni-header p{font-size: 1rem;
+  color: var(--text-secondary);
+  max-width: 600px;
+  margin: 0 auto;}
+.related-calc{padding: 64px 0;
+  background: var(--bg-page);
+  border-top: 1px solid var(--border-default);}
+.related-grid{display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+  gap: 12px;
+  max-width: 900px;
+  margin: 24px auto 0;}
+.related-grid a{display: block;
+  padding: 16px;
+  background: var(--bg-surface);
+  border: 1px solid var(--border-default);
+  border-radius: var(--radius-md);
+  text-decoration: none;
+  text-align: center;
+  transition: all .2s;}
+.related-grid a:hover{border-color: var(--navy-300);
+  background: var(--navy-50);
+  transform: translateY(-2px);}
+.related-grid b{display: block;
+  font-family: var(--font-display);
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--navy-900);
+  letter-spacing: -0.02em;
+  margin-bottom: 2px;}
+.related-grid span{display: block;
+  font-size: 12px;
+  color: var(--text-tertiary);}
 /* close doubled section spacing WITHOUT flushing headings to a section top edge */
 main > section + section{padding-top:32px !important}
 main > section:has(+ section){padding-bottom:32px !important}

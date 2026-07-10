@@ -1545,7 +1545,7 @@ section {
 }
 .callout strong { display: inline-block; margin-bottom: 4px; }
 .callout-info {
-  background: var(--info-bg);
+  background: var(--info-bg, #EFF6FF);
   border-color: rgba(59, 130, 246, .3);
   color: #1E40AF;
 }
@@ -1738,7 +1738,7 @@ section {
   gap: 8px;
 }
 .do-card h4 { color: var(--success-text); }
-.dont-card h4 { color: var(--error-text); }
+.dont-card h4 { color: var(--error-text, #DC2626); }
 .do-dont-card ul { margin: 0; padding-left: 18px; }
 .do-dont-card li { font-size: 14px; margin-bottom: 6px; line-height: 1.5; }
 .do-card li { color: var(--success-dark, #065F46); }
@@ -2146,7 +2146,7 @@ section {
 .subject-remove:hover {
   background: var(--error-bg);
   border-color: rgba(239, 68, 68, .4);
-  color: var(--error-text);
+  color: var(--error-text, #DC2626);
 }
 
 /* Bottom section - PROMINENT mark input */
@@ -2971,7 +2971,8 @@ main > section + h2,main > section + h3{margin-top:20px !important}
 .howto-step p{font-size:14px;color:var(--text-secondary);margin:0;line-height:1.55}
 </style>
   <link rel="icon" href="/favicon.ico" sizes="any"><link rel="icon" type="image/svg+xml" href="/favicon.svg"><link rel="icon" type="image/png" sizes="48x48" href="/favicon-48x48.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="manifest" href="/site.webmanifest">
-<style>.data-table{width:100%;border-collapse:collapse;font-size:15px;margin:14px 0}.data-table th,.data-table td{text-align:left;padding:11px 14px;border-bottom:1px solid var(--navy-100);vertical-align:top}.data-table th{background:var(--navy-50);color:var(--navy-900);font-weight:700;font-size:13px;text-transform:uppercase;letter-spacing:.03em}.data-table tr:last-child td{border-bottom:none}.scale-scroll{overflow-x:auto;border:1px solid var(--navy-100);border-radius:var(--radius)}</style></head>
+<style>.data-table{width:100%;border-collapse:collapse;font-size:15px;margin:14px 0}.data-table th,.data-table td{text-align:left;padding:11px 14px;border-bottom:1px solid var(--navy-100);vertical-align:top}.data-table th{background:var(--navy-50);color:var(--navy-900);font-weight:700;font-size:13px;text-transform:uppercase;letter-spacing:.03em}.data-table tr:last-child td{border-bottom:none}.scale-scroll{overflow-x:auto;border:1px solid var(--navy-100);border-radius:var(--radius-md)}.faq-wrap .faq-item + .faq-item{margin-top:12px}
+</style></head>
 <body>
 <!-- Header injected by navigation.js -->
 <main id="main"><section class="page-header"><div class="container"><div class="breadcrumb"><a href="/">Home</a><span class="breadcrumb-sep">/</span><a href="/atar-calculators">Calculators</a><span class="breadcrumb-sep">/</span><span>NAPLAN Year 9</span></div><span class="eyebrow"><span class="eyebrow-dot"></span>NAPLAN · Year 9</span><h1>Year 9 NAPLAN Calculator — reading, numeracy, and the <em>HSC minimum standard</em>.</h1><p class="lede">Year 9 is the final NAPLAN year. Enter your Year 9 reading and numeracy scale scores to see your indicative proficiency level. We also explain how Year 9 NAPLAN relates to the NSW HSC minimum standard, and what actually meets it.</p><div class="meta">Indicative Year 9 thresholds · NSW HSC minimum standard explained · confirm with <b>NESA</b></div></div></section><section class="calc-section" id="calculator"><div class="container"><div class="calc-wrap"><div class="calc-card"><div style="display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-bottom:14px"><div><label class="scalc-label" for="rd">Year 9 Reading score</label><div class="scalc-inwrap"><input id="rd" type="number" min="0" max="1000" step="1" placeholder="e.g. 590" inputmode="numeric"/><span class="scalc-suffix">/1000</span></div></div><div><label class="scalc-label" for="nm">Year 9 Numeracy score</label><div class="scalc-inwrap"><input id="nm" type="number" min="0" max="1000" step="1" placeholder="e.g. 570" inputmode="numeric"/><span class="scalc-suffix">/1000</span></div></div></div><div class="scalc-row"><button class="btn btn-primary btn-lg" id="go" type="button">Check my Year 9 result</button><button class="btn btn-outline" id="reset" type="button">Reset</button></div><p class="scalc-err" id="err">Enter at least one score between 0 and 1000.</p><div class="scalc-result" id="res"><div class="scalc-rlabel">Indicative Year 9 proficiency</div><div class="scalc-chips" id="chips" style="margin-top:4px"></div><p class="scalc-help">Indicative Year 9 thresholds: Strong from about 580 in reading and 557 in numeracy, Exceeding from about 690. The NSW HSC minimum standard is set by NESA and is met by sitting separate online tests in Years 10 to 12, not by Year 9 NAPLAN. Always confirm current rules with NESA and your school.</p></div></div></div></div></section><section class="page-content"><div class="container">
