@@ -10,6 +10,7 @@
   </script>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta name="color-scheme" content="only light"/>
 <meta name="description" content="A GPA can look lower than your ATAR because they use different scales and measure different things. See why the numbers do not compare."/>
 <meta content="#1E3A8A" name="theme-color"/>
 <meta content="index, follow, max-snippet:-1, max-image-preview:large" name="robots"/>
@@ -41,7 +42,7 @@
    ============================================================= */
 
 /* ============= DESIGN TOKENS ============= */
-:root {
+:root {color-scheme:only light;
   /* Navy scale */
   --navy-50:  #EFF6FF;  --navy-100: #DBEAFE;  --navy-200: #BFDBFE;
   --navy-300: #93C5FD;  --navy-400: #60A5FA;  --navy-500: #3B82F6;
@@ -305,12 +306,12 @@ section {
 .logo-text em {
   font-style: normal;
   font-weight: 500;
-  color: var(--orange-500);
+  color:#C2410C;
   letter-spacing: -0.01em;
 }
 .logo-light { color: #fff; }
 .logo-light .logo-mark { background: #fff; color: var(--navy-900); }
-.logo-light .logo-text em { color: var(--orange-500); }
+.logo-light .logo-text em { color:#C2410C; }
 
 .nav-primary { flex: 1; display: flex; justify-content: center; }
 .nav-primary ul { display: flex; align-items: center; gap: 4px; }
@@ -2193,7 +2194,7 @@ section {
   min-width: 0;
 }
 .subject-input-wrap:focus-within {
-  border-color: var(--orange-500);
+  border-color:#C2410C;
   border-style: solid;
   background: #fff;
   box-shadow: 0 0 0 4px rgba(255, 94, 0, .15);
@@ -2204,7 +2205,7 @@ section {
   background: #fff;
 }
 .subject-row.has-mark .subject-input-wrap:focus-within {
-  border-color: var(--orange-500);
+  border-color:#C2410C;
   box-shadow: 0 0 0 4px rgba(255, 94, 0, .15);
 }
 
@@ -2828,7 +2829,7 @@ section {
 .toc-rail nav{display:flex;flex-direction:column}
 .toc-rail nav a{padding:6px 0 6px 14px;color:var(--text-secondary);font-size:14px;line-height:1.35;text-decoration:none;border-left:2px solid var(--border-default);transition:color .15s,border-color .15s}
 .toc-rail nav a:hover{color:var(--navy-700)}
-.toc-rail nav a.is-active{color:var(--navy-900);border-left-color:var(--orange-500);font-weight:600}
+.toc-rail nav a.is-active{color:var(--navy-900);border-left-color:#C2410C;font-weight:600}
 .post-meta-bar{display:flex;flex-wrap:wrap;align-items:center;gap:8px 12px;margin-top:14px;font-size:14px;color:var(--text-secondary)}
 .post-meta-bar .pm-a{font-weight:600;color:var(--text-primary)}
 .post-meta-bar .pm-a a{color:var(--text-primary);text-decoration:none;border-bottom:1px solid var(--border-strong)}

@@ -12,6 +12,7 @@
   </script>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta name="color-scheme" content="only light"/>
 <meta name="description" content="Free VCE Product Design and Technologies scaling calculator. Get your VTAC scaled study score from official 2025 data and see how it scales for your ATAR."/>
 <meta content="#1E3A8A" name="theme-color"/>
 <meta content="index, follow, max-snippet:-1, max-image-preview:large" name="robots"/>
@@ -43,7 +44,7 @@
    ============================================================= */
 
 /* ============= DESIGN TOKENS ============= */
-:root {
+:root {color-scheme:only light;
   /* Navy scale */
   --navy-50:  #EFF6FF;  --navy-100: #DBEAFE;  --navy-200: #BFDBFE;
   --navy-300: #93C5FD;  --navy-400: #60A5FA;  --navy-500: #3B82F6;
@@ -307,12 +308,12 @@ section {
 .logo-text em {
   font-style: normal;
   font-weight: 500;
-  color: var(--orange-500);
+  color:#C2410C;
   letter-spacing: -0.01em;
 }
 .logo-light { color: #fff; }
 .logo-light .logo-mark { background: #fff; color: var(--navy-900); }
-.logo-light .logo-text em { color: var(--orange-500); }
+.logo-light .logo-text em { color:#C2410C; }
 
 .nav-primary { flex: 1; display: flex; justify-content: center; }
 .nav-primary ul { display: flex; align-items: center; gap: 4px; }
@@ -2195,7 +2196,7 @@ section {
   min-width: 0;
 }
 .subject-input-wrap:focus-within {
-  border-color: var(--orange-500);
+  border-color:#C2410C;
   border-style: solid;
   background: #fff;
   box-shadow: 0 0 0 4px rgba(255, 94, 0, .15);
@@ -2206,7 +2207,7 @@ section {
   background: #fff;
 }
 .subject-row.has-mark .subject-input-wrap:focus-within {
-  border-color: var(--orange-500);
+  border-color:#C2410C;
   box-shadow: 0 0 0 4px rgba(255, 94, 0, .15);
 }
 
