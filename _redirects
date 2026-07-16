@@ -1,0 +1,14 @@
+# Fix the 404 Google found: old blog URL -> current page
+/blog/atar-for-medicine/  /atar-required-for-medicine  301
+/blog/atar-for-medicine   /atar-required-for-medicine  301
+
+# Consolidate duplicate URL pattern: two pages targeted the same query.
+# Kept the version the site actually links to (5 inbound links vs 1).
+/improve-atar-sa   /improve-sa-atar   301
+/improve-atar-nt   /improve-nt-atar   301
+/improve-atar-wa   /improve-wa-atar   301
+/improve-atar-tas  /improve-tas-atar  301
+/improve-atar-act  /improve-act-atar  301
+
+# Any other legacy /blog/<slug> URLs -> the same slug at root (posts now live at root)
+/blog/*  /:splat  301

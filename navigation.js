@@ -151,8 +151,23 @@
     `;
   }
 
-  /* ---------- INJECT NAVIGATION ---------- */
+  /* ---------- INJECT NAVIGATION ----------
+     The header/footer are now server-rendered into the static HTML of every
+     page (so they are crawlable without JavaScript). If they are already in
+     the document we must NOT inject a second copy — we just wire up the
+     interactivity and highlight the active link. Injection below remains as a
+     fallback for any page that ships without the static markup. */
   function injectNavigation() {
+    const hasStaticHeader = document.querySelector('header.header');
+    const hasStaticFooter = document.querySelector('footer.footer');
+
+    if (hasStaticHeader && hasStaticFooter) {
+      updateYear();
+      setupHeaderInteractivity();
+      highlightActivePage();
+      return;
+    }
+
     const main = document.querySelector('main');
     if (main) {
       // Page has a <main> — wrap it: header before, footer after
@@ -167,8 +182,20 @@
       return;
     }
 
+    updateYear();
     setupHeaderInteractivity();
     highlightActivePage();
+  }
+
+  /* ---------- KEEP COPYRIGHT YEAR CURRENT ----------
+     The year is baked into the static footer at build time, so refresh it
+     client-side to stop it going stale after 31 December. */
+  function updateYear() {
+    const el = document.getElementById('year');
+    if (el) {
+      const y = String(new Date().getFullYear());
+      if (el.textContent !== y) el.textContent = y;
+    }
   }
 
   /* ---------- HEADER INTERACTIVITY ---------- */
