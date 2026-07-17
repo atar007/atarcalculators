@@ -1,6 +1,12 @@
 <!DOCTYPE html>
 <html lang="en-AU">
 <head>
+<link rel="preconnect" href="https://pagead2.googlesyndication.com" crossorigin/>
+<link rel="preconnect" href="https://googleads.g.doubleclick.net" crossorigin/>
+<link rel="preconnect" href="https://www.googletagmanager.com"/>
+<link rel="dns-prefetch" href="https://fundingchoicesmessages.google.com"/>
+<link rel="dns-prefetch" href="https://tpc.googlesyndication.com"/>
+
   <!-- adsense:start -->
   <meta name="google-adsense-account" content="ca-pub-2187903899334578"/>
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2187903899334578" crossorigin="anonymous"></script>
@@ -38,7 +44,7 @@
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebApplication", "name": "Regional Bonus Points Calculator 2026 — Rural Adjustment", "url": "https://atarcalculators.com/regional-bonus-points-calculator", "applicationCategory": "EducationalApplication", "operatingSystem": "All", "browserRequirements": "Requires JavaScript", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "AUD"}, "description": "Free regional bonus points calculator. Estimate the adjustment factors rural and regional students get on top of their ATAR, plus the selection rank.", "inLanguage": "en-AU", "publisher": {"@type": "Organization", "name": "ATARCalculators", "url": "https://atarcalculators.com/"}}</script>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://atarcalculators.com/"}, {"@type": "ListItem", "position": 2, "name": "University Calculators", "item": "https://atarcalculators.com/university-calculators"}, {"@type": "ListItem", "position": 3, "name": "Regional Bonus Points", "item": "https://atarcalculators.com/regional-bonus-points-calculator"}]}</script>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "How many bonus points do regional students get?", "acceptedAnswer": {"@type": "Answer", "text": "Usually about 3 to 5 points. The exact number depends on the university and how remote your area is. Remote areas often get more than regional ones. The points add to your ATAR to make your selection rank. Each university caps the total, usually near 10 points."}}, {"@type": "Question", "name": "What postcodes get regional bonus points?", "acceptedAnswer": {"@type": "Answer", "text": "It depends on your home postcode. It must be classed as regional or remote. Most schemes use the Australian standard geographical classification. You also usually need to have lived there a set time. Five years is common. Each university lists its eligible areas. Check your postcode against each one."}}, {"@type": "Question", "name": "Can city students get regional bonus points?", "acceptedAnswer": {"@type": "Answer", "text": "Usually no. Regional bonuses are for students who live at a regional or remote address. You also need to live there long enough. A student who has always lived in a city will not qualify. They may still get other bonuses. Subject bonuses and equity schemes are examples."}}, {"@type": "Question", "name": "Do regional bonus points apply at every university?", "acceptedAnswer": {"@type": "Answer", "text": "Most Australian universities offer some regional bonus. But the points, postcodes and time rules differ. Some competitive courses cap or exclude them. Always check the scheme for the courses you want."}}, {"@type": "Question", "name": "How do I claim regional bonus points?", "acceptedAnswer": {"@type": "Answer", "text": "They are usually applied for you. The admissions centre uses the address on your file. Some schemes need a separate form or proof of address. Make sure your details are correct before offer rounds."}}, {"@type": "Question", "name": "Can regional and equity bonuses be combined?", "acceptedAnswer": {"@type": "Answer", "text": "Often yes, up to the university’s cap. The cap is usually around 10 points. You might get points from a regional scheme and a hardship scheme. But the combined total is still limited. Check how each university stacks its schemes."}}, {"@type": "Question", "name": "How many points do regional students get?", "acceptedAnswer": {"@type": "Answer", "text": "Most eligible students gain about 3 to 5 points. The exact number depends on your postcode and the university. Each scheme also has its own cap."}}, {"@type": "Question", "name": "Is the regional bonus based on my school or my home?", "acceptedAnswer": {"@type": "Answer", "text": "Your home postcode, in almost all schemes. A student who boards in a city but lives in the country can still qualify. Always check the postcode list for your target course."}}, {"@type": "Question", "name": "Can I get regional points and equity points together?", "acceptedAnswer": {"@type": "Answer", "text": "Usually yes. Most schemes stack, so you can hold several at once. Your final selection rank is still capped at 99.95."}}]}</script>
-<link rel="stylesheet" href="/css/s7ec52f54b2.css"/>
+<link rel="stylesheet" href="/css/s2d096dc181.css"/>
 <style>
     /* Load-more FAQ + minor enhancements */
     .faq-extra{display:none !important;}
@@ -47,52 +53,7 @@
     .faq-count-note{text-align:center;color:#64748b;font-size:.9rem;margin:.35rem 0 1.25rem;}
     #faq-loadmore{min-width:240px;}
   </style>
-<style>
-/* University calculator UI — scoped, uses site design tokens */
-.uni-rows{display:flex;flex-direction:column;gap:10px;margin:4px 0 6px}
-.uni-row{display:grid;grid-template-columns:1fr 92px 92px 36px;gap:8px;align-items:center}
-.uni-row-head{display:grid;grid-template-columns:1fr 92px 92px 36px;gap:8px;font-size:.72rem;font-weight:700;letter-spacing:.04em;text-transform:uppercase;color:var(--text-tertiary);padding:0 2px}
-.uni-row input{width:100%;padding:11px 12px;border:1.5px solid var(--border-default);border-radius:var(--radius-md);font:inherit;font-size:.95rem;color:var(--text-primary);background:var(--bg-surface);transition:border-color .15s,box-shadow .15s}
-.uni-row input:focus{outline:none;border-color:var(--navy-500);box-shadow:0 0 0 3px var(--navy-100)}
-.uni-row input.bad{border-color:var(--error-solid);background:var(--error-bg)}
-.uni-row .row-del{border:none;background:var(--bg-subtle);color:var(--text-tertiary);border-radius:var(--radius-md);height:38px;cursor:pointer;font-size:1.1rem;line-height:1;transition:background .15s,color .15s}
-.uni-row .row-del:hover{background:var(--error-bg);color:var(--error-solid)}
-.uni-grade-pill{display:inline-block;min-width:30px;text-align:center;font-weight:800;font-size:.78rem;padding:3px 7px;border-radius:var(--radius-full);background:var(--bg-subtle);color:var(--text-secondary)}
-.single-input{display:flex;flex-direction:column;gap:6px;margin:6px 0 2px}
-.single-input label{font-weight:700;color:var(--text-primary);font-size:.95rem}
-.single-input input[type=number]{padding:14px 14px;border:1.5px solid var(--border-default);border-radius:var(--radius-md);font:inherit;font-size:1.15rem;font-variant-numeric:tabular-nums;color:var(--text-primary);background:var(--bg-surface)}
-.single-input input:focus{outline:none;border-color:var(--navy-500);box-shadow:0 0 0 3px var(--navy-100)}
-.adj-grid{display:flex;flex-direction:column;gap:9px;margin:8px 0}
-.adj-opt{display:flex;align-items:flex-start;gap:11px;padding:12px 14px;border:1.5px solid var(--border-default);border-radius:var(--radius-md);cursor:pointer;background:var(--bg-surface);transition:border-color .15s,background .15s}
-.adj-opt:hover{border-color:var(--navy-400);background:var(--bg-subtle)}
-.adj-opt input{margin-top:3px;width:18px;height:18px;accent-color:var(--navy-900);flex:none}
-.adj-opt .adj-txt b{display:block;color:var(--text-primary);font-size:.95rem}
-.adj-opt .adj-txt span{display:block;color:var(--text-tertiary);font-size:.83rem;margin-top:2px}
-.adj-opt .adj-pts{margin-left:auto;font-weight:800;color:var(--navy-700);white-space:nowrap}
-.uni-metric-2{display:flex;gap:18px;justify-content:center;flex-wrap:wrap;margin-top:10px}
-.uni-metric-2 .m{background:var(--bg-surface);border:1.5px solid var(--border-default);border-radius:var(--radius-lg);padding:14px 22px;text-align:center;min-width:130px}
-.uni-metric-2 .m .ml{font-size:.72rem;font-weight:700;letter-spacing:.05em;text-transform:uppercase;color:var(--text-tertiary)}
-.uni-metric-2 .m .mv{font-size:1.9rem;font-weight:800;font-variant-numeric:tabular-nums;color:var(--navy-900);line-height:1.1;margin-top:3px}
-.uni-class{margin-top:12px;text-align:center;font-weight:600;color:var(--text-secondary)}
-.uni-class b{color:var(--navy-800)}
-.scale-table{width:100%;border-collapse:collapse;margin:10px 0;font-size:.9rem}
-.scale-table th,.scale-table td{padding:8px 10px;border-bottom:1px solid var(--border-default);text-align:left}
-.scale-table th{font-size:.74rem;letter-spacing:.04em;text-transform:uppercase;color:var(--text-tertiary)}
-.scale-table td:first-child{font-weight:700;color:var(--text-primary)}
-@media(max-width:560px){.uni-row,.uni-row-head{grid-template-columns:1fr 70px 64px 32px;gap:6px}.uni-row input{padding:9px 8px;font-size:.86rem}}
-.hub-cat-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:14px;margin:8px 0}
-.hub-cat-card{display:block;padding:20px;border:1.5px solid var(--border-default);border-radius:var(--radius-lg);background:var(--bg-surface);text-decoration:none;transition:border-color .15s,transform .15s,box-shadow .15s}
-.hub-cat-card:hover{border-color:var(--navy-400);transform:translateY(-2px);box-shadow:var(--shadow-md)}
-.hub-cat-card h3{color:var(--navy-900);margin:0 0 4px;font-size:1.08rem}
-.hub-cat-card p{color:var(--text-secondary);margin:0;font-size:.9rem}
-.hub-cat-card .hub-tag{display:inline-block;margin-top:8px;font-size:.78rem;font-weight:700;color:var(--orange-600,#EA580C)}
-html{overflow-x:clip}body{overflow-x:clip;position:relative}
-
-/* WCAG 2.2 SC 2.5.8 — footer link targets >=24px without changing visual pitch */
-.footer-col ul{gap:2px}
-.footer-col li>a{display:block;padding:4px 0;min-height:24px}
-.footer-brand .footer-tag{margin-top:8px}
-</style>
+<style>.uni-rows{display:flex;flex-direction:column;gap:10px;margin:4px 0 6px}.uni-row{display:grid;grid-template-columns:1fr 92px 92px 36px;gap:8px;align-items:center}.uni-row-head{display:grid;grid-template-columns:1fr 92px 92px 36px;gap:8px;font-size:.72rem;font-weight:700;letter-spacing:.04em;text-transform:uppercase;color:var(--text-tertiary);padding:0 2px}.uni-row input{width:100%;padding:11px 12px;border:1.5px solid var(--border-default);border-radius:var(--radius-md);font:inherit;font-size:.95rem;color:var(--text-primary);background:var(--bg-surface);transition:border-color .15s,box-shadow .15s}.uni-row input:focus{outline:none;border-color:var(--navy-500);box-shadow:0 0 0 3px var(--navy-100)}.uni-row input.bad{border-color:var(--error-solid);background:var(--error-bg)}.uni-row .row-del{border:none;background:var(--bg-subtle);color:var(--text-tertiary);border-radius:var(--radius-md);height:38px;cursor:pointer;font-size:1.1rem;line-height:1;transition:background .15s,color .15s}.uni-row .row-del:hover{background:var(--error-bg);color:var(--error-solid)}.uni-grade-pill{display:inline-block;min-width:30px;text-align:center;font-weight:800;font-size:.78rem;padding:3px 7px;border-radius:var(--radius-full);background:var(--bg-subtle);color:var(--text-secondary)}.single-input{display:flex;flex-direction:column;gap:6px;margin:6px 0 2px}.single-input label{font-weight:700;color:var(--text-primary);font-size:.95rem}.single-input input[type=number]{padding:14px 14px;border:1.5px solid var(--border-default);border-radius:var(--radius-md);font:inherit;font-size:1.15rem;font-variant-numeric:tabular-nums;color:var(--text-primary);background:var(--bg-surface)}.single-input input:focus{outline:none;border-color:var(--navy-500);box-shadow:0 0 0 3px var(--navy-100)}.adj-grid{display:flex;flex-direction:column;gap:9px;margin:8px 0}.adj-opt{display:flex;align-items:flex-start;gap:11px;padding:12px 14px;border:1.5px solid var(--border-default);border-radius:var(--radius-md);cursor:pointer;background:var(--bg-surface);transition:border-color .15s,background .15s}.adj-opt:hover{border-color:var(--navy-400);background:var(--bg-subtle)}.adj-opt input{margin-top:3px;width:18px;height:18px;accent-color:var(--navy-900);flex:none}.adj-opt .adj-txt b{display:block;color:var(--text-primary);font-size:.95rem}.adj-opt .adj-txt span{display:block;color:var(--text-tertiary);font-size:.83rem;margin-top:2px}.adj-opt .adj-pts{margin-left:auto;font-weight:800;color:var(--navy-700);white-space:nowrap}.uni-metric-2{display:flex;gap:18px;justify-content:center;flex-wrap:wrap;margin-top:10px}.uni-metric-2 .m{background:var(--bg-surface);border:1.5px solid var(--border-default);border-radius:var(--radius-lg);padding:14px 22px;text-align:center;min-width:130px}.uni-metric-2 .m .ml{font-size:.72rem;font-weight:700;letter-spacing:.05em;text-transform:uppercase;color:var(--text-tertiary)}.uni-metric-2 .m .mv{font-size:1.9rem;font-weight:800;font-variant-numeric:tabular-nums;color:var(--navy-900);line-height:1.1;margin-top:3px}.uni-class{margin-top:12px;text-align:center;font-weight:600;color:var(--text-secondary)}.uni-class b{color:var(--navy-800)}.scale-table{width:100%;border-collapse:collapse;margin:10px 0;font-size:.9rem}.scale-table th,.scale-table td{padding:8px 10px;border-bottom:1px solid var(--border-default);text-align:left}.scale-table th{font-size:.74rem;letter-spacing:.04em;text-transform:uppercase;color:var(--text-tertiary)}.scale-table td:first-child{font-weight:700;color:var(--text-primary)}@media(max-width:560px){.uni-row,.uni-row-head{grid-template-columns:1fr 70px 64px 32px;gap:6px}.uni-row input{padding:9px 8px;font-size:.86rem}}.hub-cat-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:14px;margin:8px 0}.hub-cat-card{display:block;padding:20px;border:1.5px solid var(--border-default);border-radius:var(--radius-lg);background:var(--bg-surface);text-decoration:none;transition:border-color .15s,transform .15s,box-shadow .15s}.hub-cat-card:hover{border-color:var(--navy-400);transform:translateY(-2px);box-shadow:var(--shadow-md)}.hub-cat-card h3{color:var(--navy-900);margin:0 0 4px;font-size:1.08rem}.hub-cat-card p{color:var(--text-secondary);margin:0;font-size:.9rem}.hub-cat-card .hub-tag{display:inline-block;margin-top:8px;font-size:.78rem;font-weight:700;color:var(--orange-600,#EA580C)}html{overflow-x:clip}body{overflow-x:clip;position:relative}.footer-col ul{gap:2px}.footer-col li>a{display:block;padding:4px 0;min-height:24px}.footer-brand .footer-tag{margin-top:8px}</style>
   <link rel="icon" href="/favicon.ico" sizes="any"><link rel="icon" type="image/svg+xml" href="/favicon.svg"><link rel="icon" type="image/png" sizes="48x48" href="/favicon-48x48.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="manifest" href="/site.webmanifest">
 </head>
 <body>
