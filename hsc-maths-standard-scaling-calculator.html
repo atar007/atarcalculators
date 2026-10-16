@@ -164,9 +164,9 @@
 <tbody>
 <tr><td>50</td><td class='sc'>11.8 <span style='color:var(--text-tertiary);font-weight:400'>/50</span></td><td>20th</td></tr>
 <tr><td>60</td><td class='sc'>14.2 <span style='color:var(--text-tertiary);font-weight:400'>/50</span></td><td>24th</td></tr>
-<tr><td>70</td><td class='sc'>20.5 <span style='color:var(--text-tertiary);font-weight:400'>/50</span></td><td>42th</td></tr>
-<tr><td>80</td><td class='sc'>30.5 <span style='color:var(--text-tertiary);font-weight:400'>/50</span></td><td>72th</td></tr>
-<tr><td>90</td><td class='sc'>38.2 <span style='color:var(--text-tertiary);font-weight:400'>/50</span></td><td>92th</td></tr>
+<tr><td>70</td><td class='sc'>20.5 <span style='color:var(--text-tertiary);font-weight:400'>/50</span></td><td>42nd</td></tr>
+<tr><td>80</td><td class='sc'>30.5 <span style='color:var(--text-tertiary);font-weight:400'>/50</span></td><td>72nd</td></tr>
+<tr><td>90</td><td class='sc'>38.2 <span style='color:var(--text-tertiary);font-weight:400'>/50</span></td><td>92nd</td></tr>
 <tr><td>100</td><td class='sc'>47.1 <span style='color:var(--text-tertiary);font-weight:400'>/50</span></td><td>99th+</td></tr>
 </tbody>
 </table></div>
@@ -354,7 +354,7 @@ A raw mark of 100 does not become a scaled mark of 50. Scaling reflects how the 
    var ou=U===2? v/2 : v, sc=interp(ANC,ou), pct=interp(PCT,ou);
    document.getElementById('scaled').textContent=sc.toFixed(1);
    var p=Math.max(1,Math.min(99.9,pct));
-   var pr=p>=99? "top 1%" : p>=90? "top "+(100-Math.round(p))+"%" : Math.round(p)+"th percentile";
+   var rank=Math.round(p),end=(rank%100>=11&&rank%100<=13)?"th":rank%10===1?"st":rank%10===2?"nd":rank%10===3?"rd":"th";var pr=p>=99?"top 1%":p>=90?"top "+(100-rank)+"%":rank+end+" percentile";
    document.getElementById('chip-pct').innerHTML="Around the <b>"+pr+"</b> in "+NAME;
    res.classList.add('is-shown');
  }
