@@ -1,18 +1,7 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="680" height="200" viewBox="0 0 680 200" role="img" aria-labelledby="bm-title bm-desc">
-<title id="bm-title">Four steps to a stronger VCE Business Management response</title>
-<desc id="bm-desc">Identify the command word, select evidence from the given case study, explain the consequence, and connect to the business objective.</desc>
+<svg xmlns="http://www.w3.org/2000/svg" width="680" height="200" viewBox="0 0 680 200" font-family="Helvetica,Arial,sans-serif" role="img">
 <rect width="680" height="200" rx="14" fill="#EFF6FF"/>
 <rect x="0" y="0" width="6" height="200" rx="3" fill="#6366F1"/>
-<text x="340" y="36" font-family="Arial,Helvetica,sans-serif" font-size="17" font-weight="700" fill="#0F1E3D" text-anchor="middle">Build an applied Business Management answer</text>
-<g font-family="Arial,Helvetica,sans-serif" font-size="14" fill="#1E3A8A" font-weight="700" text-anchor="middle">
-<rect x="18" y="65" width="142" height="95" rx="10" fill="white" stroke="#6366F1" stroke-width="1.5"/>
-<text x="89" y="104">1. Command word</text><text x="89" y="125" font-size="12" font-weight="400">What is asked?</text>
-<rect x="185" y="65" width="142" height="95" rx="10" fill="white" stroke="#6366F1" stroke-width="1.5"/>
-<text x="256" y="104">2. Case evidence</text><text x="256" y="125" font-size="12" font-weight="400">Use the stimulus</text>
-<rect x="352" y="65" width="142" height="95" rx="10" fill="white" stroke="#6366F1" stroke-width="1.5"/>
-<text x="423" y="104">3. Explain effect</text><text x="423" y="125" font-size="12" font-weight="400">Cause → consequence</text>
-<rect x="519" y="65" width="142" height="95" rx="10" fill="white" stroke="#6366F1" stroke-width="1.5"/>
-<text x="590" y="104">4. Business goal</text><text x="590" y="125" font-size="12" font-weight="400">Link the outcome</text>
-</g>
-<g stroke="#6366F1" stroke-width="2.5" fill="none" stroke-linejoin="round"><path d="M164 111h17l-5 -5m5 5l-5 5"/><path d="M331 111h17l-5 -5m5 5l-5 5"/><path d="M498 111h17l-5 -5m5 5l-5 5"/></g>
+<text x="340.0" y="40" font-size="18" font-weight="800" fill="#0F1E3D" text-anchor="middle">How Business Management Mistakes scales into your ATAR</text>
+<rect x="16" y="70" width="118" height="96" rx="12" fill="#FFFFFF" stroke="#6366F1" stroke-width="2"/><text x="75" y="118" font-size="14" font-weight="700" fill="#1E3A8A" text-anchor="middle"><tspan x="75" dy="0">Study score /50</tspan></text><path d="M136 118.0 l10 0 m-4 -4 l4 4 l-4 4" stroke="#6366F1" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/><rect x="148" y="70" width="118" height="96" rx="12" fill="#FFFFFF" stroke="#6366F1" stroke-width="2"/><text x="208" y="109" font-size="14" font-weight="700" fill="#1E3A8A" text-anchor="middle"><tspan x="208" dy="0">VTAC scales vs</tspan><tspan x="208" dy="18">cohort</tspan></text><path d="M269 118.0 l10 0 m-4 -4 l4 4 l-4 4" stroke="#6366F1" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/><rect x="281" y="70" width="118" height="96" rx="12" fill="#FFFFFF" stroke="#6366F1" stroke-width="2"/><text x="340" y="109" font-size="14" font-weight="700" fill="#1E3A8A" text-anchor="middle"><tspan x="340" dy="0">Scaled study</tspan><tspan x="340" dy="18">score</tspan></text><path d="M401 118.0 l10 0 m-4 -4 l4 4 l-4 4" stroke="#6366F1" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/><rect x="413" y="70" width="118" height="96" rx="12" fill="#FFFFFF" stroke="#6366F1" stroke-width="2"/><text x="472" y="118" font-size="14" font-weight="700" fill="#1E3A8A" text-anchor="middle"><tspan x="472" dy="0">Best 4 + 10%</tspan></text><path d="M534 118.0 l10 0 m-4 -4 l4 4 l-4 4" stroke="#6366F1" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/><rect x="546" y="70" width="118" height="96" rx="12" fill="#6366F1" stroke="#6366F1" stroke-width="2"/><text x="605" y="118" font-size="14" font-weight="700" fill="#FFFFFF" text-anchor="middle"><tspan x="605" dy="0">ATAR 0–99.95</tspan></text>
+<text x="340.0" y="188" font-size="11" fill="#64748B" text-anchor="middle">atarcalculators.com</text>
 </svg>

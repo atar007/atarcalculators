@@ -1,17 +1,7 @@
 <!DOCTYPE html>
 <html lang="en-AU">
 <head>
-<script src="https://quge5.com/88/tag.min.js" data-zone="274631" async data-cfasync="false"></script>
-<link rel="preconnect" href="https://pagead2.googlesyndication.com" crossorigin/>
-<link rel="preconnect" href="https://googleads.g.doubleclick.net" crossorigin/>
 <link rel="preconnect" href="https://www.googletagmanager.com"/>
-<link rel="dns-prefetch" href="https://fundingchoicesmessages.google.com"/>
-<link rel="dns-prefetch" href="https://tpc.googlesyndication.com"/>
-
-  <!-- adsense:start -->
-  <meta name="google-adsense-account" content="ca-pub-2187903899334578"/>
-  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2187903899334578" crossorigin="anonymous"></script>
-  <!-- adsense:end -->
 
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-555X6M0V55"></script>
@@ -163,7 +153,7 @@
 <thead><tr><th>HSC mark (/100)</th><th>Scaled mark (/50)</th><th>Percentile</th></tr></thead>
 <tbody>
 <tr><td>50</td><td class='sc'>11.4 <span style='color:var(--text-tertiary);font-weight:400'>/50</span></td><td>19th</td></tr>
-<tr><td>60</td><td class='sc'>13.7 <span style='color:var(--text-tertiary);font-weight:400'>/50</span></td><td>23rd</td></tr>
+<tr><td>60</td><td class='sc'>13.7 <span style='color:var(--text-tertiary);font-weight:400'>/50</span></td><td>23th</td></tr>
 <tr><td>70</td><td class='sc'>18.8 <span style='color:var(--text-tertiary);font-weight:400'>/50</span></td><td>36th</td></tr>
 <tr><td>80</td><td class='sc'>28.5 <span style='color:var(--text-tertiary);font-weight:400'>/50</span></td><td>64th</td></tr>
 <tr><td>90</td><td class='sc'>39.2 <span style='color:var(--text-tertiary);font-weight:400'>/50</span></td><td>90th</td></tr>
@@ -354,7 +344,7 @@ A raw mark of 100 does not become a scaled mark of 50. Scaling reflects how the 
    var ou=U===2? v/2 : v, sc=interp(ANC,ou), pct=interp(PCT,ou);
    document.getElementById('scaled').textContent=sc.toFixed(1);
    var p=Math.max(1,Math.min(99.9,pct));
-   var rank=Math.round(p),end=(rank%100>=11&&rank%100<=13)?"th":rank%10===1?"st":rank%10===2?"nd":rank%10===3?"rd":"th";var pr=p>=99?"top 1%":p>=90?"top "+(100-rank)+"%":rank+end+" percentile";
+   var pr=p>=99? "top 1%" : p>=90? "top "+(100-Math.round(p))+"%" : Math.round(p)+"th percentile";
    document.getElementById('chip-pct').innerHTML="Around the <b>"+pr+"</b> in "+NAME;
    res.classList.add('is-shown');
  }
